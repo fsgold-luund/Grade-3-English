@@ -1,0 +1,1932 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sân Khấu Tiếng Anh — Lớp 3 · 8 bài học + Ôn tập</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --night:#16205C; --night2:#27358F; --gold:#FFC24B; --lotus:#FF6FA5;
+  --leaf:#35C08A; --cream:#FFF7E8; --ink:#1B1E2E; --paper:#fff;
+  --shadow:0 10px 0 rgba(16,20,60,.16); --r:22px;
+  --display:'Baloo 2',ui-rounded,'Segoe UI',system-ui,sans-serif;
+  --body:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:var(--body);color:var(--ink);background:var(--night);
+  background-image:
+    radial-gradient(1200px 500px at 50% -10%, #34459f 0%, transparent 60%),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.028) 0 2px,transparent 2px 42px);
+  min-height:100vh;-webkit-text-size-adjust:100%
+}
+.wrap{max-width:1020px;margin:0 auto;padding:18px 16px 80px}
+.curtain{position:relative;padding-top:34px}
+.curtain::before{content:"";position:absolute;inset:0 0 auto 0;height:34px;
+  background:radial-gradient(14px 26px at 14px 0,var(--lotus) 98%,transparent 100%) 0 0/28px 34px repeat-x;
+  filter:drop-shadow(0 4px 0 rgba(0,0,0,.18))}
+.brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.brand h1{font-family:var(--display);font-weight:800;color:var(--cream);
+  font-size:clamp(22px,4.6vw,34px);margin:0;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+.brand .sub{color:#BFCBFF;font-size:13px;font-weight:700}
+.lantern{width:34px;height:42px;flex:none}
+
+.card{background:var(--cream);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.screen{display:none;animation:in .35s ease both}
+.screen.on{display:block}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+.lesson{text-align:left;background:var(--paper);border:0;border-radius:var(--r);padding:0;
+  box-shadow:var(--shadow);cursor:pointer;overflow:hidden;font:inherit;color:inherit;position:relative;
+  transition:transform .18s ease,box-shadow .18s ease}
+.lesson:hover,.lesson:focus-visible{transform:translateY(-5px);box-shadow:0 15px 0 rgba(16,20,60,.16)}
+.lesson .top{height:100px;display:grid;place-items:center;font-size:52px}
+.lesson .top span{animation:bob 2.6s ease-in-out infinite}
+.t-leaf  .top{background:linear-gradient(160deg,#7BE3B6,#22A97A)}
+.t-lotus .top{background:linear-gradient(160deg,#FFB3CE,#FF6FA5)}
+.t-gold  .top{background:linear-gradient(160deg,#FFDE9B,#FFB01F)}
+.t-sky   .top{background:linear-gradient(160deg,#9CD8FF,#3E9BE0)}
+.t-plum  .top{background:linear-gradient(160deg,#CDBBFF,#7C5CE0)}
+.t-mint  .top{background:linear-gradient(160deg,#BDF3E1,#3FBFA0)}
+.t-clay  .top{background:linear-gradient(160deg,#FFCBA9,#F0834B)}
+.t-blue  .top{background:linear-gradient(160deg,#AFC9FF,#4A6FE0)}
+.t-ink   .top{background:linear-gradient(160deg,#9FB0D8,#2F4278)}
+.t-rose  .top{background:linear-gradient(160deg,#FFC2D8,#D4356E)}
+.t-jade  .top{background:linear-gradient(160deg,#A8E8C8,#158F63)}
+.t-amber .top{background:linear-gradient(160deg,#FFE3A3,#D98A00)}
+.t-sea   .top{background:linear-gradient(160deg,#A6D8F0,#1B6FA8)}
+.t-berry .top{background:linear-gradient(160deg,#D9B8F0,#7A2FA8)}
+.t-moss  .top{background:linear-gradient(160deg,#CFE0A0,#5E7D22)}
+.lvhead{grid-column:1/-1;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:6px 0 -4px}
+.lvhead b{font-family:var(--display);font-size:19px;color:var(--night)}
+.lvhead span{font-size:12.5px;font-weight:700;color:#5A6180}
+.lvhead i{flex:1;height:2px;background:#DDE2F2;min-width:20px}
+
+.t-sand  .top{background:linear-gradient(160deg,#FFD9A0,#E8863C)}
+.t-coral .top{background:linear-gradient(160deg,#FFB9AE,#EF5B52)}
+.t-teal  .top{background:linear-gradient(160deg,#9FE6DE,#12968E)}
+.t-ruby  .top{background:linear-gradient(160deg,#F5A8C6,#C22E63)}
+.t-forest.top,.t-forest .top{background:linear-gradient(160deg,#A9D9A0,#31824A)}
+.t-violet .top{background:linear-gradient(160deg,#C7B4F5,#6C42C4)}
+.t-slate .top{background:linear-gradient(160deg,#B4C4D8,#4A6076)}
+.t-lime  .top{background:linear-gradient(160deg,#DCEE9A,#7FA51B)}
+
+.lesson .body{padding:14px 16px 16px}
+.lesson h3{font-family:var(--display);font-size:19.5px;margin:0 0 2px}
+.lesson .vi{color:#5A6180;font-size:13.5px;font-weight:700;margin-bottom:9px}
+.tags{display:flex;gap:6px;flex-wrap:wrap}
+.tag{background:#EEF1FB;color:#3B4470;font-size:11px;font-weight:800;padding:4px 9px;border-radius:99px}
+.best{position:absolute;top:10px;right:10px;background:rgba(22,32,92,.9);color:#FFD98A;
+  font-family:var(--display);font-size:13px;font-weight:700;padding:4px 11px;border-radius:99px}
+
+.practice{text-align:left;background:#1E2A70;border:2px dashed rgba(255,194,75,.55);border-radius:var(--r);
+  padding:16px 18px;cursor:pointer;font:inherit;color:#fff;box-shadow:var(--shadow);
+  transition:transform .18s ease,border-color .18s ease}
+.practice:hover,.practice:focus-visible{transform:translateY(-4px);border-color:var(--gold)}
+.practice .ic{font-size:32px;display:block;margin-bottom:6px}
+.practice h3{font-family:var(--display);font-size:18px;margin:0 0 3px;color:var(--gold)}
+.practice p{margin:0;font-size:13.5px;color:#CBD5FF;font-weight:600;line-height:1.5}
+
+.btn{font-family:var(--display);font-weight:700;font-size:17px;border:0;cursor:pointer;
+  padding:13px 24px;border-radius:99px;background:var(--night2);color:#fff;
+  box-shadow:0 5px 0 #101a52;transition:transform .1s ease}
+.btn:active{transform:translateY(3px);box-shadow:0 2px 0 #101a52}
+.btn.gold{background:var(--gold);color:#4A3000;box-shadow:0 5px 0 #C98A00}
+.btn.gold:active{box-shadow:0 2px 0 #C98A00}
+.btn.leaf{background:var(--leaf);color:#053b28;box-shadow:0 5px 0 #1B8B62}
+.btn.leaf:active{box-shadow:0 2px 0 #1B8B62}
+.btn.ghost{background:#fff;color:var(--night);box-shadow:0 5px 0 #C9D0EA}
+.btn.ghost:active{box-shadow:0 2px 0 #C9D0EA}
+.btn.sm{font-size:14px;padding:9px 16px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+.stage{position:relative;aspect-ratio:16/9;min-height:220px;border-radius:18px;overflow:hidden;
+  background:#8ecdf5;box-shadow:inset 0 0 0 5px rgba(27,30,46,.12)}
+.stage svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.actor{position:absolute;transform:translate(-50%,-50%);line-height:1;user-select:none;
+  filter:drop-shadow(0 6px 4px rgba(0,0,0,.22))}
+.scene-layer{position:absolute;inset:0;animation:fadeIn .5s ease both}
+@keyframes fadeIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes hop{0%,68%,100%{transform:translateY(0) scaleY(1)}72%{transform:translateY(0) scaleY(.85)}84%{transform:translateY(-28px) scaleY(1.08)}}
+@keyframes sway{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(8deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%{transform:translateX(-14px)}100%{transform:translateX(14px)}}
+@keyframes pop{0%{transform:scale(0)}60%{transform:scale(1.18)}100%{transform:scale(1)}}
+@keyframes shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-9deg)}75%{transform:rotate(9deg)}}
+.a-bob{animation:bob 2.2s ease-in-out infinite}
+.a-hop{animation:hop 2.4s ease-in-out infinite}
+.a-sway{animation:sway 2.2s ease-in-out infinite}
+.a-spin{animation:spin 9s linear infinite}
+.a-drift{animation:drift 6s ease-in-out infinite alternate}
+.a-pop{animation:pop .6s cubic-bezier(.34,1.56,.64,1) both}
+.a-shake{animation:shake 1.6s ease-in-out infinite}
+
+.caption{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(20,25,64,.86);
+  color:#fff;border-radius:14px;padding:10px 14px}
+.caption .en{font-family:var(--display);font-size:clamp(17px,3.4vw,25px);font-weight:700;line-height:1.2}
+.caption .vi{color:#FFD98A;font-size:clamp(12px,2.4vw,15px);font-weight:700;margin-top:2px}
+.bar{height:9px;background:#E2E6F5;border-radius:99px;overflow:hidden;margin:14px 0 12px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--gold),var(--lotus));width:0;transition:width .3s linear}
+
+.words{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}
+.word{background:#fff;border:0;border-radius:16px;padding:12px;text-align:center;cursor:pointer;
+  box-shadow:0 4px 0 #D9DEF0;font:inherit;transition:transform .12s ease}
+.word:hover{transform:translateY(-3px)}
+.word .e{font-size:36px;display:block}
+.word b{font-family:var(--display);font-size:17.5px;display:block;margin-top:2px}
+.word .ipa{color:#6C7495;font-size:11.5px;font-weight:700}
+.word .vi{color:var(--lotus);font-size:12.5px;font-weight:800}
+.word .ex{color:#57608A;font-size:11.5px;font-weight:600;margin-top:4px;font-style:italic}
+
+.dlg{background:#fff;border-radius:16px;padding:14px 16px;box-shadow:0 4px 0 #E1E5F3}
+.line{display:flex;gap:10px;padding:7px 0;border-bottom:1px dashed #E7EAF5;cursor:pointer}
+.line:last-child{border-bottom:0}
+.line .who{font-size:26px;flex:none}
+.line .en{font-family:var(--display);font-size:17px;line-height:1.25}
+.line .vi{color:#6C7495;font-size:13px;font-weight:700}
+.line:hover .en{color:var(--night2)}
+
+.lanterns{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:12px}
+.lanterns i{width:14px;height:18px;border-radius:4px 4px 6px 6px;background:#DDE2F2;display:block}
+.lanterns i.ok{background:var(--leaf)}
+.lanterns i.no{background:#FFB4C6}
+.lanterns i.now{background:var(--gold);box-shadow:0 0 0 3px rgba(255,194,75,.35)}
+.qhead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.qnum{font-family:var(--display);font-size:15px;color:#5A6180;font-weight:700}
+.qtext{font-family:var(--display);font-size:clamp(19px,3.6vw,26px);line-height:1.25;margin:6px 0 2px}
+.qvi{color:#6C7495;font-weight:700;font-size:14px;margin-bottom:12px}
+.qmedia{text-align:center;font-size:74px;line-height:1;margin:6px 0 14px;animation:pop .5s cubic-bezier(.34,1.56,.64,1) both}
+.opts{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.opt{background:#fff;border:3px solid transparent;border-radius:16px;padding:14px 12px;cursor:pointer;
+  font-family:var(--display);font-size:18px;box-shadow:0 4px 0 #D9DEF0;color:var(--ink);
+  transition:transform .12s ease;text-align:center}
+.opt:hover:not(:disabled){transform:translateY(-3px)}
+.opt:disabled{cursor:default}
+.opt .oe{display:block;font-size:42px;line-height:1.1}
+.opt.right{border-color:var(--leaf);background:#E6FBF2}
+.opt.wrong{border-color:#FF8FAC;background:#FFEEF3}
+.fb{margin-top:14px;border-radius:16px;padding:13px 16px;font-weight:800;display:none}
+.fb.on{display:block;animation:in .25s ease both}
+.fb.good{background:#E6FBF2;color:#0E7A54}
+.fb.try{background:#FFF3D6;color:#8A5A00}
+.fb small{display:block;font-weight:700;opacity:.85;margin-top:3px}
+
+.score{text-align:center;padding:8px 0 4px}
+.score .big{font-family:var(--display);font-size:clamp(52px,13vw,86px);font-weight:800;line-height:1;color:var(--night)}
+.score .of{font-size:22px;color:#6C7495;font-weight:800}
+.stars{font-size:44px;letter-spacing:6px;margin:6px 0}
+.stars span{display:inline-block;animation:pop .5s cubic-bezier(.34,1.56,.64,1) both}
+.msg{font-family:var(--display);font-size:22px;margin:4px 0 2px}
+.review{margin-top:18px;text-align:left}
+.review h4{font-family:var(--display);margin:0 0 8px;font-size:17px}
+.rev{background:#fff;border-radius:14px;padding:11px 14px;margin-bottom:8px;box-shadow:0 3px 0 #E1E5F3}
+.rev b{color:var(--leaf)}
+.rev .yours{color:#C2456E}
+
+h2.sec{font-family:var(--display);font-size:20px;margin:22px 0 10px;color:var(--night)}
+h2.sec.light{color:var(--cream)}
+.note{background:#EEF1FB;border-radius:16px;padding:14px 16px;font-size:14.5px;font-weight:600;line-height:1.55}
+.note.real{background:#FFF3D6;border-left:6px solid var(--gold)}
+.note b{color:var(--night)}
+.pat{background:#fff;border-radius:14px;padding:11px 15px;margin-bottom:8px;box-shadow:0 3px 0 #E1E5F3;
+  font-family:var(--display);font-size:17px}
+.crumb{color:#BFCBFF;font-weight:800;font-size:13px;margin-bottom:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.crumb button{background:none;border:0;color:var(--gold);font:inherit;cursor:pointer;padding:0;text-decoration:underline}
+
+.picks{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-bottom:14px}
+.pick{display:flex;gap:9px;align-items:center;background:#fff;border-radius:14px;padding:10px 13px;
+  box-shadow:0 3px 0 #E1E5F3;cursor:pointer;font-weight:700;font-size:14.5px}
+.pick input{width:19px;height:19px;accent-color:var(--leaf);flex:none}
+
+.flash{background:#fff;border-radius:20px;padding:26px 20px;text-align:center;box-shadow:0 5px 0 #D9DEF0;min-height:250px;
+  display:flex;flex-direction:column;justify-content:center;gap:6px}
+.flash .fe{font-size:76px;line-height:1;animation:pop .45s cubic-bezier(.34,1.56,.64,1) both}
+.flash .fvi{font-family:var(--display);font-size:24px;color:var(--lotus)}
+.flash .fen{font-family:var(--display);font-size:32px;color:var(--night)}
+.flash .fipa{color:#6C7495;font-weight:700}
+.flash .fs{color:#57608A;font-weight:600;font-style:italic;font-size:14.5px}
+.hidden{display:none}
+
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}}
+</style>
+
+<div class="wrap curtain">
+  <div class="brand">
+    <svg class="lantern" viewBox="0 0 40 50" aria-hidden="true">
+      <path d="M20 2v6" stroke="#FFC24B" stroke-width="3" stroke-linecap="round"/>
+      <ellipse cx="20" cy="26" rx="15" ry="18" fill="#FF6FA5"/>
+      <ellipse cx="20" cy="26" rx="6" ry="18" fill="#FF95BE"/>
+      <rect x="10" y="7" width="20" height="5" rx="2" fill="#FFC24B"/>
+      <rect x="10" y="40" width="20" height="5" rx="2" fill="#FFC24B"/>
+      <path d="M20 45v4M15 45v3M25 45v3" stroke="#FFC24B" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <div><h1>Sân Khấu Tiếng Anh</h1>
+    <div class="sub">Lớp 3 · 8 bài học đời thực + Khu ôn tập</div></div>
+  </div>
+
+  <!-- HOME -->
+  <section class="screen on" id="s-home">
+    <div class="card">
+      <h2 class="sec" style="margin-top:0">🎬 Bài học</h2>
+      <p class="note" style="margin-bottom:16px">
+        Mỗi bài: <b>phim ngắn</b> → <b>từ vựng có tiếng</b> → <b>hội thoại</b> → <b>nhiệm vụ đời thực</b> →
+        <b>20 câu hỏi</b> → <b>chấm điểm</b>. Học lại bao nhiêu lần cũng được. 🎧 Nhớ bật loa!
+      </p>
+      <div class="grid" id="lesson-list"></div>
+    </div>
+
+    <h2 class="sec light">🏮 Ôn tập &amp; Thực hành</h2>
+    <div class="grid" id="practice-list"></div>
+    <div class="card" style="margin-top:16px">
+      <div class="note">
+        <b>Lịch ôn để nhớ lâu:</b> học xong ôn lại sau <b>1 ngày → 3 ngày → 7 ngày → 14 ngày → 30 ngày</b>.
+        Mỗi lần chỉ cần 10 phút với mục <i>Ôn tập tổng hợp</i> là đủ giữ từ trong đầu.
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="screen" id="s-video">
+    <div class="crumb"><button onclick="go('home')">← Bài học</button> <span id="v-title"></span></div>
+    <div class="card">
+      <div class="stage" id="stage"></div>
+      <div class="bar"><i id="v-bar"></i></div>
+      <div class="row">
+        <button class="btn gold" id="v-play">⏸ Tạm dừng</button>
+        <button class="btn ghost sm" onclick="playScene(sceneIdx-1)">⏮</button>
+        <button class="btn ghost sm" onclick="playScene(sceneIdx+1)">⏭</button>
+        <button class="btn ghost sm" onclick="playScene(0)">🔁 Từ đầu</button>
+        <button class="btn leaf" style="margin-left:auto" onclick="go('vocab')">Học từ vựng →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOCAB -->
+  <section class="screen" id="s-vocab">
+    <div class="crumb"><button onclick="go('home')">← Bài học</button> <span id="w-title"></span></div>
+    <div class="card">
+      <h2 class="sec" style="margin-top:0">🔊 Chạm vào từ để nghe</h2>
+      <div class="words" id="words"></div>
+
+      <h2 class="sec">Hội thoại — chạm từng dòng để nghe</h2>
+      <div class="dlg" id="dialog"></div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn ghost sm" onclick="playDialog()">▶ Nghe cả đoạn</button>
+      </div>
+
+      <h2 class="sec">Mẫu câu</h2>
+      <div id="patterns"></div>
+
+      <h2 class="sec">🌏 Nhiệm vụ đời thực</h2>
+      <div class="note real" id="real"></div>
+
+      <h2 class="sec">Luyện phát âm</h2>
+      <div class="note" id="phonics"></div>
+
+      <h2 class="sec">Vận động cùng cô (TPR)</h2>
+      <div class="note" id="tpr"></div>
+
+      <div class="row" style="margin-top:20px">
+        <button class="btn ghost" onclick="go('video')">← Xem lại phim</button>
+        <button class="btn gold" onclick="startLessonQuiz()">Bắt đầu 20 câu hỏi →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHỌN BÀI ĐỂ ÔN -->
+  <section class="screen" id="s-pick">
+    <div class="crumb"><button onclick="go('home')">← Trang chủ</button> <span id="p-title"></span></div>
+    <div class="card">
+      <h2 class="sec" style="margin-top:0" id="p-head"></h2>
+      <p class="note" style="margin-bottom:14px" id="p-desc"></p>
+      <div class="picks" id="picks"></div>
+      <div class="row">
+        <button class="btn ghost sm" onclick="togglePicks(true)">Chọn tất cả</button>
+        <button class="btn ghost sm" onclick="togglePicks(false)">Bỏ chọn</button>
+        <button class="btn gold" style="margin-left:auto" id="p-start">Bắt đầu →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="screen" id="s-quiz">
+    <div class="crumb"><button onclick="go('home')">← Thoát</button> <span id="q-title"></span></div>
+    <div class="card">
+      <div class="lanterns" id="lanterns"></div>
+      <div class="qhead">
+        <div class="qnum" id="q-num"></div>
+        <div class="qnum">Điểm: <b id="q-score">0</b></div>
+      </div>
+      <div id="q-media"></div>
+      <div class="qtext" id="q-text"></div>
+      <div class="qvi" id="q-vi"></div>
+      <div class="opts" id="q-opts"></div>
+      <div class="fb" id="q-fb"></div>
+      <div class="row" style="margin-top:16px">
+        <button class="btn ghost sm" id="q-hear" hidden>🔊 Nghe lại</button>
+        <button class="btn gold" id="q-next" style="margin-left:auto" hidden>Câu tiếp →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLASHCARD NÓI -->
+  <section class="screen" id="s-flash">
+    <div class="crumb"><button onclick="go('home')">← Trang chủ</button> <span>🗣️ Thẻ ghi nhớ — luyện nói</span></div>
+    <div class="card">
+      <div class="qhead">
+        <div class="qnum" id="f-num"></div>
+        <div class="qnum">Nói được: <b id="f-ok">0</b></div>
+      </div>
+      <div class="flash" id="flash"></div>
+      <div class="row" style="margin-top:16px" id="f-controls"></div>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section class="screen" id="s-result">
+    <div class="card">
+      <div class="score">
+        <div class="stars" id="r-stars"></div>
+        <div class="big"><span id="r-score">0</span><span class="of"> / <span id="r-total">20</span></span></div>
+        <div class="msg" id="r-msg"></div>
+        <div id="r-msg-vi" style="color:#6C7495;font-weight:700"></div>
+      </div>
+      <div class="review" id="r-review"></div>
+      <div id="r-extra"></div>
+      <div class="row" style="margin-top:20px" id="r-actions"></div>
+    </div>
+  </section>
+</div>
+
+<script>
+/* ═══════ PHÔNG NỀN SÂN KHẤU ═══════ */
+const G=(id,a,b)=>`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>`;
+const BG={
+ meadow:G('g1','#8FD3FF','#D8F3FF')+`<rect width="100" height="100" fill="url(#g1)"/><circle cx="84" cy="16" r="9" fill="#FFD86B"/>
+  <path d="M0 76 Q25 58 50 74 T100 68 V100 H0Z" fill="#57C98D"/><path d="M0 86 Q30 74 60 88 T100 82 V100 H0Z" fill="#3AAE72"/>`,
+ forest:G('g2','#BFE9C9','#6FC98F')+`<rect width="100" height="100" fill="url(#g2)"/>
+  <path d="M12 78 L20 44 L28 78Z" fill="#2E9463"/><path d="M70 80 L80 38 L90 80Z" fill="#2E9463"/><rect y="80" width="100" height="20" fill="#3AAE72"/>`,
+ water:G('g3','#BDEAFF','#2E82C9')+`<rect width="100" height="100" fill="url(#g3)"/>
+  <path d="M0 46 Q12 40 25 46 T50 46 T75 46 T100 46 V100 H0Z" fill="#4FA6E0" opacity=".55"/>
+  <path d="M0 60 Q12 54 25 60 T50 60 T75 60 T100 60 V100 H0Z" fill="#2E82C9" opacity=".5"/>`,
+ room:G('g4','#FFE9C4','#FFD08F')+`<rect width="100" height="100" fill="url(#g4)"/><rect y="72" width="100" height="28" fill="#C98A55"/>
+  <rect x="8" y="16" width="26" height="22" rx="3" fill="#9FE0FF" stroke="#fff" stroke-width="2"/>`,
+ gym:G('g5','#FFC7DE','#FFE7A8')+`<rect width="100" height="100" fill="url(#g5)"/><rect y="76" width="100" height="24" fill="#F0A34D"/>
+  <circle cx="50" cy="40" r="30" fill="#fff" opacity=".28"/>`,
+ paper:`<rect width="100" height="100" fill="#FFF7E8"/><g stroke="#E7D9BC" stroke-width=".6">${Array.from({length:9},(_,i)=>`<line x1="${(i+1)*10}" y1="0" x2="${(i+1)*10}" y2="100"/><line x1="0" y1="${(i+1)*10}" x2="100" y2="${(i+1)*10}"/>`).join('')}</g>`,
+ night:G('g6','#1B2A6B','#4A5FC0')+`<rect width="100" height="100" fill="url(#g6)"/><circle cx="80" cy="18" r="7" fill="#FFF0BC"/>
+  <path d="M0 82 Q25 66 50 80 T100 74 V100 H0Z" fill="#22306E"/>`,
+ class:G('g7','#DCE9FF','#B6CCF5')+`<rect width="100" height="100" fill="url(#g7)"/><rect y="74" width="100" height="26" fill="#B98A5E"/>
+  <rect x="24" y="12" width="52" height="30" rx="3" fill="#2F7A5A" stroke="#F0E0BC" stroke-width="3"/>`,
+ home:G('g8','#FFE3EC','#FFC7D8')+`<rect width="100" height="100" fill="url(#g8)"/><rect y="74" width="100" height="26" fill="#D08A6A"/>
+  <path d="M18 44 L34 28 L50 44 Z" fill="#E86A7C"/><rect x="24" y="44" width="20" height="30" fill="#FFF0D8"/>`,
+ kitchen:G('g9','#FFF0D2','#FFD9A8')+`<rect width="100" height="100" fill="url(#g9)"/><rect y="70" width="100" height="30" fill="#E8B27A"/>
+  <rect x="6" y="56" width="88" height="8" rx="3" fill="#F5E2C0"/>`,
+ rain:G('ga','#94A9C9','#5C7295')+`<rect width="100" height="100" fill="url(#ga)"/>
+  <g stroke="#DCE9FF" stroke-width="1.4" stroke-linecap="round" opacity=".8">${Array.from({length:14},(_,i)=>`<line x1="${i*7+3}" y1="${(i%4)*10+8}" x2="${i*7}" y2="${(i%4)*10+18}"/>`).join('')}</g>
+  <path d="M0 80 Q30 70 60 82 T100 78 V100 H0Z" fill="#4C6280"/>`,
+ street:G('gb','#B6E3FF','#E8F6FF')+`<rect width="100" height="100" fill="url(#gb)"/><rect y="72" width="100" height="28" fill="#8A93A8"/>
+  <g fill="#FFF">${Array.from({length:6},(_,i)=>`<rect x="${i*18+4}" y="85" width="10" height="3" rx="1.5"/>`).join('')}</g>
+  <rect x="4" y="34" width="18" height="38" fill="#D9C1A0"/><rect x="78" y="28" width="18" height="44" fill="#C9D6E8"/>`
+};
+
+/* ═══════ 8 BÀI HỌC ═══════ */
+const LESSONS=[
+{id:'animals',badge:'🐘',theme:'t-leaf',title:'Animals and Their Homes',titleVi:'Con vật và ngôi nhà của chúng',
+ tags:['Pre A1 → A1','35–40 phút','CLIL: Khoa học'],
+ vocab:[
+  {w:'elephant',ipa:'/ˈel.ɪ.fənt/',vi:'con voi',e:'🐘',s:'The elephant is big.'},
+  {w:'monkey',ipa:'/ˈmʌŋ.ki/',vi:'con khỉ',e:'🐒',s:'The monkey is funny.'},
+  {w:'fish',ipa:'/fɪʃ/',vi:'con cá',e:'🐟',s:'The fish can swim.'},
+  {w:'bird',ipa:'/bɜːd/',vi:'con chim',e:'🐦',s:'The bird can fly.'},
+  {w:'bear',ipa:'/beər/',vi:'con gấu',e:'🐻',s:'The bear is brown.'},
+  {w:'rabbit',ipa:'/ˈræb.ɪt/',vi:'con thỏ',e:'🐰',s:'The rabbit can hop.'},
+  {w:'tree',ipa:'/triː/',vi:'cái cây',e:'🌳',s:'The monkey is in the tree.'},
+  {w:'river',ipa:'/ˈrɪv.ər/',vi:'dòng sông',e:'🏞️',s:'The fish is in the river.'},
+  {w:'cave',ipa:'/keɪv/',vi:'cái hang',e:'⛰️',s:'The bear is in the cave.'},
+  {w:'nest',ipa:'/nest/',vi:'cái tổ',e:'🪺',s:'The bird is in the nest.'}],
+ patterns:['What is it? — It is a bear.','Where does the bird live? — It lives in a nest.','Can the fish swim? — Yes, it can.'],
+ dialog:[{w:'🧒',en:'Look, Mai! What is it?',vi:'Nhìn kìa Mai! Con gì vậy?'},
+  {w:'👧',en:'It is a monkey. It lives in a tree.',vi:'Con khỉ đó. Nó sống trên cây.'},
+  {w:'🧒',en:'Can it climb?',vi:'Nó leo được không?'},
+  {w:'👧',en:'Yes, it can. Look at the bird!',vi:'Được chứ. Nhìn con chim kìa!'},
+  {w:'🧒',en:'Where does it live?',vi:'Nó sống ở đâu?'},
+  {w:'👧',en:'It lives in a nest. Come on!',vi:'Nó sống trong tổ. Đi nào!'}],
+ real:'🌳 <b>Ra công viên hoặc nhìn ra sân nhà.</b> Tìm 3 con vật thật (chim, mèo, cá, kiến…). Với mỗi con, nói to: <b>"It is a bird. It lives in a tree."</b> Chụp ảnh lại và khoe với cô giáo.',
+ phonics:'<b>Âm /iː/ dài</b> — tr<b>ee</b>, thr<b>ee</b>, gr<b>ee</b>n. Cười tươi, kéo dài âm "i".<br>Lỗi hay gặp: đọc <i>tree</i> thành "tri" ngắn. Hãy đọc <b>tri-i-i</b>.',
+ tpr:'🐘 voi: đưa tay làm vòi · 🐒 khỉ: gãi đầu, nhảy · 🐦 chim: vẫy hai tay · 🐰 thỏ: chụm tay làm tai, nhảy 3 cái · 🐻 gấu: gầm "grrr".',
+ hw:'Vẽ 3 con vật em thích. Dưới mỗi hình viết: <b>It is a ___ . It lives in a ___ .</b>',
+ parent:'Chỉ vào tranh và hỏi <b>"What is it?"</b>, để con trả lời cả câu. Con nói sai thì nói <b>"Almost! Look again."</b> chứ đừng nói "sai".',
+ scenes:[
+  {bg:'meadow',cap:'Welcome to the animal park!',vi:'Chào mừng đến công viên thú!',act:[{e:'🧒',x:22,y:70,s:60,a:'a-hop'},{e:'👧',x:36,y:72,s:56,a:'a-bob'},{e:'☁️',x:70,y:22,s:44,a:'a-drift'},{e:'🎪',x:82,y:64,s:60,a:'a-bob'}]},
+  {bg:'meadow',cap:'Look! It is an elephant. It is big.',vi:'Nhìn kìa! Con voi. Nó to lớn.',act:[{e:'🐘',x:50,y:60,s:110,a:'a-bob'},{e:'🌳',x:14,y:64,s:58,a:'a-sway'},{e:'🌳',x:88,y:66,s:54,a:'a-sway'}]},
+  {bg:'forest',cap:'The monkey lives in a tree.',vi:'Con khỉ sống trên cây.',act:[{e:'🌳',x:52,y:58,s:118,a:'a-sway'},{e:'🐒',x:52,y:44,s:56,a:'a-hop'},{e:'🍌',x:78,y:70,s:36,a:'a-bob'}]},
+  {bg:'water',cap:'The fish lives in the river. It can swim.',vi:'Con cá sống ở sông. Nó biết bơi.',act:[{e:'🐟',x:38,y:62,s:70,a:'a-drift'},{e:'🐠',x:66,y:72,s:50,a:'a-drift'},{e:'🫧',x:52,y:44,s:32,a:'a-bob'}]},
+  {bg:'meadow',cap:'The bird lives in a nest. It can fly.',vi:'Con chim sống trong tổ. Nó biết bay.',act:[{e:'🌳',x:30,y:60,s:100,a:'a-sway'},{e:'🪺',x:30,y:42,s:42,a:'a-bob'},{e:'🐦',x:68,y:34,s:50,a:'a-drift'}]},
+  {bg:'night',cap:'The bear lives in a cave. Good night!',vi:'Con gấu sống trong hang. Chúc ngủ ngon!',act:[{e:'⛰️',x:40,y:60,s:110,a:'a-bob'},{e:'🐻',x:64,y:70,s:62,a:'a-bob'},{e:'⭐',x:20,y:24,s:32,a:'a-spin'}]}],
+ quiz:[
+  {q:'Which one is an elephant?',vi:'Con nào là con voi?',opts:['🐘 elephant','🐒 monkey','🐟 fish','🐦 bird'],a:0},
+  {q:'What is it?',vi:'Đây là con gì?',media:'🐒',opts:['bear','monkey','rabbit','fish'],a:1,say:'monkey'},
+  {q:'What is it?',vi:'Đây là con gì?',media:'🐟',opts:['bird','bear','fish','tree'],a:2,say:'fish'},
+  {q:'Where does the bird live?',vi:'Con chim sống ở đâu?',media:'🐦',opts:['in a nest','in a cave','in the river','in a box'],a:0},
+  {q:'Where does the fish live?',vi:'Con cá sống ở đâu?',media:'🐟',opts:['in a tree','in the river','in a nest','in a cave'],a:1},
+  {q:'Where does the bear live?',vi:'Con gấu sống ở đâu?',media:'🐻',opts:['in a cave','in a nest','in the sky','in the river'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'rabbit',opts:['🐘','🐰','🐻','🐦'],a:1},
+  {q:'It is big. It has a long nose. What is it?',vi:'Nó to. Nó có mũi dài. Con gì?',opts:['🐰 rabbit','🐦 bird','🐘 elephant','🐟 fish'],a:2},
+  {q:'The monkey lives in a ______ .',vi:'Con khỉ sống trên ______ .',opts:['river','tree','nest','cave'],a:1},
+  {q:'Which animal can fly?',vi:'Con nào biết bay?',opts:['🐟 fish','🐻 bear','🐦 bird','🐘 elephant'],a:2},
+  {q:'Which animal can swim?',vi:'Con nào biết bơi?',opts:['🐟 fish','🐰 rabbit','🐦 bird','🌳 tree'],a:0},
+  {q:'Which one is NOT an animal?',vi:'Từ nào KHÔNG phải con vật?',opts:['bear','rabbit','river','monkey'],a:2},
+  {q:'A nest is a home for a ______ .',vi:'Cái tổ là nhà của ______ .',opts:['bird','bear','fish','elephant'],a:0},
+  {q:'The bear ______ in a cave.',vi:'Con gấu ______ trong hang.',opts:['live','lives','living','to live'],a:1},
+  {q:'How many legs does a rabbit have?',vi:'Con thỏ có mấy chân?',media:'🐰',opts:['two','four','six','eight'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'nest',opts:['🌳','🪺','⛰️','🏞️'],a:1},
+  {q:'True or False? The fish lives in a tree.',vi:'Đúng hay Sai? Cá sống trên cây.',media:'🐟🌳',opts:['True','False'],a:1},
+  {q:'Where do you see a nest?',vi:'Em thấy tổ chim ở đâu?',opts:['in a tree','in the river','in a bag','in a cave'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['It is a bear.','It a bear is.','Bear it is a.','Is a it bear.'],a:0},
+  {q:'A friend asks "What is it?" You see 🐘. You say:',vi:'Bạn hỏi "What is it?". Em thấy 🐘. Em nói:',opts:['It is an elephant.','I am an elephant.','It is a monkey.','It lives a tree.'],a:0}]},
+
+{id:'body',badge:'🤸',theme:'t-lotus',title:'Move Your Body!',titleVi:'Vận động cùng cơ thể',
+ tags:['Pre A1 → A1','35–40 phút','TPR'],
+ vocab:[
+  {w:'run',ipa:'/rʌn/',vi:'chạy',e:'🏃',s:'I can run fast.'},
+  {w:'jump',ipa:'/dʒʌmp/',vi:'nhảy',e:'🦘',s:'I can jump high.'},
+  {w:'clap',ipa:'/klæp/',vi:'vỗ tay',e:'👏',s:'Clap your hands!'},
+  {w:'walk',ipa:'/wɔːk/',vi:'đi bộ',e:'🚶',s:'I walk to school.'},
+  {w:'swim',ipa:'/swɪm/',vi:'bơi',e:'🏊',s:'I can swim in the pool.'},
+  {w:'dance',ipa:'/dɑːns/',vi:'nhảy múa',e:'💃',s:'We dance together.'},
+  {w:'hands',ipa:'/hændz/',vi:'đôi bàn tay',e:'🙌',s:'Wash your hands.'},
+  {w:'feet',ipa:'/fiːt/',vi:'đôi bàn chân',e:'🦶',s:'Stamp your feet!'},
+  {w:'head',ipa:'/hed/',vi:'cái đầu',e:'🧠',s:'Touch your head.'},
+  {w:'arms',ipa:'/ɑːmz/',vi:'hai cánh tay',e:'💪',s:'Open your arms.'}],
+ patterns:['I can jump. / I can’t fly.','Can you swim? — Yes, I can. / No, I can’t.','Clap your hands!'],
+ dialog:[{w:'👩‍🏫',en:'Good morning! Stand up, please.',vi:'Chào buổi sáng! Mời cả lớp đứng lên.'},
+  {w:'🧒',en:'Good morning, teacher!',vi:'Chào cô ạ!'},
+  {w:'👩‍🏫',en:'Clap your hands. One, two, three!',vi:'Vỗ tay nào. Một, hai, ba!'},
+  {w:'👧',en:'Can I jump too?',vi:'Con nhảy được không ạ?'},
+  {w:'👩‍🏫',en:'Yes, you can. Jump three times!',vi:'Được chứ. Nhảy 3 cái nào!'},
+  {w:'🧒',en:'That is fun!',vi:'Vui quá đi!'}],
+ real:'🏠 <b>Ở nhà, làm "lớp thể dục tiếng Anh" 5 phút.</b> Em làm cô giáo, bố mẹ làm học sinh. Em hô: <b>"Run! Jump! Clap your hands! Freeze!"</b> — bố mẹ phải làm theo. Đổi vai và chơi lại.',
+ phonics:'<b>Âm /æ/</b> — cl<b>a</b>p, h<b>a</b>nd, d<b>a</b>nce. Mở miệng rộng như đang cười to.<br>Lỗi hay gặp: đọc <i>clap</i> thành "cláp". Hãy hạ hàm: <b>c-lææp</b>.',
+ tpr:'<b>Run!</b> chạy tại chỗ · <b>Jump!</b> nhảy 3 cái · <b>Clap!</b> vỗ 5 lần · <b>Swim!</b> quạt tay · <b>Dance!</b> lắc lư · <b>Freeze!</b> đứng im.',
+ hw:'Quay video 20 giây: em vừa làm động tác vừa nói <b>"I can run. I can jump. I can clap."</b>',
+ parent:'Chơi <b>Simon Says</b> 5 phút mỗi tối. Có "Simon says" mới được làm theo — vừa vui vừa nhớ từ rất nhanh.',
+ scenes:[
+  {bg:'gym',cap:'Hello! Let’s move our body!',vi:'Xin chào! Cùng vận động nào!',act:[{e:'🧒',x:30,y:66,s:64,a:'a-hop'},{e:'👧',x:52,y:68,s:60,a:'a-bob'},{e:'🧑',x:72,y:66,s:58,a:'a-hop'}]},
+  {bg:'gym',cap:'I can run. Run, run, run!',vi:'Tớ chạy được. Chạy nào!',act:[{e:'🏃',x:44,y:66,s:104,a:'a-drift'},{e:'💨',x:20,y:70,s:42,a:'a-bob'}]},
+  {bg:'gym',cap:'I can jump. Jump high!',vi:'Tớ nhảy được. Nhảy cao nào!',act:[{e:'🦘',x:50,y:62,s:100,a:'a-hop'},{e:'⭐',x:78,y:28,s:36,a:'a-spin'}]},
+  {bg:'class',cap:'Clap your hands! One, two, three!',vi:'Vỗ tay nào! Một, hai, ba!',act:[{e:'👏',x:50,y:52,s:100,a:'a-bob'},{e:'🎵',x:22,y:34,s:38,a:'a-drift'},{e:'🎵',x:78,y:38,s:34,a:'a-drift'}]},
+  {bg:'water',cap:'Can you swim? Yes, I can!',vi:'Bạn biết bơi không? Có, tớ biết!',act:[{e:'🏊',x:46,y:62,s:96,a:'a-drift'},{e:'🫧',x:72,y:48,s:32,a:'a-bob'}]},
+  {bg:'gym',cap:'Now dance with me. Great job!',vi:'Giờ nhảy cùng tớ nào. Giỏi lắm!',act:[{e:'💃',x:36,y:64,s:86,a:'a-sway'},{e:'🕺',x:64,y:64,s:86,a:'a-sway'},{e:'🎉',x:86,y:30,s:42,a:'a-pop'}]}],
+ quiz:[
+  {q:'What is he doing?',vi:'Bạn ấy đang làm gì?',media:'🏃',opts:['run','swim','clap','sleep'],a:0,say:'run'},
+  {q:'What is she doing?',vi:'Bạn ấy đang làm gì?',media:'🏊',opts:['walk','swim','jump','dance'],a:1,say:'swim'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'jump',opts:['🚶','🦘','👏','💃'],a:1},
+  {q:'Clap your ______ .',vi:'Vỗ ______ của em.',media:'👏',opts:['feet','head','hands','arms'],a:2},
+  {q:'Which body part do you use to walk?',vi:'Em dùng bộ phận nào để đi?',opts:['hands','feet','head','ears'],a:1},
+  {q:'"Can you swim?" — Say YES.',vi:'Trả lời CÓ.',opts:['Yes, I can.','Yes, I am.','No, I can.','Yes, I do can.'],a:0},
+  {q:'"Can you fly?" — Say NO.',vi:'Trả lời KHÔNG.',opts:['No, I am not.','No, I can’t.','No, I don’t can.','Not, I can.'],a:1},
+  {q:'I ______ jump very high.',vi:'Tớ ______ nhảy rất cao.',opts:['can','am','is','do'],a:0},
+  {q:'Choose the action word.',vi:'Chọn từ chỉ hành động.',opts:['head','dance','feet','arms'],a:1},
+  {q:'Which one is NOT a body part?',vi:'Từ nào KHÔNG phải bộ phận cơ thể?',opts:['hands','feet','clap','head'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'hands',opts:['🦶','🙌','🧠','💪'],a:1},
+  {q:'Touch your ______ .',vi:'Chạm vào ______ .',media:'🧠',opts:['head','feet','hands','arms'],a:0},
+  {q:'How many hands do you have?',vi:'Em có mấy bàn tay?',media:'🙌',opts:['one','two','three','four'],a:1},
+  {q:'We move to music. We ______ .',vi:'Nhún nhảy theo nhạc là ______ .',media:'💃',opts:['read','dance','eat','sleep'],a:1},
+  {q:'True or False? A fish can walk.',vi:'Đúng hay Sai? Cá biết đi bộ.',media:'🐟',opts:['True','False'],a:1},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['I can clap my hands.','I clap can hands my.','Can I hands clap.','My hands I can.'],a:0},
+  {q:'Slow or fast? 🚶 walk',vi:'Chậm hay nhanh?',opts:['fast','slow'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'feet',opts:['💪','🧠','🦶','🙌'],a:2},
+  {q:'The teacher says "Jump!" You ______ .',vi:'Cô nói "Jump!". Em ______ .',opts:['sit down','jump up','clap slowly','go home'],a:1},
+  {q:'Finish the song: "Clap your hands, stamp your ______ !"',vi:'Hoàn thành bài hát.',opts:['head','feet','arms','nose'],a:1}]},
+
+{id:'shapes',badge:'🔺',theme:'t-gold',title:'Shapes Around Me',titleVi:'Hình khối quanh em',
+ tags:['Pre A1 → A1','35–40 phút','CLIL: Toán'],
+ vocab:[
+  {w:'circle',ipa:'/ˈsɜː.kəl/',vi:'hình tròn',e:'🔵',s:'The sun is a circle.'},
+  {w:'square',ipa:'/skweər/',vi:'hình vuông',e:'🟦',s:'The window is a square.'},
+  {w:'triangle',ipa:'/ˈtraɪ.æŋ.ɡəl/',vi:'hình tam giác',e:'🔺',s:'The roof is a triangle.'},
+  {w:'rectangle',ipa:'/ˈrek.tæŋ.ɡəl/',vi:'hình chữ nhật',e:'🟨',s:'The door is a rectangle.'},
+  {w:'star',ipa:'/stɑːr/',vi:'hình ngôi sao',e:'⭐',s:'I see a star at night.'},
+  {w:'heart',ipa:'/hɑːt/',vi:'hình trái tim',e:'❤️',s:'I draw a red heart.'},
+  {w:'side',ipa:'/saɪd/',vi:'cạnh',e:'📏',s:'A square has four sides.'},
+  {w:'corner',ipa:'/ˈkɔː.nər/',vi:'góc',e:'📐',s:'A triangle has three corners.'},
+  {w:'big',ipa:'/bɪɡ/',vi:'to',e:'🐘',s:'This circle is big.'},
+  {w:'small',ipa:'/smɔːl/',vi:'nhỏ',e:'🐜',s:'That circle is small.'}],
+ patterns:['What shape is it? — It is a circle.','How many sides? — It has four sides.','This one is big. That one is small.'],
+ dialog:[{w:'👩‍🏫',en:'What shape is the clock?',vi:'Cái đồng hồ hình gì?'},
+  {w:'🧒',en:'It is a circle.',vi:'Nó là hình tròn ạ.'},
+  {w:'👩‍🏫',en:'Good! And the door?',vi:'Giỏi lắm! Còn cánh cửa?'},
+  {w:'👧',en:'It is a rectangle. It has four sides.',vi:'Hình chữ nhật ạ. Nó có bốn cạnh.'},
+  {w:'👩‍🏫',en:'Excellent! Now find a triangle.',vi:'Xuất sắc! Giờ tìm một hình tam giác.'},
+  {w:'🧒',en:'The roof! It has three corners.',vi:'Mái nhà ạ! Nó có ba góc.'}],
+ real:'🔎 <b>Đi một vòng quanh nhà, tìm 5 đồ vật.</b> Nói tên hình bằng tiếng Anh: <b>"The plate is a circle. The door is a rectangle."</b> Chụp lại 5 tấm và làm một "shape album" nhỏ.',
+ phonics:'<b>Cụm /skw/</b> — <b>squ</b>are, <b>squ</b>irrel. Đọc liền 3 âm s-k-w, không thêm nguyên âm giữa.<br>Lỗi hay gặp: đọc "sờ-que". Hãy đọc <b>skwea</b>.',
+ tpr:'Vẽ hình trong không khí bằng ngón trỏ: <b>circle</b> 1 vòng · <b>square</b> 4 nét · <b>triangle</b> 3 nét · <b>star</b> 5 nét nhanh. Vừa vẽ vừa đếm to.',
+ hw:'Tìm 5 đồ vật trong nhà. Vẽ lại và viết: <b>The clock is a circle.</b>',
+ parent:'Chơi <b>"I spy a shape"</b> khi ăn cơm: "I spy a circle!" — con tìm đồ vật hình tròn và nói <i>"The plate is a circle."</i>',
+ scenes:[
+  {bg:'paper',cap:'Hello! Let’s find shapes today.',vi:'Xin chào! Hôm nay ta đi tìm hình nhé.',act:[{e:'🧒',x:26,y:64,s:62,a:'a-bob'},{e:'📐',x:52,y:52,s:54,a:'a-sway'},{e:'✏️',x:78,y:62,s:50,a:'a-bob'}]},
+  {bg:'paper',cap:'This is a circle. It is round.',vi:'Đây là hình tròn. Nó tròn trịa.',act:[{e:'🔵',x:36,y:52,s:104,a:'a-spin'},{e:'🕐',x:70,y:58,s:64,a:'a-bob'}]},
+  {bg:'paper',cap:'A square has four sides.',vi:'Hình vuông có bốn cạnh.',act:[{e:'🟦',x:40,y:54,s:102,a:'a-bob'},{e:'4️⃣',x:74,y:52,s:58,a:'a-pop'}]},
+  {bg:'paper',cap:'A triangle has three corners.',vi:'Hình tam giác có ba góc.',act:[{e:'🔺',x:40,y:56,s:102,a:'a-bob'},{e:'3️⃣',x:74,y:52,s:58,a:'a-pop'}]},
+  {bg:'room',cap:'Look! The door is a rectangle.',vi:'Nhìn kìa! Cánh cửa là hình chữ nhật.',act:[{e:'🚪',x:36,y:56,s:102,a:'a-bob'},{e:'🪟',x:72,y:44,s:68,a:'a-bob'}]},
+  {bg:'night',cap:'One big star. Good job today!',vi:'Một ngôi sao lớn. Hôm nay em giỏi lắm!',act:[{e:'⭐',x:50,y:46,s:108,a:'a-spin'},{e:'🌙',x:82,y:26,s:48,a:'a-bob'},{e:'🎉',x:20,y:60,s:50,a:'a-pop'}]}],
+ quiz:[
+  {q:'What shape is it?',vi:'Đây là hình gì?',media:'🔵',opts:['square','circle','triangle','star'],a:1,say:'circle'},
+  {q:'What shape is it?',vi:'Đây là hình gì?',media:'🔺',opts:['triangle','circle','heart','rectangle'],a:0,say:'triangle'},
+  {q:'How many sides does a square have?',vi:'Hình vuông có mấy cạnh?',media:'🟦',opts:['three','four','five','six'],a:1},
+  {q:'How many corners does a triangle have?',vi:'Hình tam giác có mấy góc?',media:'🔺',opts:['two','three','four','five'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'star',opts:['❤️','⭐','🔵','🟦'],a:1},
+  {q:'The sun is a ______ .',vi:'Mặt trời là hình ______ .',media:'☀️',opts:['circle','square','triangle','star'],a:0},
+  {q:'The door is a ______ .',vi:'Cánh cửa là hình ______ .',media:'🚪',opts:['circle','rectangle','triangle','heart'],a:1},
+  {q:'Which shape is round?',vi:'Hình nào tròn?',opts:['🟦','🔺','🔵','⭐'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'square',opts:['🟦','🔺','❤️','⭐'],a:0},
+  {q:'A circle has ______ corners.',vi:'Hình tròn có ______ góc.',media:'🔵',opts:['no','three','four','five'],a:0},
+  {q:'Which one is NOT a shape word?',vi:'Từ nào KHÔNG phải tên hình?',opts:['circle','square','rabbit','star'],a:2},
+  {q:'🐘 is big. 🐜 is ______ .',vi:'🐘 to. 🐜 thì ______ .',opts:['big','small','round','long'],a:1},
+  {q:'Which shape has 5 points?',vi:'Hình nào có 5 cánh?',opts:['🔵 circle','⭐ star','🟦 square','🔺 triangle'],a:1},
+  {q:'The roof of a house is often a ______ .',vi:'Mái nhà thường là hình ______ .',media:'🏠',opts:['circle','triangle','heart','star'],a:1},
+  {q:'True or False? A rectangle has four sides.',vi:'Đúng hay Sai?',media:'🟨',opts:['True','False'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['It is a circle.','It circle a is.','A is it circle.','Circle it a is.'],a:0},
+  {q:'A wheel is a ______ .',vi:'Bánh xe là hình ______ .',media:'🛞',opts:['square','circle','triangle','star'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'heart',opts:['⭐','🔺','❤️','🟦'],a:2},
+  {q:'A square and a rectangle both have ______ sides.',vi:'Cả hai đều có ______ cạnh.',opts:['three','four','five','six'],a:1},
+  {q:'Friend asks "What shape is it?" You see ⭐. You say:',vi:'Em nói:',opts:['It is a star.','I am a star.','It is a square.','Star it is a.'],a:0}]},
+
+{id:'school',badge:'🎒',theme:'t-sky',title:'My School Things',titleVi:'Đồ dùng học tập của em',
+ tags:['Pre A1 → A1','35–40 phút','Đời thực: Lớp học'],
+ vocab:[
+  {w:'pencil',ipa:'/ˈpen.səl/',vi:'bút chì',e:'✏️',s:'This is my pencil.'},
+  {w:'book',ipa:'/bʊk/',vi:'quyển sách',e:'📕',s:'Open your book, please.'},
+  {w:'ruler',ipa:'/ˈruː.lər/',vi:'thước kẻ',e:'📏',s:'I draw a line with a ruler.'},
+  {w:'eraser',ipa:'/ɪˈreɪ.zər/',vi:'cục tẩy',e:'🩹',s:'May I have your eraser?'},
+  {w:'school bag',ipa:'/ˈskuːl bæɡ/',vi:'cặp sách',e:'🎒',s:'My school bag is heavy.'},
+  {w:'desk',ipa:'/desk/',vi:'bàn học',e:'🪑',s:'My book is on the desk.'},
+  {w:'chair',ipa:'/tʃeər/',vi:'cái ghế',e:'💺',s:'Sit on your chair.'},
+  {w:'board',ipa:'/bɔːd/',vi:'bảng',e:'📋',s:'Look at the board.'},
+  {w:'crayon',ipa:'/ˈkreɪ.ɒn/',vi:'bút sáp màu',e:'🖍️',s:'I colour with crayons.'},
+  {w:'notebook',ipa:'/ˈnəʊt.bʊk/',vi:'vở',e:'📓',s:'Write in your notebook.'}],
+ patterns:['What is this? — It is a ruler.','Is this your book? — Yes, it is.','How many pencils? — Five pencils.','Open your book, please.'],
+ dialog:[{w:'👩‍🏫',en:'Good morning, class. Open your books.',vi:'Chào cả lớp. Mở sách ra nào.'},
+  {w:'🧒',en:'Teacher, what is this?',vi:'Thưa cô, cái này là gì ạ?'},
+  {w:'👩‍🏫',en:'It is a ruler. You draw lines with it.',vi:'Đó là cái thước. Con dùng nó để kẻ.'},
+  {w:'👧',en:'Nam, is this your eraser?',vi:'Nam ơi, cục tẩy này của bạn à?'},
+  {w:'🧒',en:'Yes, it is. Thank you, Mai!',vi:'Đúng rồi. Cảm ơn Mai!'},
+  {w:'👧',en:'You’re welcome.',vi:'Không có gì.'}],
+ real:'🎒 <b>Mở cặp sách của em ngay bây giờ.</b> Lấy ra 5 món, xếp lên bàn, chỉ từng món và nói: <b>"This is a pencil. This is my notebook."</b> Sau đó đếm: <b>"One, two, three pencils."</b>',
+ phonics:'<b>Âm /ʊ/ ngắn</b> — b<b>oo</b>k, l<b>oo</b>k, g<b>oo</b>d. Môi tròn nhỏ, âm rất ngắn.<br>Lỗi hay gặp: đọc <i>book</i> thành "buuk" dài như <i>boot</i>. Hãy bật nhanh: <b>bʊk</b>.',
+ tpr:'Cô hô – trò làm: <b>Open your book!</b> mở sách · <b>Close your book!</b> gấp sách · <b>Take your pencil!</b> giơ bút chì lên · <b>Point to the board!</b> chỉ lên bảng · <b>Sit down!</b> ngồi xuống.',
+ hw:'Vẽ chiếc cặp của em và 5 món bên trong. Ghi tên tiếng Anh cạnh mỗi món.',
+ parent:'Buổi tối khi con soạn cặp, hỏi từng món: <b>"What is this?"</b> Con trả lời <i>"It is a notebook."</i> Vừa soạn cặp vừa học, không tốn thêm phút nào.',
+ scenes:[
+  {bg:'class',cap:'Good morning! Welcome to class 3A.',vi:'Chào buổi sáng! Chào mừng đến lớp 3A.',act:[{e:'👩‍🏫',x:26,y:64,s:66,a:'a-bob'},{e:'🧒',x:54,y:70,s:56,a:'a-hop'},{e:'👧',x:72,y:70,s:54,a:'a-bob'}]},
+  {bg:'class',cap:'What is this? It is a pencil.',vi:'Cái này là gì? Đó là bút chì.',act:[{e:'✏️',x:48,y:52,s:104,a:'a-sway'},{e:'👩‍🏫',x:80,y:66,s:60,a:'a-bob'}]},
+  {bg:'class',cap:'This is a ruler. I draw a line.',vi:'Đây là thước kẻ. Tớ kẻ một đường.',act:[{e:'📏',x:44,y:54,s:100,a:'a-sway'},{e:'📓',x:74,y:64,s:60,a:'a-bob'}]},
+  {bg:'class',cap:'How many pencils? One, two, three!',vi:'Có mấy bút chì? Một, hai, ba!',act:[{e:'✏️',x:32,y:56,s:70,a:'a-bob'},{e:'✏️',x:50,y:56,s:70,a:'a-bob'},{e:'✏️',x:68,y:56,s:70,a:'a-bob'},{e:'3️⃣',x:86,y:34,s:48,a:'a-pop'}]},
+  {bg:'class',cap:'Is this your eraser? Yes, it is!',vi:'Cục tẩy này của bạn à? Đúng rồi!',act:[{e:'🩹',x:42,y:52,s:88,a:'a-shake'},{e:'🧒',x:22,y:68,s:56,a:'a-bob'},{e:'👧',x:70,y:68,s:56,a:'a-bob'}]},
+  {bg:'class',cap:'Put everything in your school bag. See you!',vi:'Cất hết vào cặp nhé. Hẹn gặp lại!',act:[{e:'🎒',x:50,y:56,s:108,a:'a-bob'},{e:'👋',x:80,y:40,s:52,a:'a-shake'}]}],
+ quiz:[
+  {q:'What is this?',vi:'Đây là gì?',media:'📕',opts:['book','ruler','chair','crayon'],a:0,say:'book'},
+  {q:'What is this?',vi:'Đây là gì?',media:'📏',opts:['pencil','ruler','desk','board'],a:1,say:'ruler'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'pencil',opts:['📏','✏️','🎒','📓'],a:1},
+  {q:'Which one do you write with?',vi:'Em viết bằng cái gì?',opts:['✏️ pencil','💺 chair','🎒 school bag','📋 board'],a:0},
+  {q:'Which one do you draw a straight line with?',vi:'Kẻ đường thẳng bằng gì?',opts:['eraser','ruler','notebook','chair'],a:1},
+  {q:'I put my books in my ______ .',vi:'Em bỏ sách vào ______ .',media:'🎒',opts:['chair','school bag','board','ruler'],a:1},
+  {q:'How many pencils?',vi:'Có mấy cây bút chì?',media:'✏️✏️✏️',opts:['two','three','four','five'],a:1},
+  {q:'Which one is NOT a school thing?',vi:'Từ nào KHÔNG phải đồ dùng học tập?',opts:['pencil','ruler','banana','notebook'],a:2},
+  {q:'"Is this your book?" — Say YES.',vi:'Trả lời CÓ.',opts:['Yes, it is.','Yes, I am.','Yes, it does.','Yes, this is.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'chair',opts:['💺','📓','🖍️','📏'],a:0},
+  {q:'I sit on a ______ .',vi:'Em ngồi trên ______ .',media:'💺',opts:['desk','chair','board','bag'],a:1},
+  {q:'The teacher writes on the ______ .',vi:'Cô giáo viết lên ______ .',media:'📋',opts:['board','chair','bag','pencil'],a:0},
+  {q:'I colour my picture with ______ .',vi:'Em tô tranh bằng ______ .',media:'🖍️',opts:['a ruler','crayons','a chair','a bag'],a:1},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['It is a notebook.','It notebook a is.','A it is notebook.','Notebook a it is.'],a:0},
+  {q:'How do you ask the name of a thing?',vi:'Hỏi tên đồ vật thế nào?',opts:['What is this?','Where is this?','How is this?','Who is this?'],a:0},
+  {q:'Be polite: "______ your book, please."',vi:'Nói lịch sự.',opts:['Open','Eat','Run','Sleep'],a:0},
+  {q:'True or False? A ruler is round.',vi:'Đúng hay Sai? Thước kẻ hình tròn.',media:'📏',opts:['True','False'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'notebook',opts:['📓','💺','📋','🎒'],a:0},
+  {q:'You make a mistake. You use an ______ .',vi:'Viết sai thì em dùng ______ .',opts:['eraser','apple','arm','elephant'],a:0},
+  {q:'A friend asks "What is this?" You hold 🎒. You say:',vi:'Em nói:',opts:['It is a school bag.','I am a school bag.','It is a chair.','This a bag is.'],a:0}]},
+
+{id:'family',badge:'👨‍👩‍👧',theme:'t-plum',title:'My Family',titleVi:'Gia đình của em',
+ tags:['Pre A1 → A1','35–40 phút','Đời thực: Ở nhà'],
+ vocab:[
+  {w:'father',ipa:'/ˈfɑː.ðər/',vi:'bố',e:'👨',s:'This is my father.'},
+  {w:'mother',ipa:'/ˈmʌð.ər/',vi:'mẹ',e:'👩',s:'My mother is kind.'},
+  {w:'brother',ipa:'/ˈbrʌð.ər/',vi:'anh / em trai',e:'👦',s:'I play with my brother.'},
+  {w:'sister',ipa:'/ˈsɪs.tər/',vi:'chị / em gái',e:'👧',s:'My sister is six.'},
+  {w:'grandfather',ipa:'/ˈɡræn.fɑː.ðər/',vi:'ông',e:'👴',s:'My grandfather is old.'},
+  {w:'grandmother',ipa:'/ˈɡræn.mʌð.ər/',vi:'bà',e:'👵',s:'My grandmother cooks well.'},
+  {w:'family',ipa:'/ˈfæm.əl.i/',vi:'gia đình',e:'👨‍👩‍👧',s:'I love my family.'},
+  {w:'tall',ipa:'/tɔːl/',vi:'cao',e:'📐',s:'My father is tall.'},
+  {w:'kind',ipa:'/kaɪnd/',vi:'tốt bụng',e:'💗',s:'My mother is kind.'},
+  {w:'young',ipa:'/jʌŋ/',vi:'trẻ',e:'🧒',s:'My sister is young.'}],
+ patterns:['This is my mother.','Who is he? — He is my brother.','She is kind. He is tall.','I love my family.'],
+ dialog:[{w:'👧',en:'Nam, is this your family photo?',vi:'Nam ơi, đây là ảnh gia đình bạn à?'},
+  {w:'🧒',en:'Yes. This is my father. He is tall.',vi:'Ừ. Đây là bố tớ. Bố tớ cao.'},
+  {w:'👧',en:'Who is she?',vi:'Còn đây là ai?'},
+  {w:'🧒',en:'She is my mother. She is very kind.',vi:'Đó là mẹ tớ. Mẹ tớ rất tốt bụng.'},
+  {w:'👧',en:'And the little girl?',vi:'Còn bé gái này?'},
+  {w:'🧒',en:'She is my sister. I love my family!',vi:'Đó là em gái tớ. Tớ yêu gia đình mình!'}],
+ real:'🖼️ <b>Lấy một tấm ảnh gia đình thật.</b> Chỉ vào từng người và giới thiệu bằng tiếng Anh cho bố mẹ nghe: <b>"This is my father. He is tall. This is my grandmother. She is kind."</b> Nói được 4 người là giỏi rồi!',
+ phonics:'<b>Âm /ð/</b> — fa<b>th</b>er, mo<b>th</b>er, bro<b>th</b>er. Đặt nhẹ đầu lưỡi giữa hai hàm răng rồi rung giọng.<br>Lỗi hay gặp: đọc thành "fa-dơ" hoặc "fa-zơ". Hãy để lưỡi thò ra một chút: <b>fa-ðə</b>.',
+ tpr:'👨 father: vuốt cằm như có râu · 👩 mother: hai tay ôm má · 👴 grandfather: chống gậy đi chậm · 👵 grandmother: làm động tác nấu ăn · 👨‍👩‍👧 family: dang tay ôm cả nhóm.',
+ hw:'Vẽ cây gia đình của em với 4 người. Dưới mỗi người viết: <b>This is my ___ . He/She is ___ .</b>',
+ parent:'Mở album ảnh cũ, chỉ vào từng người và hỏi <b>"Who is he?" / "Who is she?"</b>. Con trả lời cả câu. Vừa ôn tiếng Anh vừa kể chuyện gia đình.',
+ scenes:[
+  {bg:'home',cap:'This is my family. Say hello!',vi:'Đây là gia đình tớ. Chào đi nào!',act:[{e:'👨',x:26,y:64,s:64,a:'a-bob'},{e:'👩',x:44,y:64,s:64,a:'a-bob'},{e:'🧒',x:60,y:70,s:52,a:'a-hop'},{e:'👧',x:74,y:70,s:50,a:'a-bob'}]},
+  {bg:'home',cap:'This is my father. He is tall.',vi:'Đây là bố tớ. Bố tớ cao.',act:[{e:'👨',x:44,y:58,s:110,a:'a-bob'},{e:'📐',x:74,y:52,s:52,a:'a-sway'}]},
+  {bg:'kitchen',cap:'This is my mother. She is kind.',vi:'Đây là mẹ tớ. Mẹ rất tốt bụng.',act:[{e:'👩',x:42,y:56,s:104,a:'a-bob'},{e:'💗',x:70,y:40,s:52,a:'a-pop'},{e:'🍲',x:72,y:66,s:56,a:'a-bob'}]},
+  {bg:'kitchen',cap:'My grandmother cooks very well.',vi:'Bà tớ nấu ăn rất ngon.',act:[{e:'👵',x:40,y:58,s:100,a:'a-bob'},{e:'🍜',x:70,y:62,s:64,a:'a-bob'},{e:'♨️',x:70,y:44,s:40,a:'a-drift'}]},
+  {bg:'meadow',cap:'I play with my brother and sister.',vi:'Tớ chơi với anh và em gái.',act:[{e:'👦',x:34,y:66,s:78,a:'a-hop'},{e:'👧',x:60,y:68,s:74,a:'a-hop'},{e:'⚽',x:80,y:74,s:46,a:'a-spin'}]},
+  {bg:'night',cap:'I love my family. Good night!',vi:'Tớ yêu gia đình mình. Chúc ngủ ngon!',act:[{e:'👨‍👩‍👧',x:46,y:60,s:104,a:'a-bob'},{e:'❤️',x:76,y:38,s:52,a:'a-pop'},{e:'🌙',x:20,y:26,s:44,a:'a-bob'}]}],
+ quiz:[
+  {q:'Who is she?',vi:'Đây là ai?',media:'👩',opts:['father','mother','brother','grandfather'],a:1,say:'mother'},
+  {q:'Who is he?',vi:'Đây là ai?',media:'👨',opts:['father','sister','mother','grandmother'],a:0,say:'father'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'sister',opts:['👦','👧','👴','👵'],a:1},
+  {q:'My father’s father is my ______ .',vi:'Bố của bố em là ______ .',media:'👴',opts:['brother','grandfather','uncle','father'],a:1},
+  {q:'This is my ______ . He is a boy.',vi:'Đây là ______ của em. Là con trai.',media:'👦',opts:['sister','mother','brother','grandmother'],a:2},
+  {q:'My mother’s mother is my ______ .',vi:'Mẹ của mẹ em là ______ .',media:'👵',opts:['grandmother','sister','mother','aunt'],a:0},
+  {q:'Father, mother, brother and sister are my ______ .',vi:'Tất cả họ là ______ của em.',opts:['friends','family','teachers','neighbours'],a:1},
+  {q:'Which one is NOT a family word?',vi:'Từ nào KHÔNG phải người thân?',opts:['mother','sister','monkey','brother'],a:2},
+  {q:'My sister is 6 years old. She is ______ .',vi:'Em gái em 6 tuổi. Em ấy ______ .',opts:['old','young','tall','big'],a:1},
+  {q:'Basketball players are very ______ .',vi:'Cầu thủ bóng rổ rất ______ .',media:'🏀',opts:['small','tall','young','kind'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'grandmother',opts:['👩','👵','👧','👨'],a:1},
+  {q:'She helps everybody. She is ______ .',vi:'Cô ấy giúp mọi người. Cô ấy ______ .',media:'💗',opts:['kind','tall','young','small'],a:0},
+  {q:'How many people? 👨👩👧',vi:'Có mấy người?',media:'👨👩👧',opts:['two','three','four','five'],a:1},
+  {q:'True or False? My brother is a girl.',vi:'Đúng hay Sai?',opts:['True','False'],a:1},
+  {q:'"This ______ my sister."',vi:'Điền từ đúng.',opts:['is','are','am','be'],a:0},
+  {q:'I ______ my family.',vi:'Em ______ gia đình mình.',media:'❤️',opts:['love','eat','run','open'],a:0},
+  {q:'"Who is he?" — Choose the answer.',vi:'Chọn câu trả lời.',opts:['He is my brother.','She is my brother.','It is my brother.','He are my brother.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'family',opts:['🎒','👨‍👩‍👧','🐘','📏'],a:1},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['This is my father.','This my father is.','My father this is.','Is this my father he.'],a:0},
+  {q:'You show a photo to a friend. You say:',vi:'Em khoe ảnh và nói:',opts:['This is my family.','This is my school bag.','I am a family.','Family is a this.'],a:0}]},
+
+{id:'food',badge:'🍜',theme:'t-clay',title:'Food I Like',titleVi:'Món ăn em thích',
+ tags:['Pre A1 → A1','35–40 phút','Đời thực: Bữa ăn'],
+ vocab:[
+  {w:'rice',ipa:'/raɪs/',vi:'cơm',e:'🍚',s:'I eat rice every day.'},
+  {w:'noodles',ipa:'/ˈnuː.dəlz/',vi:'mì / phở',e:'🍜',s:'I like noodles.'},
+  {w:'milk',ipa:'/mɪlk/',vi:'sữa',e:'🥛',s:'I drink milk in the morning.'},
+  {w:'water',ipa:'/ˈwɔː.tər/',vi:'nước',e:'💧',s:'Please give me some water.'},
+  {w:'apple',ipa:'/ˈæp.əl/',vi:'quả táo',e:'🍎',s:'An apple is red.'},
+  {w:'banana',ipa:'/bəˈnɑː.nə/',vi:'quả chuối',e:'🍌',s:'The banana is yellow.'},
+  {w:'bread',ipa:'/bred/',vi:'bánh mì',e:'🍞',s:'I eat bread for breakfast.'},
+  {w:'egg',ipa:'/eɡ/',vi:'quả trứng',e:'🥚',s:'I like eggs.'},
+  {w:'soup',ipa:'/suːp/',vi:'canh / súp',e:'🥣',s:'The soup is hot.'},
+  {w:'chicken',ipa:'/ˈtʃɪk.ɪn/',vi:'thịt gà',e:'🍗',s:'Chicken is my favourite.'}],
+ patterns:['I like rice. / I don’t like soup.','Do you like milk? — Yes, I do. / No, I don’t.','What is your favourite food? — My favourite food is noodles.'],
+ dialog:[{w:'👩',en:'Nam, do you like noodles?',vi:'Nam ơi, con thích ăn phở không?'},
+  {w:'🧒',en:'Yes, I do. I love noodles!',vi:'Có ạ. Con thích phở lắm!'},
+  {w:'👩',en:'Do you like soup?',vi:'Con thích canh không?'},
+  {w:'🧒',en:'No, I don’t. But I like chicken.',vi:'Con không thích. Nhưng con thích gà.'},
+  {w:'👩',en:'What is your favourite food?',vi:'Món con thích nhất là gì?'},
+  {w:'🧒',en:'My favourite food is rice and egg!',vi:'Món con thích nhất là cơm với trứng!'}],
+ real:'🍽️ <b>Vào bếp cùng bố mẹ.</b> Tìm 5 món ăn hoặc đồ uống thật. Chỉ vào từng món và nói: <b>"This is rice. I like rice."</b> Đến bữa cơm, thử hỏi cả nhà: <b>"Do you like fish?"</b>',
+ phonics:'<b>Âm /ɪ/ ngắn</b> — m<b>i</b>lk, ch<b>i</b>cken, f<b>i</b>sh. Âm bật rất nhanh, không kéo dài.<br>Lỗi hay gặp: đọc <i>milk</i> thành "miu-k". Giữ lưỡi chạm hàm trên: <b>mɪlk</b>.',
+ tpr:'🍚 rice: xúc cơm bằng đũa · 🥛 milk: uống cạn ly · 🍌 banana: bóc vỏ chuối · 🥣 soup: húp thìa canh nóng, thổi phù phù · 🍗 chicken: gặm miếng gà. Cô nói tên món, cả lớp làm động tác.',
+ hw:'Vẽ mâm cơm tối nay của gia đình em. Ghi tên tiếng Anh 4 món và viết 1 câu: <b>I like ___ .</b>',
+ parent:'Trong bữa cơm, hỏi con <b>"Do you like ___ ?"</b> với từng món trên bàn. Con phải trả lời <i>"Yes, I do."</i> hoặc <i>"No, I don’t."</i> Bữa cơm nào cũng thành lớp học 5 phút.',
+ scenes:[
+  {bg:'kitchen',cap:'Good morning! Time for breakfast.',vi:'Chào buổi sáng! Đến giờ ăn sáng rồi.',act:[{e:'🧒',x:28,y:66,s:62,a:'a-bob'},{e:'🍞',x:52,y:58,s:64,a:'a-bob'},{e:'🥛',x:72,y:60,s:60,a:'a-bob'}]},
+  {bg:'kitchen',cap:'I like rice. I eat rice every day.',vi:'Tớ thích cơm. Ngày nào tớ cũng ăn cơm.',act:[{e:'🍚',x:44,y:56,s:106,a:'a-bob'},{e:'🥢',x:74,y:56,s:56,a:'a-sway'}]},
+  {bg:'street',cap:'Look! Hot noodles. They smell good!',vi:'Nhìn kìa! Phở nóng. Thơm quá!',act:[{e:'🍜',x:46,y:58,s:106,a:'a-bob'},{e:'♨️',x:46,y:36,s:44,a:'a-drift'},{e:'🧒',x:76,y:66,s:56,a:'a-hop'}]},
+  {bg:'street',cap:'Apples and bananas at the market.',vi:'Táo và chuối ở chợ.',act:[{e:'🍎',x:34,y:56,s:80,a:'a-bob'},{e:'🍌',x:58,y:58,s:80,a:'a-bob'},{e:'🧺',x:80,y:68,s:56,a:'a-bob'}]},
+  {bg:'class',cap:'Do you like chicken? Yes, I do!',vi:'Bạn thích gà không? Có, tớ thích!',act:[{e:'🍗',x:44,y:54,s:98,a:'a-shake'},{e:'🧒',x:22,y:68,s:56,a:'a-bob'},{e:'👧',x:72,y:68,s:56,a:'a-bob'}]},
+  {bg:'kitchen',cap:'Thank you for the food. Yummy!',vi:'Cảm ơn bữa ăn ngon. Ngon quá!',act:[{e:'👩',x:32,y:62,s:80,a:'a-bob'},{e:'🍚',x:56,y:66,s:60,a:'a-bob'},{e:'🥣',x:74,y:66,s:58,a:'a-bob'},{e:'😋',x:56,y:38,s:48,a:'a-pop'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là món gì?',media:'🍚',opts:['bread','rice','soup','egg'],a:1,say:'rice'},
+  {q:'What is it?',vi:'Đây là món gì?',media:'🍜',opts:['noodles','chicken','milk','apple'],a:0,say:'noodles'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'milk',opts:['🍞','🥛','🍗','🍎'],a:1},
+  {q:'What is it?',vi:'Đây là quả gì?',media:'🍎',opts:['banana','egg','apple','soup'],a:2,say:'apple'},
+  {q:'Which one is a drink?',vi:'Cái nào là đồ uống?',opts:['🍚 rice','🥛 milk','🍞 bread','🥚 egg'],a:1},
+  {q:'Which one is a fruit?',vi:'Cái nào là trái cây?',opts:['🍌 banana','🍗 chicken','🥣 soup','🍚 rice'],a:0},
+  {q:'"Do you like chicken?" — Say YES.',vi:'Trả lời CÓ.',opts:['Yes, I do.','Yes, I am.','Yes, I like.','Yes, it is.'],a:0},
+  {q:'"Do you like soup?" — Say NO.',vi:'Trả lời KHÔNG.',opts:['No, I am not.','No, I don’t.','No, I not like.','No, it isn’t.'],a:1},
+  {q:'I ______ bananas very much.',vi:'Em rất ______ chuối.',opts:['like','likes','liking','am like'],a:0},
+  {q:'Which one is NOT food or drink?',vi:'Từ nào KHÔNG phải đồ ăn uống?',opts:['rice','bread','chair','egg'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'bread',opts:['🍞','🥣','🍌','💧'],a:0},
+  {q:'It is hot. It is in a bowl. It is ______ .',vi:'Nóng, đựng trong bát. Đó là ______ .',media:'🥣',opts:['bread','soup','apple','milk'],a:1},
+  {q:'How many apples?',vi:'Có mấy quả táo?',media:'🍎🍎🍎🍎',opts:['three','four','five','six'],a:1},
+  {q:'True or False? We drink rice.',vi:'Đúng hay Sai? Chúng ta uống cơm.',media:'🍚',opts:['True','False'],a:1},
+  {q:'You are thirsty. You drink ______ .',vi:'Khát nước thì em uống ______ .',media:'💧',opts:['water','bread','chicken','rice'],a:0},
+  {q:'🥚 comes from a 🐔. It is an ______ .',vi:'Nó là quả ______ .',opts:['apple','egg','onion','orange'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'chicken',opts:['🥚','🍗','🍜','🍎'],a:1},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['I like noodles.','I noodles like.','Like I noodles.','I am like noodles.'],a:0},
+  {q:'Which food is yellow?',vi:'Món nào màu vàng?',opts:['🍌 banana','🥛 milk','🥣 soup','💧 water'],a:0},
+  {q:'"What is your favourite food?" You say:',vi:'Em trả lời:',opts:['My favourite food is rice.','I favourite rice.','My food favourite rice is.','Favourite is my food rice.'],a:0}]},
+
+{id:'weather',badge:'🌦️',theme:'t-mint',title:'Weather and Clothes',titleVi:'Thời tiết và trang phục',
+ tags:['Pre A1 → A1','35–40 phút','CLIL: Khoa học'],
+ vocab:[
+  {w:'sunny',ipa:'/ˈsʌn.i/',vi:'nắng',e:'☀️',s:'It is sunny today.'},
+  {w:'rainy',ipa:'/ˈreɪ.ni/',vi:'mưa',e:'🌧️',s:'It is rainy. Take an umbrella.'},
+  {w:'windy',ipa:'/ˈwɪn.di/',vi:'gió',e:'🌬️',s:'It is windy. My kite can fly.'},
+  {w:'cloudy',ipa:'/ˈklaʊ.di/',vi:'nhiều mây',e:'☁️',s:'It is cloudy today.'},
+  {w:'hot',ipa:'/hɒt/',vi:'nóng',e:'🔥',s:'Summer is hot.'},
+  {w:'cold',ipa:'/kəʊld/',vi:'lạnh',e:'❄️',s:'Winter is cold.'},
+  {w:'hat',ipa:'/hæt/',vi:'cái mũ',e:'🧢',s:'Wear a hat in the sun.'},
+  {w:'raincoat',ipa:'/ˈreɪn.kəʊt/',vi:'áo mưa',e:'🧥',s:'Put on your raincoat.'},
+  {w:'jacket',ipa:'/ˈdʒæk.ɪt/',vi:'áo khoác',e:'🧣',s:'It is cold. Wear a jacket.'},
+  {w:'umbrella',ipa:'/ʌmˈbrel.ə/',vi:'cái ô',e:'☂️',s:'Take your umbrella.'}],
+ patterns:['How is the weather? — It is sunny.','It is hot today.','Put on your jacket.','Take your umbrella, please.'],
+ dialog:[{w:'👩',en:'Mai, how is the weather today?',vi:'Mai ơi, hôm nay thời tiết thế nào?'},
+  {w:'👧',en:'It is rainy, Mum.',vi:'Trời mưa mẹ ạ.'},
+  {w:'👩',en:'Then take your umbrella.',vi:'Vậy con cầm ô đi nhé.'},
+  {w:'👧',en:'Is it cold outside?',vi:'Ngoài trời có lạnh không mẹ?'},
+  {w:'👩',en:'Yes, it is. Put on your jacket, please.',vi:'Có con ạ. Mặc áo khoác vào nhé.'},
+  {w:'👧',en:'OK. Thank you, Mum. Goodbye!',vi:'Vâng ạ. Con cảm ơn mẹ. Con đi đây!'}],
+ real:'🪟 <b>Sáng mai vừa ngủ dậy, nhìn ra cửa sổ.</b> Nói to một câu: <b>"It is sunny today."</b> hoặc <b>"It is rainy today."</b> Rồi chọn đồ: <b>"I put on my jacket."</b> Làm mỗi sáng trong 7 ngày liền.',
+ phonics:'<b>Âm /aʊ/</b> — cl<b>ou</b>dy, h<b>ow</b>, n<b>ow</b>. Miệng mở to rồi tròn lại, như đang kêu "a-u".<br>Lỗi hay gặp: đọc <i>cloudy</i> thành "clo-đi". Hãy kéo hai âm liền nhau: <b>klaʊ-di</b>.',
+ tpr:'☀️ sunny: hai tay vẽ vòng tròn trên đầu · 🌧️ rainy: ngón tay rơi lộp độp · 🌬️ windy: cả người lắc lư · ❄️ cold: ôm vai run cầm cập · 🔥 hot: quạt tay, thở phù.',
+ hw:'Làm bảng thời tiết 5 ngày. Mỗi ngày vẽ 1 biểu tượng và viết: <b>Monday — It is sunny.</b>',
+ parent:'Mỗi sáng trước khi ra khỏi nhà, hỏi con <b>"How is the weather?"</b> và <b>"What do you wear?"</b>. Chỉ 1 phút nhưng ngày nào cũng lặp lại nên con nhớ rất chắc.',
+ scenes:[
+  {bg:'meadow',cap:'How is the weather today? It is sunny!',vi:'Hôm nay thời tiết thế nào? Trời nắng!',act:[{e:'☀️',x:76,y:26,s:78,a:'a-spin'},{e:'🧒',x:34,y:68,s:64,a:'a-hop'},{e:'🧢',x:34,y:52,s:42,a:'a-bob'}]},
+  {bg:'rain',cap:'Oh no! It is rainy. Take your umbrella.',vi:'Ôi! Trời mưa rồi. Cầm ô đi nào.',act:[{e:'☂️',x:44,y:50,s:96,a:'a-sway'},{e:'👧',x:44,y:70,s:58,a:'a-bob'},{e:'💧',x:74,y:56,s:40,a:'a-bob'}]},
+  {bg:'meadow',cap:'It is windy. My kite can fly!',vi:'Trời có gió. Diều của tớ bay được!',act:[{e:'🪁',x:64,y:30,s:76,a:'a-drift'},{e:'🧒',x:34,y:68,s:62,a:'a-bob'},{e:'🌬️',x:14,y:34,s:52,a:'a-drift'}]},
+  {bg:'street',cap:'It is cold. Put on your jacket.',vi:'Trời lạnh. Mặc áo khoác vào nhé.',act:[{e:'❄️',x:22,y:30,s:52,a:'a-spin'},{e:'🧣',x:50,y:56,s:88,a:'a-sway'},{e:'👧',x:76,y:66,s:60,a:'a-shake'}]},
+  {bg:'meadow',cap:'It is hot. I drink water.',vi:'Trời nóng. Tớ uống nước.',act:[{e:'🔥',x:24,y:34,s:56,a:'a-bob'},{e:'🧒',x:50,y:66,s:72,a:'a-bob'},{e:'💧',x:74,y:60,s:56,a:'a-bob'}]},
+  {bg:'meadow',cap:'The rain stops. Look, a rainbow!',vi:'Mưa tạnh rồi. Nhìn kìa, cầu vồng!',act:[{e:'🌈',x:50,y:38,s:110,a:'a-pop'},{e:'🧒',x:30,y:70,s:58,a:'a-hop'},{e:'👧',x:70,y:70,s:56,a:'a-hop'}]}],
+ quiz:[
+  {q:'How is the weather?',vi:'Thời tiết thế nào?',media:'☀️',opts:['rainy','sunny','windy','cold'],a:1,say:'sunny'},
+  {q:'How is the weather?',vi:'Thời tiết thế nào?',media:'🌧️',opts:['rainy','sunny','hot','cloudy'],a:0,say:'rainy'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'windy',opts:['☀️','🌬️','❄️','☁️'],a:1},
+  {q:'It is raining. Take your ______ .',vi:'Trời mưa. Cầm ______ đi.',media:'🌧️',opts:['hat','umbrella','kite','ruler'],a:1},
+  {q:'It is cold. Put on your ______ .',vi:'Trời lạnh. Mặc ______ vào.',media:'❄️',opts:['jacket','hat','umbrella','shoes'],a:0},
+  {q:'The sun is strong. Wear a ______ .',vi:'Nắng gắt. Đội ______ vào.',media:'☀️',opts:['raincoat','hat','jacket','umbrella'],a:1},
+  {q:'How is the weather?',vi:'Thời tiết thế nào?',media:'☁️',opts:['sunny','cloudy','rainy','hot'],a:1,say:'cloudy'},
+  {q:'❄️ It is very ______ .',vi:'Trời rất ______ .',opts:['hot','cold','sunny','windy'],a:1},
+  {q:'🔥 It is very ______ .',vi:'Trời rất ______ .',opts:['cold','hot','rainy','cloudy'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'umbrella',opts:['🧢','☂️','🧥','🧣'],a:1},
+  {q:'Which one is NOT a weather word?',vi:'Từ nào KHÔNG nói về thời tiết?',opts:['sunny','rainy','windy','apple'],a:3},
+  {q:'True or False? We need an umbrella on a sunny day.',vi:'Đúng hay Sai?',media:'☀️☂️',opts:['True','False'],a:1},
+  {q:'Which one do you wear when it rains?',vi:'Trời mưa em mặc gì?',opts:['🧥 raincoat','🧢 hat','👕 T-shirt','🩳 shorts'],a:0},
+  {q:'"How ______ the weather?"',vi:'Điền từ đúng.',opts:['is','are','do','am'],a:0},
+  {q:'It is windy. The kite can ______ .',vi:'Trời có gió. Con diều có thể ______ .',media:'🪁',opts:['swim','fly','eat','sleep'],a:1},
+  {q:'In summer in Vietnam it is usually ______ .',vi:'Mùa hè ở Việt Nam thường rất ______ .',opts:['cold','hot','snowy','windy'],a:1},
+  {q:'What do you wear on your head?',vi:'Em đội gì trên đầu?',media:'🧢',opts:['jacket','hat','shoes','umbrella'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'jacket',opts:['☂️','🧣','🧢','🌈'],a:1},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['It is sunny today.','Today sunny is it.','Is it today sunny.','Sunny it today is.'],a:0},
+  {q:'A friend asks "How is the weather?" You see 🌧️. You say:',vi:'Em nói:',opts:['It is rainy.','I am rainy.','It is sunny.','Rainy is it.'],a:0}]},
+
+{id:'day',badge:'🕐',theme:'t-blue',title:'My Day and the Clock',titleVi:'Một ngày của em',
+ tags:['Pre A1 → A1','35–40 phút','CLIL: Toán'],
+ vocab:[
+  {w:'get up',ipa:'/ɡet ʌp/',vi:'thức dậy',e:'⏰',s:'I get up at six o’clock.'},
+  {w:'brush my teeth',ipa:'/brʌʃ maɪ tiːθ/',vi:'đánh răng',e:'🪥',s:'I brush my teeth.'},
+  {w:'go to school',ipa:'/ɡəʊ tə skuːl/',vi:'đi học',e:'🏫',s:'I go to school at seven.'},
+  {w:'have lunch',ipa:'/hæv lʌntʃ/',vi:'ăn trưa',e:'🍱',s:'I have lunch at eleven.'},
+  {w:'play',ipa:'/pleɪ/',vi:'chơi',e:'⚽',s:'I play with my friends.'},
+  {w:'do homework',ipa:'/duː ˈhəʊm.wɜːk/',vi:'làm bài tập',e:'📝',s:'I do my homework at five.'},
+  {w:'have dinner',ipa:'/hæv ˈdɪn.ər/',vi:'ăn tối',e:'🍽️',s:'We have dinner at seven.'},
+  {w:'go to bed',ipa:'/ɡəʊ tə bed/',vi:'đi ngủ',e:'🛏️',s:'I go to bed at nine.'},
+  {w:'morning',ipa:'/ˈmɔː.nɪŋ/',vi:'buổi sáng',e:'🌅',s:'In the morning I get up.'},
+  {w:'o’clock',ipa:'/əˈklɒk/',vi:'giờ đúng',e:'🕐',s:'It is seven o’clock.'}],
+ patterns:['What time is it? — It is seven o’clock.','I get up at six o’clock.','In the morning I go to school.','What time do you go to bed?'],
+ dialog:[{w:'👩‍🏫',en:'Nam, what time do you get up?',vi:'Nam ơi, con thức dậy lúc mấy giờ?'},
+  {w:'🧒',en:'I get up at six o’clock.',vi:'Con dậy lúc 6 giờ ạ.'},
+  {w:'👩‍🏫',en:'And what time do you go to school?',vi:'Thế con đi học lúc mấy giờ?'},
+  {w:'🧒',en:'I go to school at seven o’clock.',vi:'Con đi học lúc 7 giờ ạ.'},
+  {w:'👩‍🏫',en:'What do you do after school?',vi:'Sau giờ học con làm gì?'},
+  {w:'🧒',en:'I do my homework and I play football.',vi:'Con làm bài tập rồi đi đá bóng ạ.'}],
+ real:'⏰ <b>Nhìn đồng hồ thật trong nhà 3 lần hôm nay</b> — sáng, trưa, tối. Mỗi lần nói to: <b>"It is seven o’clock. I go to school."</b> Tối nay kể lại một ngày của em bằng 4 câu tiếng Anh cho bố mẹ nghe.',
+ phonics:'<b>Âm /uː/ dài</b> — sch<b>oo</b>l, n<b>oo</b>n, f<b>oo</b>d. Môi chu tròn và kéo dài.<br>Lỗi hay gặp: đọc <i>school</i> thành "sờ-kun". Không thêm âm "ơ" ở đầu: <b>skuːl</b>.',
+ tpr:'⏰ get up: vươn vai ngáp · 🪥 brush my teeth: chải răng · 🏫 go to school: đeo cặp bước đi · 🍱 have lunch: và cơm · 📝 do homework: viết bài · 🛏️ go to bed: chắp tay úp má nhắm mắt.',
+ hw:'Vẽ 4 chiếc đồng hồ: giờ em dậy, đi học, ăn tối, đi ngủ. Dưới mỗi đồng hồ viết: <b>I get up at six o’clock.</b>',
+ parent:'Mỗi lần nhắc con làm việc gì, thêm tiếng Anh vào: <b>"It is nine o’clock. Time to go to bed!"</b> Con nghe đi nghe lại hằng ngày sẽ thuộc mà không cần học thuộc.',
+ scenes:[
+  {bg:'room',cap:'Ring ring! It is six o’clock. I get up.',vi:'Reng reng! 6 giờ rồi. Tớ dậy đây.',act:[{e:'⏰',x:34,y:48,s:88,a:'a-shake'},{e:'🛏️',x:66,y:64,s:78,a:'a-bob'},{e:'🌅',x:84,y:28,s:48,a:'a-bob'}]},
+  {bg:'room',cap:'I brush my teeth. I wash my face.',vi:'Tớ đánh răng và rửa mặt.',act:[{e:'🪥',x:44,y:54,s:94,a:'a-shake'},{e:'💧',x:72,y:60,s:52,a:'a-bob'}]},
+  {bg:'street',cap:'It is seven o’clock. I go to school.',vi:'7 giờ rồi. Tớ đi học.',act:[{e:'🎒',x:34,y:64,s:70,a:'a-bob'},{e:'🧒',x:48,y:66,s:64,a:'a-hop'},{e:'🏫',x:78,y:56,s:80,a:'a-bob'}]},
+  {bg:'class',cap:'At eleven o’clock I have lunch.',vi:'11 giờ tớ ăn trưa.',act:[{e:'🍱',x:44,y:56,s:96,a:'a-bob'},{e:'🕚',x:76,y:40,s:56,a:'a-spin'}]},
+  {bg:'room',cap:'After school I do my homework.',vi:'Tan học tớ làm bài tập.',act:[{e:'📝',x:42,y:54,s:94,a:'a-bob'},{e:'🧒',x:70,y:64,s:60,a:'a-bob'}]},
+  {bg:'night',cap:'It is nine o’clock. Good night!',vi:'9 giờ rồi. Chúc ngủ ngon!',act:[{e:'🛏️',x:44,y:60,s:98,a:'a-bob'},{e:'🕘',x:74,y:36,s:56,a:'a-spin'},{e:'🌙',x:20,y:28,s:46,a:'a-bob'}]}],
+ quiz:[
+  {q:'What time is it?',vi:'Mấy giờ rồi?',media:'🕖',opts:['six o’clock','seven o’clock','eight o’clock','nine o’clock'],a:1},
+  {q:'What time is it?',vi:'Mấy giờ rồi?',media:'🕘',opts:['nine o’clock','ten o’clock','seven o’clock','five o’clock'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'get up',opts:['⏰','🍽️','⚽','📝'],a:0},
+  {q:'In the morning I ______ at six o’clock.',vi:'Buổi sáng em ______ lúc 6 giờ.',media:'⏰',opts:['go to bed','get up','have dinner','play'],a:1},
+  {q:'I ______ my teeth every morning.',vi:'Sáng nào em cũng ______ răng.',media:'🪥',opts:['brush','eat','open','run'],a:0},
+  {q:'At eleven o’clock I ______ .',vi:'11 giờ em ______ .',media:'🍱',opts:['have lunch','go to bed','get up','brush my teeth'],a:0},
+  {q:'After school I ______ .',vi:'Sau giờ học em ______ .',media:'📝',opts:['get up','do my homework','have breakfast','go to school'],a:1},
+  {q:'At nine o’clock at night I ______ .',vi:'9 giờ tối em ______ .',media:'🛏️',opts:['go to bed','go to school','have lunch','play football'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'go to school',opts:['🛏️','🏫','🍽️','⚽'],a:1},
+  {q:'Which comes FIRST in a day?',vi:'Việc nào làm TRƯỚC trong ngày?',opts:['go to bed','get up','have dinner','do homework'],a:1},
+  {q:'What time is it?',vi:'Mấy giờ rồi?',media:'🕛',opts:['ten o’clock','eleven o’clock','twelve o’clock','one o’clock'],a:2},
+  {q:'Which one is NOT a time word?',vi:'Từ nào KHÔNG chỉ thời gian?',opts:['morning','evening','banana','night'],a:2},
+  {q:'"What ______ is it?"',vi:'Điền từ đúng.',opts:['time','shape','colour','name'],a:0},
+  {q:'I go to school ______ the morning.',vi:'Em đi học ______ buổi sáng.',opts:['in','on','at','to'],a:0},
+  {q:'True or False? We sleep in the morning.',vi:'Đúng hay Sai?',media:'🌅',opts:['True','False'],a:1},
+  {q:'Which one do you do at night?',vi:'Việc nào em làm buổi tối?',opts:['go to bed','go to school','get up','have breakfast'],a:0},
+  {q:'What do you use to see the time?',vi:'Em xem giờ bằng gì?',media:'🕐',opts:['a ruler','a clock','a book','a bag'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'have dinner',opts:['🍽️','🪥','🏫','⏰'],a:0},
+  {q:'I get up ______ six o’clock.',vi:'Em dậy ______ 6 giờ.',opts:['in','at','on','to'],a:1},
+  {q:'"What time do you go to bed?" You say:',vi:'Em trả lời:',opts:['I go to bed at nine o’clock.','I go bed nine.','At nine I bed go.','I am go to bed nine.'],a:0}]}
+,
+{id:'team',badge:'🤝',theme:'t-sand',title:'Working Together',titleVi:'Cùng nhau làm việc',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 1'],
+ vocab:[
+  {w:'team',ipa:'/tiːm/',vi:'đội, nhóm',e:'🤝',s:'We are one team.'},
+  {w:'throw',ipa:'/θrəʊ/',vi:'ném',e:'🤾',s:'Throw the ball to me.'},
+  {w:'catch',ipa:'/kætʃ/',vi:'bắt',e:'🧤',s:'Catch the ball!'},
+  {w:'kick',ipa:'/kɪk/',vi:'đá',e:'⚽',s:'Kick the ball, Nam!'},
+  {w:'ball',ipa:'/bɔːl/',vi:'quả bóng',e:'🏀',s:'The ball is red.'},
+  {w:'win',ipa:'/wɪn/',vi:'thắng',e:'🏆',s:'Our team can win.'},
+  {w:'goal',ipa:'/ɡəʊl/',vi:'bàn thắng',e:'🥅',s:'What a great goal!'},
+  {w:'match',ipa:'/mætʃ/',vi:'trận đấu',e:'📣',s:'The match is today.'},
+  {w:'help',ipa:'/help/',vi:'giúp đỡ',e:'🙌',s:'Can you help me?'},
+  {w:'together',ipa:'/təˈɡeð.ər/',vi:'cùng nhau',e:'👫',s:'We play together.'}],
+ patterns:['What are you doing? — I am kicking the ball.','Let’s play together!','Can you help me? — Yes, of course.','Well done! Good job, team!'],
+ dialog:[{w:'🧒',en:'Mai, what are you doing?',vi:'Mai ơi, cậu đang làm gì thế?'},
+  {w:'👧',en:'I am kicking the ball. Come and play!',vi:'Tớ đang đá bóng. Sang chơi đi!'},
+  {w:'🧒',en:'OK! Throw the ball to me.',vi:'Được! Ném bóng cho tớ nào.'},
+  {w:'👧',en:'Catch it! Oh, good catch!',vi:'Bắt lấy! Ôi, bắt giỏi lắm!'},
+  {w:'🧒',en:'Now kick it. Goal! We win!',vi:'Giờ đá đi. Vào rồi! Chúng ta thắng!'},
+  {w:'👧',en:'Well done! We are a good team.',vi:'Giỏi lắm! Chúng mình là một đội tốt.'}],
+ real:'⚽ <b>Ra sân trường giờ ra chơi.</b> Rủ 3 bạn chơi bóng và chỉ nói tiếng Anh khi chơi: <b>"Throw it!" "Catch it!" "Kick it!" "Good job!"</b> Chơi 5 phút thôi cũng đủ nhớ từ.',
+ phonics:'<b>Âm /θ/</b> — <b>th</b>row, <b>th</b>ree, toge<b>th</b>er. Đặt nhẹ đầu lưỡi giữa hai hàm răng rồi thổi hơi ra.<br>Lỗi hay gặp: đọc <i>throw</i> thành "trâu". Hãy để lưỡi chạm răng: <b>θrəʊ</b>.',
+ tpr:'<b>Throw!</b> làm động tác ném · <b>Catch!</b> chụm hai tay bắt bóng · <b>Kick!</b> đá chân · <b>Run!</b> chạy tại chỗ · <b>Stop!</b> đứng im · <b>We win!</b> giơ hai tay reo lên.',
+ hw:'Vẽ đội của em gồm 4 bạn. Dưới hình viết 2 câu: <b>We are a team. We play together.</b>',
+ parent:'Khi con chơi ở nhà, thử hỏi bằng tiếng Anh <b>"What are you doing?"</b> để con trả lời <i>"I am playing."</i> Câu này lặp lại mỗi ngày là con thuộc ngay.',
+ scenes:[
+  {bg:'gym',cap:'Hello! Today we play together.',vi:'Xin chào! Hôm nay chúng ta chơi cùng nhau.',act:[{e:'🧒',x:30,y:66,s:62,a:'a-hop'},{e:'👧',x:52,y:68,s:60,a:'a-bob'},{e:'🧑',x:72,y:66,s:58,a:'a-hop'}]},
+  {bg:'gym',cap:'Throw the ball to me!',vi:'Ném bóng cho tớ nào!',act:[{e:'🤾',x:36,y:60,s:104,a:'a-bob'},{e:'🏀',x:70,y:52,s:60,a:'a-drift'}]},
+  {bg:'gym',cap:'Catch it! Good catch!',vi:'Bắt lấy! Bắt giỏi lắm!',act:[{e:'🧤',x:44,y:56,s:100,a:'a-bob'},{e:'🏀',x:72,y:60,s:56,a:'a-bob'}]},
+  {bg:'meadow',cap:'Now kick the ball. Goal!',vi:'Giờ đá bóng đi. Vào rồi!',act:[{e:'⚽',x:38,y:66,s:80,a:'a-spin'},{e:'🥅',x:72,y:58,s:96,a:'a-bob'}]},
+  {bg:'meadow',cap:'Can you help me? Yes, of course!',vi:'Giúp tớ được không? Được chứ!',act:[{e:'🙌',x:40,y:56,s:96,a:'a-bob'},{e:'👫',x:74,y:62,s:78,a:'a-bob'}]},
+  {bg:'gym',cap:'We win! Well done, team!',vi:'Chúng ta thắng! Giỏi lắm cả đội!',act:[{e:'🏆',x:46,y:54,s:110,a:'a-bob'},{e:'🎉',x:80,y:30,s:50,a:'a-pop'}]}],
+ quiz:[
+  {q:'What is he doing?',vi:'Bạn ấy đang làm gì?',media:'🤾',opts:['throw','catch','sleep','read'],a:0,say:'throw'},
+  {q:'What is she doing?',vi:'Bạn ấy đang làm gì?',media:'⚽',opts:['kick','write','eat','sing'],a:0,say:'kick'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'ball',opts:['🏀','🥅','🏆','🧤'],a:0},
+  {q:'Use your hands to ______ the ball.',vi:'Dùng tay để ______ quả bóng.',media:'🧤',opts:['kick','catch','sing','sleep'],a:1},
+  {q:'Use your foot to ______ the ball.',vi:'Dùng chân để ______ quả bóng.',media:'⚽',opts:['catch','kick','read','write'],a:1},
+  {q:'Four friends playing football are a ______ .',vi:'Bốn bạn cùng đá bóng là một ______ .',media:'🤝',opts:['team','desk','cave','month'],a:0},
+  {q:'The ball goes in. It is a ______ !',vi:'Bóng vào lưới. Đó là một ______ !',media:'🥅',opts:['goal','book','fish','hat'],a:0},
+  {q:'"Can you help me?" — Say YES politely.',vi:'Trả lời CÓ một cách lịch sự.',opts:['Yes, of course.','No, I can.','Yes, I am help.','Help you I can.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'win',opts:['🥅','🏆','📣','👫'],a:1},
+  {q:'"What ______ you doing?"',vi:'Điền từ đúng.',opts:['is','are','am','do'],a:1},
+  {q:'I ______ playing football now.',vi:'Bây giờ em ______ đá bóng.',opts:['am','is','are','be'],a:0},
+  {q:'Your friend scores a goal. You say:',vi:'Bạn ghi bàn. Em nói:',media:'🏆',opts:['Well done!','Go away!','I am sad.','Stop it!'],a:0},
+  {q:'Which one is NOT a sports word?',vi:'Từ nào KHÔNG nói về thể thao?',opts:['goal','match','team','cave'],a:3},
+  {q:'We do it side by side. We work ______ .',vi:'Chúng ta làm cạnh nhau, tức là làm ______ .',media:'👫',opts:['together','alone','slowly','never'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'catch',opts:['🧤','⚽','📣','🎉'],a:0},
+  {q:'True or False? In a team we help each other.',vi:'Đúng hay Sai? Trong đội, ta giúp nhau.',media:'🤝',opts:['True','False'],a:0},
+  {q:'The football ______ is on Sunday.',vi:'______ bóng đá diễn ra vào Chủ nhật.',media:'📣',opts:['match','apple','chair','river'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['We are playing together.','We together playing are.','Playing we are together.','Together are we playing.'],a:0},
+  {q:'Your friend drops the ball. You say:',vi:'Bạn làm rơi bóng. Em nói:',opts:['Good try! Try again!','You are bad.','Go home.','I don’t like you.'],a:0},
+  {q:'A friend asks "What are you doing?" You are running. You say:',vi:'Em nói:',media:'🏃',opts:['I am running.','I run yesterday.','I am run.','Running I am do.'],a:0}]},
+
+{id:'months',badge:'🎂',theme:'t-coral',title:'Months and Birthdays',titleVi:'Tháng và ngày sinh nhật',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 2'],
+ vocab:[
+  {w:'birthday',ipa:'/ˈbɜːθ.deɪ/',vi:'sinh nhật',e:'🎂',s:'Today is my birthday.'},
+  {w:'party',ipa:'/ˈpɑː.ti/',vi:'bữa tiệc',e:'🎉',s:'We have a party.'},
+  {w:'present',ipa:'/ˈprez.ənt/',vi:'món quà',e:'🎁',s:'This present is for you.'},
+  {w:'month',ipa:'/mʌnθ/',vi:'tháng',e:'📅',s:'There are twelve months.'},
+  {w:'January',ipa:'/ˈdʒæn.ju.ə.ri/',vi:'tháng Một',e:'❄️',s:'January is the first month.'},
+  {w:'May',ipa:'/meɪ/',vi:'tháng Năm',e:'🌸',s:'My birthday is in May.'},
+  {w:'September',ipa:'/sepˈtem.bər/',vi:'tháng Chín',e:'🍂',s:'School starts in September.'},
+  {w:'December',ipa:'/dɪˈsem.bər/',vi:'tháng Mười hai',e:'🎄',s:'December is very cold.'},
+  {w:'first',ipa:'/fɜːst/',vi:'thứ nhất, mùng 1',e:'1️⃣',s:'The first of May.'},
+  {w:'second',ipa:'/ˈsek.ənd/',vi:'thứ hai, mùng 2',e:'2️⃣',s:'The second of June.'}],
+ patterns:['When is your birthday? — It is in May.','My birthday is on the first of June.','Happy birthday to you!','Thank you for the present.'],
+ dialog:[{w:'👧',en:'Nam, when is your birthday?',vi:'Nam ơi, sinh nhật cậu ngày nào?'},
+  {w:'🧒',en:'It is in September. And yours?',vi:'Tháng Chín. Còn cậu?'},
+  {w:'👧',en:'My birthday is on the first of May.',vi:'Sinh nhật tớ mùng 1 tháng Năm.'},
+  {w:'🧒',en:'That is soon! Do you have a party?',vi:'Sắp rồi đấy! Cậu có tiệc không?'},
+  {w:'👧',en:'Yes! Here is a card for you.',vi:'Có chứ! Đây là tấm thiệp cho cậu.'},
+  {w:'🧒',en:'Thank you! Happy birthday, Mai!',vi:'Cảm ơn cậu! Chúc mừng sinh nhật Mai!'}],
+ real:'📅 <b>Hỏi cả nhà bằng tiếng Anh.</b> Đến bên bố, mẹ, ông, bà và hỏi <b>"When is your birthday?"</b> Ghi lại vào một tờ giấy rồi vẽ 12 ô tháng, dán tên từng người vào đúng tháng của họ.',
+ phonics:'<b>Âm /θ/ trong month</b> — mon<b>th</b>, bir<b>th</b>day, <b>th</b>ree. Lưỡi chạm nhẹ răng trên rồi thổi.<br>Lỗi hay gặp: đọc <i>month</i> thành "mân". Hãy kết thúc bằng hơi: <b>mʌnθ</b>.',
+ tpr:'Cô hô tên tháng, cả lớp làm động tác: <b>January</b> ôm vai run · <b>May</b> hai tay xoè như hoa nở · <b>September</b> tay vẫy như lá rơi · <b>December</b> tay chụm làm cây thông. Ai sai vẫn được khen "Good try!".',
+ hw:'Vẽ tấm thiệp sinh nhật cho một người trong nhà. Viết: <b>Happy birthday! My present is for you.</b>',
+ parent:'Mỗi sáng hỏi con <b>"What month is it?"</b> và cùng nhìn tờ lịch. Chỉ 30 giây nhưng lặp lại đủ 30 ngày là con thuộc hết 12 tháng.',
+ scenes:[
+  {bg:'home',cap:'Today is my birthday!',vi:'Hôm nay là sinh nhật tớ!',act:[{e:'🎂',x:44,y:56,s:110,a:'a-bob'},{e:'🧒',x:76,y:64,s:60,a:'a-hop'}]},
+  {bg:'home',cap:'We have a party with my family.',vi:'Nhà tớ tổ chức tiệc.',act:[{e:'🎉',x:30,y:44,s:60,a:'a-pop'},{e:'👨‍👩‍👧',x:52,y:62,s:96,a:'a-bob'},{e:'🎈',x:80,y:40,s:56,a:'a-drift'}]},
+  {bg:'home',cap:'This present is for you. Thank you!',vi:'Món quà này cho cậu. Cảm ơn nhé!',act:[{e:'🎁',x:44,y:56,s:104,a:'a-bob'},{e:'👧',x:76,y:64,s:58,a:'a-bob'}]},
+  {bg:'paper',cap:'There are twelve months in a year.',vi:'Một năm có mười hai tháng.',act:[{e:'📅',x:44,y:52,s:110,a:'a-bob'},{e:'🔢',x:76,y:54,s:56,a:'a-pop'}]},
+  {bg:'meadow',cap:'My birthday is in May. Flowers everywhere!',vi:'Sinh nhật tớ tháng Năm. Hoa nở khắp nơi!',act:[{e:'🌸',x:34,y:56,s:88,a:'a-sway'},{e:'🌼',x:66,y:62,s:72,a:'a-sway'}]},
+  {bg:'night',cap:'December is cold. Happy new year!',vi:'Tháng Mười hai lạnh lắm. Chúc mừng năm mới!',act:[{e:'🎄',x:42,y:56,s:108,a:'a-bob'},{e:'❄️',x:76,y:34,s:52,a:'a-spin'}]}],
+ quiz:[
+  {q:'When is your birthday? Choose the correct answer.',vi:'Chọn câu trả lời đúng.',media:'🎂',opts:['It is in May.','I am in May.','My birthday May.','In May is birthday.'],a:0},
+  {q:'What is it?',vi:'Đây là cái gì?',media:'🎁',opts:['present','party','month','goal'],a:0,say:'present'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'birthday',opts:['🎂','📅','🎁','🍂'],a:0},
+  {q:'How many months are in a year?',vi:'Một năm có mấy tháng?',media:'📅',opts:['ten','eleven','twelve','seven'],a:2},
+  {q:'Which month is the FIRST month?',vi:'Tháng nào là tháng đầu tiên?',media:'1️⃣',opts:['January','May','September','December'],a:0},
+  {q:'Which month is the LAST month?',vi:'Tháng nào là tháng cuối cùng?',media:'🎄',opts:['May','September','January','December'],a:3},
+  {q:'In Vietnam, school starts in ______ .',vi:'Ở Việt Nam, năm học bắt đầu vào tháng ______ .',media:'🍂',opts:['May','September','January','December'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'party',opts:['🎉','🎁','📅','🌸'],a:0},
+  {q:'1st = ______',vi:'Ngày mùng 1 tiếng Anh là gì?',media:'1️⃣',opts:['one','first','once','oneth'],a:1},
+  {q:'2nd = ______',vi:'Ngày mùng 2 tiếng Anh là gì?',media:'2️⃣',opts:['two','twoth','second','secondly'],a:2},
+  {q:'My birthday is ______ the first of June.',vi:'Sinh nhật em vào ngày 1 tháng Sáu.',opts:['in','on','at','to'],a:1},
+  {q:'My birthday is ______ May.',vi:'Sinh nhật em vào tháng Năm.',opts:['in','on','at','of'],a:0},
+  {q:'Which one is NOT a month?',vi:'Từ nào KHÔNG phải tên tháng?',opts:['January','September','Monday','December'],a:2},
+  {q:'Your friend gives you a present. You say:',vi:'Bạn tặng quà. Em nói:',media:'🎁',opts:['Thank you!','Go away!','No, thanks bye.','I am a present.'],a:0},
+  {q:'It is your friend’s birthday. You say:',vi:'Hôm nay sinh nhật bạn. Em nói:',media:'🎂',opts:['Happy birthday!','Good night!','See you later.','What is this?'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'December',opts:['🌸','🍂','🎄','❄️'],a:2},
+  {q:'True or False? May comes before January.',vi:'Đúng hay Sai? Tháng Năm trước tháng Một.',media:'📅',opts:['True','False'],a:1},
+  {q:'Flowers open in ______ .',vi:'Hoa nở vào tháng ______ .',media:'🌸',opts:['May','December','January','November'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['My birthday is in April.','My birthday April in is.','In is my birthday April.','April my is birthday.'],a:0},
+  {q:'A friend asks "When is your birthday?" It is 2 September. You say:',vi:'Em trả lời:',opts:['It is on the second of September.','It is second September on the.','My birthday second.','I am second September.'],a:0}]},
+
+{id:'desert',badge:'🌵',theme:'t-teal',title:'The Desert',titleVi:'Sa mạc',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 3'],
+ vocab:[
+  {w:'desert',ipa:'/ˈdez.ət/',vi:'sa mạc',e:'🏜️',s:'The desert is very big.'},
+  {w:'sand',ipa:'/sænd/',vi:'cát',e:'🏖️',s:'I can see a lot of sand.'},
+  {w:'cactus',ipa:'/ˈkæk.təs/',vi:'cây xương rồng',e:'🌵',s:'The cactus keeps water.'},
+  {w:'camel',ipa:'/ˈkæm.əl/',vi:'con lạc đà',e:'🐫',s:'A camel can walk very far.'},
+  {w:'snake',ipa:'/sneɪk/',vi:'con rắn',e:'🐍',s:'The snake is long.'},
+  {w:'lizard',ipa:'/ˈlɪz.əd/',vi:'con thằn lằn',e:'🦎',s:'The lizard is small and fast.'},
+  {w:'dry',ipa:'/draɪ/',vi:'khô',e:'🌾',s:'The desert is dry.'},
+  {w:'sun',ipa:'/sʌn/',vi:'mặt trời',e:'☀️',s:'The sun is very strong.'},
+  {w:'night',ipa:'/naɪt/',vi:'ban đêm',e:'🌙',s:'At night it is cold.'},
+  {w:'rock',ipa:'/rɒk/',vi:'tảng đá',e:'🪨',s:'The lizard sits on a rock.'}],
+ patterns:['The desert is very dry.','A camel is bigger than a lizard.','It is hot in the day. It is cold at night.','What can you see in the desert?'],
+ dialog:[{w:'👩',en:'Look at this picture. Where is it?',vi:'Nhìn bức tranh này. Đây là đâu?'},
+  {w:'🧒',en:'It is a desert. There is a lot of sand.',vi:'Sa mạc ạ. Có rất nhiều cát.'},
+  {w:'👩',en:'Good! What animals can you see?',vi:'Giỏi lắm! Con thấy con vật nào?'},
+  {w:'🧒',en:'A camel and a small lizard.',vi:'Một con lạc đà và một con thằn lằn nhỏ.'},
+  {w:'👩',en:'Which one is bigger?',vi:'Con nào to hơn?'},
+  {w:'🧒',en:'The camel is bigger than the lizard.',vi:'Con lạc đà to hơn con thằn lằn ạ.'}],
+ real:'🌡️ <b>Làm nhà khoa học nhỏ trong 1 ngày.</b> Đặt một cốc nước ngoài nắng và một cốc trong bóng râm. Chiều tối kiểm tra và nói: <b>"This one is dry. The sun is strong."</b> Kể lại cho cô giáo bằng 2 câu tiếng Anh.',
+ phonics:'<b>Âm /æ/ trong sand, cactus</b> — s<b>a</b>nd, c<b>a</b>ctus, c<b>a</b>mel. Mở miệng rộng, hạ hàm xuống.<br>Lỗi hay gặp: đọc <i>sand</i> thành "sen". Hãy mở to: <b>sæ-nd</b>.',
+ tpr:'🐫 lạc đà: đi chậm, lưng gù · 🐍 rắn: tay lượn sóng, kêu "sss" · 🦎 thằn lằn: bò nhanh rồi đứng im · ☀️ sun: hai tay vẽ vòng tròn trên đầu · 🌙 night: ôm vai run vì lạnh.',
+ hw:'Vẽ một bức tranh sa mạc. Đặt tên 4 thứ trong tranh bằng tiếng Anh và viết 1 câu: <b>The desert is dry.</b>',
+ parent:'Xem cùng con một đoạn phim ngắn về sa mạc. Vừa xem vừa hỏi <b>"What can you see?"</b> để con trả lời <i>"I can see a camel."</i>',
+ scenes:[
+  {bg:'meadow',cap:'Welcome to the desert. It is very dry.',vi:'Chào mừng đến sa mạc. Nơi này rất khô.',act:[{e:'🏜️',x:44,y:56,s:120,a:'a-bob'},{e:'☀️',x:78,y:26,s:64,a:'a-spin'}]},
+  {bg:'meadow',cap:'This is a cactus. It keeps water inside.',vi:'Đây là cây xương rồng. Nó giữ nước bên trong.',act:[{e:'🌵',x:44,y:56,s:120,a:'a-sway'},{e:'💧',x:76,y:50,s:52,a:'a-bob'}]},
+  {bg:'meadow',cap:'A camel can walk very far.',vi:'Lạc đà có thể đi rất xa.',act:[{e:'🐫',x:46,y:60,s:126,a:'a-drift'},{e:'🏖️',x:80,y:70,s:56,a:'a-bob'}]},
+  {bg:'meadow',cap:'Look! A snake and a lizard.',vi:'Nhìn kìa! Một con rắn và một con thằn lằn.',act:[{e:'🐍',x:34,y:62,s:92,a:'a-sway'},{e:'🦎',x:68,y:64,s:76,a:'a-drift'},{e:'🪨',x:86,y:70,s:52,a:'a-bob'}]},
+  {bg:'meadow',cap:'In the day the sun is very hot.',vi:'Ban ngày mặt trời rất nóng.',act:[{e:'☀️',x:46,y:44,s:118,a:'a-spin'},{e:'🌡️',x:78,y:60,s:60,a:'a-bob'}]},
+  {bg:'night',cap:'At night the desert is cold. Good night!',vi:'Ban đêm sa mạc lạnh. Chúc ngủ ngon!',act:[{e:'🌙',x:44,y:44,s:96,a:'a-bob'},{e:'🌵',x:74,y:62,s:80,a:'a-sway'},{e:'⭐',x:20,y:30,s:40,a:'a-spin'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là cây gì?',media:'🌵',opts:['tree','cactus','flower','rock'],a:1,say:'cactus'},
+  {q:'What is it?',vi:'Đây là con gì?',media:'🐫',opts:['camel','bear','fish','snake'],a:0,say:'camel'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'lizard',opts:['🐍','🦎','🐫','🌵'],a:1},
+  {q:'The desert has a lot of ______ .',vi:'Sa mạc có rất nhiều ______ .',media:'🏖️',opts:['water','sand','snow','trees'],a:1},
+  {q:'The desert is not wet. It is ______ .',vi:'Sa mạc không ẩm. Nó rất ______ .',media:'🌾',opts:['dry','cold','soft','green'],a:0},
+  {q:'Which animal is long and has no legs?',vi:'Con vật nào dài và không có chân?',opts:['🐫 camel','🐍 snake','🦎 lizard','🐦 bird'],a:1},
+  {q:'Which one is BIGGER?',vi:'Con nào TO HƠN?',media:'🐫🦎',opts:['the camel','the lizard'],a:0},
+  {q:'A camel is ______ than a lizard.',vi:'Lạc đà ______ thằn lằn.',opts:['big','bigger','biggest','more big'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'rock',opts:['🪨','🏖️','🌵','🌙'],a:0},
+  {q:'In the day the desert is ______ .',vi:'Ban ngày sa mạc rất ______ .',media:'☀️',opts:['hot','cold','wet','dark'],a:0},
+  {q:'At night the desert is ______ .',vi:'Ban đêm sa mạc rất ______ .',media:'🌙',opts:['hot','cold','sunny','wet'],a:1},
+  {q:'Which one is NOT in the desert?',vi:'Thứ nào KHÔNG có ở sa mạc?',opts:['sand','cactus','fish','rock'],a:2},
+  {q:'The cactus keeps ______ inside.',vi:'Cây xương rồng giữ ______ bên trong.',media:'🌵',opts:['sand','water','rocks','sun'],a:1},
+  {q:'True or False? It rains every day in the desert.',vi:'Đúng hay Sai? Sa mạc mưa mỗi ngày.',media:'🏜️',opts:['True','False'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'camel',opts:['🦎','🐍','🐫','🪨'],a:2},
+  {q:'The lizard sits ______ a rock.',vi:'Con thằn lằn nằm ______ tảng đá.',media:'🦎',opts:['on','in','under the sea','into'],a:0},
+  {q:'Which is the SMALLEST?',vi:'Con nào NHỎ NHẤT?',opts:['🐫 camel','🐍 snake','🦎 lizard','🌵 cactus'],a:2},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['The desert is very dry.','Dry is the desert very.','Very the desert dry is.','Is the desert very dry the.'],a:0},
+  {q:'What can a camel do?',vi:'Lạc đà làm được gì?',media:'🐫',opts:['walk very far','fly high','swim in a river','climb a tree'],a:0},
+  {q:'Your teacher asks "What can you see?" You see a cactus. You say:',vi:'Em trả lời:',media:'🌵',opts:['I can see a cactus.','I see can a cactus.','A cactus I am.','Can I a cactus see.'],a:0}]},
+
+{id:'invent',badge:'💡',theme:'t-ruby',title:'Inventors and Inventions',titleVi:'Nhà phát minh và phát minh',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 5'],
+ vocab:[
+  {w:'invention',ipa:'/ɪnˈven.ʃən/',vi:'phát minh',e:'💡',s:'The wheel is a great invention.'},
+  {w:'wheel',ipa:'/wiːl/',vi:'bánh xe',e:'🛞',s:'A car has four wheels.'},
+  {w:'bicycle',ipa:'/ˈbaɪ.sɪ.kəl/',vi:'xe đạp',e:'🚲',s:'I ride my bicycle to school.'},
+  {w:'telephone',ipa:'/ˈtel.ɪ.fəʊn/',vi:'điện thoại',e:'☎️',s:'I call my grandma on the telephone.'},
+  {w:'computer',ipa:'/kəmˈpjuː.tər/',vi:'máy tính',e:'💻',s:'We use a computer at school.'},
+  {w:'camera',ipa:'/ˈkæm.rə/',vi:'máy ảnh',e:'📷',s:'Take a photo with the camera.'},
+  {w:'clock',ipa:'/klɒk/',vi:'đồng hồ',e:'🕰️',s:'The clock tells the time.'},
+  {w:'aeroplane',ipa:'/ˈeə.rə.pleɪn/',vi:'máy bay',e:'✈️',s:'An aeroplane can fly very fast.'},
+  {w:'useful',ipa:'/ˈjuːs.fəl/',vi:'hữu ích',e:'👍',s:'A bicycle is very useful.'},
+  {w:'idea',ipa:'/aɪˈdɪə/',vi:'ý tưởng',e:'💭',s:'That is a good idea!'}],
+ patterns:['I think the bicycle is useful.','What is your favourite invention?','People used to walk. Now they ride bicycles.','That is a good idea!'],
+ dialog:[{w:'👩',en:'What is your favourite invention, Mai?',vi:'Phát minh con thích nhất là gì, Mai?'},
+  {w:'👧',en:'I like the bicycle. It is very useful.',vi:'Con thích xe đạp ạ. Nó rất hữu ích.'},
+  {w:'👩',en:'Why do you like it?',vi:'Vì sao con thích nó?'},
+  {w:'👧',en:'Because I ride it to school every day.',vi:'Vì ngày nào con cũng đạp xe đến trường ạ.'},
+  {w:'🧒',en:'I like the aeroplane. It can fly!',vi:'Con thích máy bay. Nó bay được!'},
+  {w:'👩',en:'Good idea! Both are great inventions.',vi:'Ý hay đấy! Cả hai đều là phát minh tuyệt vời.'}],
+ real:'🏠 <b>Đi một vòng quanh nhà và tìm 5 phát minh.</b> Chỉ vào từng thứ và nói: <b>"This is a clock. It is useful."</b> Rồi chọn ra thứ em thích nhất và nói vì sao: <b>"I like the ___ ."</b>',
+ phonics:'<b>Âm /w/</b> — <b>w</b>heel, <b>w</b>ater, <b>w</b>e. Chu môi tròn nhỏ rồi bật ra.<br>Lỗi hay gặp: đọc <i>wheel</i> thành "vin". Đừng để răng chạm môi, hãy chu môi: <b>wiːl</b>.',
+ tpr:'🛞 wheel: hai tay quay vòng tròn · 🚲 bicycle: đạp chân tại chỗ · ☎️ telephone: tay áp tai "hello" · 📷 camera: bấm máy "click" · ✈️ aeroplane: dang hai tay lượn quanh lớp.',
+ hw:'Vẽ một phát minh của riêng em. Đặt tên cho nó và viết 1 câu: <b>My invention is a ___ . It is useful.</b>',
+ parent:'Buổi tối hỏi con <b>"What is this?"</b> với 3 đồ vật trong nhà, rồi hỏi tiếp <b>"Is it useful?"</b> Con trả lời <i>"Yes, it is useful."</i>',
+ scenes:[
+  {bg:'room',cap:'Hello! Today we talk about inventions.',vi:'Xin chào! Hôm nay ta nói về các phát minh.',act:[{e:'💡',x:46,y:50,s:110,a:'a-bob'},{e:'👩',x:78,y:64,s:62,a:'a-bob'}]},
+  {bg:'street',cap:'The wheel is a very old invention.',vi:'Bánh xe là phát minh rất cổ xưa.',act:[{e:'🛞',x:44,y:56,s:114,a:'a-spin'},{e:'🐫',x:80,y:62,s:56,a:'a-bob'}]},
+  {bg:'street',cap:'I ride my bicycle to school.',vi:'Tớ đạp xe đến trường.',act:[{e:'🚲',x:44,y:60,s:120,a:'a-drift'},{e:'🏫',x:80,y:56,s:64,a:'a-bob'}]},
+  {bg:'room',cap:'I call my grandma on the telephone.',vi:'Tớ gọi điện cho bà.',act:[{e:'☎️',x:38,y:56,s:104,a:'a-bob'},{e:'👵',x:74,y:58,s:76,a:'a-bob'}]},
+  {bg:'class',cap:'We use a computer and a camera.',vi:'Chúng tớ dùng máy tính và máy ảnh.',act:[{e:'💻',x:36,y:56,s:100,a:'a-bob'},{e:'📷',x:70,y:58,s:86,a:'a-bob'}]},
+  {bg:'meadow',cap:'An aeroplane can fly. What a great idea!',vi:'Máy bay biết bay. Ý tưởng tuyệt vời!',act:[{e:'✈️',x:46,y:40,s:112,a:'a-drift'},{e:'💭',x:80,y:62,s:56,a:'a-pop'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là cái gì?',media:'🚲',opts:['bicycle','camera','clock','wheel'],a:0,say:'bicycle'},
+  {q:'What is it?',vi:'Đây là cái gì?',media:'💻',opts:['telephone','computer','camera','clock'],a:1,say:'computer'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'camera',opts:['📷','☎️','🕰️','🛞'],a:0},
+  {q:'A car has four ______ .',vi:'Ô tô có bốn ______ .',media:'🛞',opts:['wheels','clocks','cameras','ideas'],a:0},
+  {q:'You use it to take a photo.',vi:'Em dùng nó để chụp ảnh.',opts:['📷 camera','☎️ telephone','🕰️ clock','🚲 bicycle'],a:0},
+  {q:'You use it to talk to grandma far away.',vi:'Em dùng nó để nói chuyện với bà ở xa.',opts:['🕰️ clock','☎️ telephone','🛞 wheel','✈️ aeroplane'],a:1},
+  {q:'It tells you the time.',vi:'Nó cho em biết mấy giờ.',opts:['🕰️ clock','📷 camera','🚲 bicycle','💻 computer'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'aeroplane',opts:['🚲','✈️','🛞','💻'],a:1},
+  {q:'It can fly high in the sky.',vi:'Nó bay cao trên bầu trời.',media:'✈️',opts:['aeroplane','bicycle','computer','clock'],a:0},
+  {q:'Something we can use every day is ______ .',vi:'Thứ ta dùng được mỗi ngày thì rất ______ .',media:'👍',opts:['useful','silly','dry','cold'],a:0},
+  {q:'"I think the bicycle is useful." This is your ______ .',vi:'Câu này nói lên ______ của em.',opts:['opinion','wheel','camera','month'],a:0},
+  {q:'Which one is NOT an invention?',vi:'Thứ nào KHÔNG phải phát minh?',opts:['computer','camera','rock','bicycle'],a:2},
+  {q:'Long ago people ______ to walk everywhere.',vi:'Ngày xưa người ta ______ đi bộ khắp nơi.',opts:['used','use','using','uses'],a:0},
+  {q:'Your friend has a clever plan. You say:',vi:'Bạn có kế hoạch hay. Em nói:',media:'💭',opts:['That is a good idea!','That is a bad rock.','I am an idea.','Idea good that is.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'wheel',opts:['🛞','🕰️','💡','📷'],a:0},
+  {q:'True or False? A bicycle has two wheels.',vi:'Đúng hay Sai? Xe đạp có hai bánh.',media:'🚲',opts:['True','False'],a:0},
+  {q:'Which invention helps us learn at school?',vi:'Phát minh nào giúp em học ở trường?',opts:['💻 computer','🛞 wheel','✈️ aeroplane','🌵 cactus'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['I think the camera is useful.','Useful I think camera the is.','The camera I useful think.','Is useful the camera I think.'],a:0},
+  {q:'A person who makes a new thing is an ______ .',vi:'Người tạo ra thứ mới gọi là ______ .',media:'💡',opts:['inventor','invention','invent','inventing'],a:0},
+  {q:'Teacher asks "What is your favourite invention?" You say:',vi:'Em trả lời:',opts:['My favourite invention is the bicycle.','Favourite my bicycle invention.','I am favourite bicycle.','Bicycle is my the favourite invention a.'],a:0}]},
+
+{id:'dino',badge:'🦕',theme:'t-forest',title:'Dinosaurs',titleVi:'Khủng long',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 6'],
+ vocab:[
+  {w:'dinosaur',ipa:'/ˈdaɪ.nə.sɔːr/',vi:'khủng long',e:'🦕',s:'The dinosaur was very big.'},
+  {w:'fossil',ipa:'/ˈfɒs.əl/',vi:'hoá thạch',e:'🦴',s:'We found a fossil in the rock.'},
+  {w:'claw',ipa:'/klɔː/',vi:'móng vuốt',e:'🐾',s:'It had sharp claws.'},
+  {w:'tail',ipa:'/teɪl/',vi:'cái đuôi',e:'🦖',s:'Its tail was very long.'},
+  {w:'long',ipa:'/lɒŋ/',vi:'dài',e:'➡️',s:'The tail was long.'},
+  {w:'heavy',ipa:'/ˈhev.i/',vi:'nặng',e:'🏋️',s:'A dinosaur was very heavy.'},
+  {w:'plant',ipa:'/plɑːnt/',vi:'cây, thực vật',e:'🌱',s:'Some dinosaurs ate plants.'},
+  {w:'meat',ipa:'/miːt/',vi:'thịt',e:'🍖',s:'Some dinosaurs ate meat.'},
+  {w:'scientist',ipa:'/ˈsaɪ.ən.tɪst/',vi:'nhà khoa học',e:'🔬',s:'A scientist studies fossils.'},
+  {w:'museum',ipa:'/mjuːˈziː.əm/',vi:'bảo tàng',e:'🏛️',s:'We see dinosaurs in a museum.'}],
+ patterns:['The dinosaur was very long.','It was as tall as a house.','Some dinosaurs ate plants. Some ate meat.','Scientists find fossils in rocks.'],
+ dialog:[{w:'🧒',en:'Look! A dinosaur in the museum!',vi:'Nhìn kìa! Khủng long trong bảo tàng!'},
+  {w:'👧',en:'Wow. It was very big and heavy.',vi:'Ồ. Nó rất to và nặng.'},
+  {w:'🧒',en:'Was it as tall as a house?',vi:'Nó cao bằng ngôi nhà à?'},
+  {w:'👧',en:'Yes! And its tail was very long.',vi:'Đúng! Và đuôi nó rất dài.'},
+  {w:'🧒',en:'Did it eat meat?',vi:'Nó ăn thịt à?'},
+  {w:'👧',en:'No, this one ate plants. Scientists know.',vi:'Không, con này ăn cây. Các nhà khoa học biết mà.'}],
+ real:'🦴 <b>Làm nhà khoa học tí hon.</b> Lấy 5 chiếc lá, cành nhỏ hoặc vỏ sò và xếp lên bàn như một bộ sưu tập bảo tàng. Viết thẻ tên tiếng Anh cho từng thứ rồi mời cả nhà đi "tham quan": <b>"Look! This is a leaf. It is small."</b>',
+ phonics:'<b>Âm /aɪ/</b> — d<b>i</b>nosaur, sc<b>i</b>entist, m<b>y</b>. Miệng mở to rồi khép nhanh thành "ai".<br>Lỗi hay gặp: đọc <i>dinosaur</i> thành "đi-nô-sô". Hãy nhấn âm đầu: <b>DAI-nə-sɔː</b>.',
+ tpr:'🦕 dinosaur: bước chậm, tay làm cổ dài · 🦖 tail: lắc mông làm đuôi · 🐾 claw: co ngón tay như móng vuốt · 🍖 meat: giả vờ gặm · 🌱 plant: giả vờ nhai lá · 🔬 scientist: cúi soi kính lúp.',
+ hw:'Vẽ một con khủng long tưởng tượng. Đặt tên cho nó và viết 2 câu: <b>It was very long. It ate plants.</b>',
+ parent:'Cùng con xem tranh khủng long và hỏi <b>"Was it big or small?"</b>, <b>"Did it eat plants or meat?"</b> Con chỉ cần trả lời ngắn cũng được.',
+ scenes:[
+  {bg:'forest',cap:'A long time ago, dinosaurs lived here.',vi:'Rất lâu về trước, khủng long sống ở đây.',act:[{e:'🦕',x:44,y:56,s:130,a:'a-bob'},{e:'🌳',x:82,y:60,s:64,a:'a-sway'}]},
+  {bg:'forest',cap:'This dinosaur was very long.',vi:'Con khủng long này rất dài.',act:[{e:'🦕',x:40,y:56,s:120,a:'a-drift'},{e:'➡️',x:78,y:52,s:60,a:'a-bob'}]},
+  {bg:'forest',cap:'Some dinosaurs ate plants.',vi:'Một số con khủng long ăn cây cỏ.',act:[{e:'🌱',x:34,y:64,s:80,a:'a-sway'},{e:'🦕',x:68,y:56,s:104,a:'a-bob'}]},
+  {bg:'forest',cap:'Some dinosaurs ate meat. They had sharp claws.',vi:'Một số con ăn thịt. Chúng có móng vuốt sắc.',act:[{e:'🦖',x:42,y:56,s:118,a:'a-bob'},{e:'🐾',x:78,y:62,s:56,a:'a-pop'}]},
+  {bg:'paper',cap:'Scientists find fossils in the rocks.',vi:'Các nhà khoa học tìm hoá thạch trong đá.',act:[{e:'🔬',x:36,y:56,s:96,a:'a-bob'},{e:'🦴',x:70,y:58,s:88,a:'a-bob'}]},
+  {bg:'room',cap:'Now we see them in the museum. Amazing!',vi:'Giờ ta thấy chúng trong bảo tàng. Tuyệt quá!',act:[{e:'🏛️',x:40,y:56,s:112,a:'a-bob'},{e:'🦕',x:76,y:58,s:74,a:'a-bob'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là con gì?',media:'🦕',opts:['camel','dinosaur','elephant','lizard'],a:1,say:'dinosaur'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'fossil',opts:['🦴','🐾','🌱','🏛️'],a:0},
+  {q:'Scientists find bones in rocks. These are ______ .',vi:'Xương tìm thấy trong đá gọi là ______ .',media:'🦴',opts:['fossils','plants','claws','museums'],a:0},
+  {q:'Its ______ was very long.',vi:'______ của nó rất dài.',media:'🦖',opts:['tail','month','wheel','goal'],a:0},
+  {q:'Some dinosaurs ate ______ . They were plant-eaters.',vi:'Một số khủng long ăn ______ .',media:'🌱',opts:['plants','rocks','sand','fossils'],a:0},
+  {q:'Some dinosaurs ate ______ . They had sharp claws.',vi:'Một số khủng long ăn ______ .',media:'🍖',opts:['plants','meat','water','sand'],a:1},
+  {q:'A dinosaur was not light. It was very ______ .',vi:'Khủng long không nhẹ. Nó rất ______ .',media:'🏋️',opts:['heavy','small','dry','cold'],a:0},
+  {q:'Where do we see dinosaur fossils today?',vi:'Ngày nay ta xem hoá thạch ở đâu?',media:'🏛️',opts:['in a museum','in a schoolbag','in a nest','in a cup'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'scientist',opts:['🔬','🦴','🏛️','🐾'],a:0},
+  {q:'It was ______ tall ______ a house.',vi:'Nó cao bằng một ngôi nhà.',opts:['as … as','more … than','so … that','too … to'],a:0},
+  {q:'The dinosaur ______ very big.',vi:'Khủng long ______ rất to. (thì quá khứ)',opts:['is','was','are','be'],a:1},
+  {q:'Which one is NOT about dinosaurs?',vi:'Từ nào KHÔNG liên quan đến khủng long?',opts:['fossil','claw','tail','birthday'],a:3},
+  {q:'Do dinosaurs live today?',vi:'Ngày nay khủng long còn sống không?',media:'🦕',opts:['No, they lived long ago.','Yes, in my house.','Yes, in the museum garden.','Yes, in the river.'],a:0},
+  {q:'A person who studies fossils is a ______ .',vi:'Người nghiên cứu hoá thạch là ______ .',media:'🔬',opts:['scientist','teacher','doctor','farmer'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'museum',opts:['🏛️','🏫','🏠','🏜️'],a:0},
+  {q:'True or False? All dinosaurs ate meat.',vi:'Đúng hay Sai? Mọi khủng long đều ăn thịt.',media:'🌱',opts:['True','False'],a:1},
+  {q:'Sharp things on a dinosaur’s foot are ______ .',vi:'Thứ sắc nhọn trên chân khủng long là ______ .',media:'🐾',opts:['claws','wheels','books','months'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['The dinosaur was very heavy.','Heavy the dinosaur very was.','Was very the heavy dinosaur.','Very was dinosaur the heavy.'],a:0},
+  {q:'Which is LONGER?',vi:'Cái nào DÀI HƠN?',media:'🦕🦎',opts:['the dinosaur','the lizard'],a:0},
+  {q:'Your friend asks "What did it eat?" It ate plants. You say:',vi:'Em trả lời:',media:'🌱',opts:['It ate plants.','It eat plants.','It is ate plants.','Plants it ate is.'],a:0}]},
+
+{id:'puzzle',badge:'🧩',theme:'t-violet',title:'Puzzles and Patterns',titleVi:'Câu đố và hoa văn',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 7'],
+ vocab:[
+  {w:'puzzle',ipa:'/ˈpʌz.əl/',vi:'câu đố, trò xếp hình',e:'🧩',s:'Can you solve this puzzle?'},
+  {w:'code',ipa:'/kəʊd/',vi:'mật mã',e:'🔢',s:'This is a secret code.'},
+  {w:'spots',ipa:'/spɒts/',vi:'đốm',e:'🐆',s:'The leopard has spots.'},
+  {w:'stripes',ipa:'/straɪps/',vi:'sọc, vằn',e:'🦓',s:'The zebra has stripes.'},
+  {w:'spoon',ipa:'/spuːn/',vi:'cái thìa',e:'🥄',s:'Eat the soup with a spoon.'},
+  {w:'fork',ipa:'/fɔːk/',vi:'cái nĩa',e:'🍴',s:'The fork is next to the plate.'},
+  {w:'cup',ipa:'/kʌp/',vi:'cái cốc',e:'☕',s:'The cup is on the table.'},
+  {w:'under',ipa:'/ˈʌn.dər/',vi:'ở dưới',e:'⬇️',s:'The spoon is under the cup.'},
+  {w:'on',ipa:'/ɒn/',vi:'ở trên',e:'⬆️',s:'The cup is on the box.'},
+  {w:'between',ipa:'/bɪˈtwiːn/',vi:'ở giữa',e:'↔️',s:'The fork is between the cup and the plate.'}],
+ patterns:['Where is the spoon? — It is under the cup.','The zebra has stripes. The leopard has spots.','Can you solve the puzzle?','It is between the cup and the fork.'],
+ dialog:[{w:'👩',en:'Nam, where is my spoon?',vi:'Nam ơi, cái thìa của mẹ đâu?'},
+  {w:'🧒',en:'It is under the cup, Mum.',vi:'Nó ở dưới cái cốc mẹ ạ.'},
+  {w:'👩',en:'Thank you. And the fork?',vi:'Cảm ơn con. Còn cái nĩa?'},
+  {w:'🧒',en:'It is between the cup and the plate.',vi:'Nó ở giữa cái cốc và cái đĩa ạ.'},
+  {w:'👩',en:'Clever boy! Now here is a puzzle for you.',vi:'Con giỏi lắm! Giờ mẹ có câu đố cho con.'},
+  {w:'🧒',en:'I love puzzles. Let me try!',vi:'Con thích câu đố lắm. Để con thử!'}],
+ real:'🔎 <b>Trò chơi "Where is it?" trên bàn ăn.</b> Bố mẹ giấu một cái thìa, em phải tìm và nói bằng tiếng Anh: <b>"It is under the bowl." / "It is between the cup and the plate."</b> Sau đó đổi vai và em giấu cho bố mẹ tìm.',
+ phonics:'<b>Cụm /str/ trong stripes</b> — <b>str</b>ipes, <b>str</b>ong, <b>str</b>eet. Đọc liền ba âm s-t-r, không thêm nguyên âm.<br>Lỗi hay gặp: đọc "sờ-trai". Hãy đọc liền: <b>straɪps</b>.',
+ tpr:'<b>On!</b> đặt tay lên đầu · <b>Under!</b> đưa tay xuống dưới bàn · <b>Between!</b> đặt tay giữa hai bạn · <b>Stripes!</b> vẽ đường thẳng trong không khí · <b>Spots!</b> chấm chấm bằng ngón trỏ.',
+ hw:'Vẽ một cái bàn ăn có cốc, thìa, nĩa. Viết 2 câu: <b>The spoon is under the cup. The fork is between the cup and the plate.</b>',
+ parent:'Trong bữa cơm hỏi con <b>"Where is the spoon?"</b> và yêu cầu trả lời cả câu. Đây là cách luyện giới từ nhanh nhất mà không cần bàn học.',
+ scenes:[
+  {bg:'room',cap:'Hello! Today we solve puzzles.',vi:'Xin chào! Hôm nay ta giải câu đố.',act:[{e:'🧩',x:44,y:52,s:110,a:'a-bob'},{e:'🔢',x:78,y:56,s:60,a:'a-pop'}]},
+  {bg:'meadow',cap:'The zebra has stripes.',vi:'Ngựa vằn có sọc.',act:[{e:'🦓',x:46,y:58,s:120,a:'a-bob'}]},
+  {bg:'forest',cap:'The leopard has spots.',vi:'Con báo có đốm.',act:[{e:'🐆',x:46,y:58,s:120,a:'a-drift'}]},
+  {bg:'kitchen',cap:'Where is the spoon? It is under the cup.',vi:'Cái thìa đâu? Nó ở dưới cái cốc.',act:[{e:'☕',x:40,y:48,s:82,a:'a-bob'},{e:'🥄',x:40,y:66,s:70,a:'a-bob'}]},
+  {bg:'kitchen',cap:'The fork is between the cup and the plate.',vi:'Cái nĩa ở giữa cốc và đĩa.',act:[{e:'☕',x:26,y:58,s:66,a:'a-bob'},{e:'🍴',x:50,y:58,s:74,a:'a-bob'},{e:'🍽️',x:74,y:58,s:70,a:'a-bob'}]},
+  {bg:'paper',cap:'Can you read the secret code? Well done!',vi:'Em đọc được mật mã không? Giỏi lắm!',act:[{e:'🔢',x:42,y:52,s:106,a:'a-bob'},{e:'🎉',x:78,y:38,s:52,a:'a-pop'}]}],
+ quiz:[
+  {q:'Which animal has stripes?',vi:'Con nào có sọc?',opts:['🦓 zebra','🐆 leopard','🐫 camel','🐟 fish'],a:0},
+  {q:'Which animal has spots?',vi:'Con nào có đốm?',opts:['🦓 zebra','🐆 leopard','🐍 snake','🐦 bird'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'spoon',opts:['🥄','🍴','☕','🍽️'],a:0},
+  {q:'What is it?',vi:'Đây là cái gì?',media:'🍴',opts:['spoon','fork','cup','plate'],a:1,say:'fork'},
+  {q:'You drink from it.',vi:'Em uống bằng cái này.',opts:['☕ cup','🍴 fork','🥄 spoon','🧩 puzzle'],a:0},
+  {q:'You eat soup with a ______ .',vi:'Em ăn canh bằng cái ______ .',media:'🥄',opts:['fork','spoon','cup','code'],a:1},
+  {q:'The spoon is ______ the cup.',vi:'Cái thìa ở DƯỚI cái cốc.',media:'⬇️',opts:['on','under','between','in front'],a:1},
+  {q:'The cup is ______ the table.',vi:'Cái cốc ở TRÊN cái bàn.',media:'⬆️',opts:['under','on','between','below'],a:1},
+  {q:'The fork is ______ the cup and the plate.',vi:'Cái nĩa ở GIỮA cốc và đĩa.',media:'↔️',opts:['on','under','between','next'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'cup',opts:['🍴','☕','🥄','🧩'],a:1},
+  {q:'A game with many small pieces is a ______ .',vi:'Trò chơi có nhiều mảnh nhỏ là ______ .',media:'🧩',opts:['puzzle','fork','stripe','spoon'],a:0},
+  {q:'Secret numbers and letters make a ______ .',vi:'Chữ và số bí mật tạo thành một ______ .',media:'🔢',opts:['code','cup','claw','month'],a:0},
+  {q:'Which one is NOT for eating?',vi:'Thứ nào KHÔNG dùng để ăn?',opts:['spoon','fork','cup','puzzle'],a:3},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'stripes',opts:['🐆','🦓','🐫','🦎'],a:1},
+  {q:'True or False? A zebra has spots.',vi:'Đúng hay Sai? Ngựa vằn có đốm.',media:'🦓',opts:['True','False'],a:1},
+  {q:'"______ is the spoon?" — "It is on the table."',vi:'Điền từ hỏi đúng.',opts:['Where','What','Who','When'],a:0},
+  {q:'Two big yellow stars. Which word comes FIRST?',vi:'Từ nào đứng TRƯỚC?',opts:['two','big','yellow','stars'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['The cup is on the box.','On the cup box is the.','Is the box on cup the.','The box the cup on is.'],a:0},
+  {q:'Your friend solves a hard puzzle. You say:',vi:'Bạn giải được câu đố khó. Em nói:',media:'🧩',opts:['Well done! You are clever!','That is easy, silly.','I don’t care.','Stop it now.'],a:0},
+  {q:'Mum asks "Where is the fork?" It is under the plate. You say:',vi:'Em trả lời:',media:'🍴',opts:['It is under the plate.','Under it plate the is.','It is plate under.','The plate is it under.'],a:0}]},
+
+{id:'health',badge:'💓',theme:'t-slate',title:'Our Amazing Body',titleVi:'Cơ thể kỳ diệu của em',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 8'],
+ vocab:[
+  {w:'heart',ipa:'/hɑːt/',vi:'trái tim',e:'💓',s:'My heart goes fast when I run.'},
+  {w:'bone',ipa:'/bəʊn/',vi:'xương',e:'🦴',s:'Bones keep us strong.'},
+  {w:'muscle',ipa:'/ˈmʌs.əl/',vi:'cơ bắp',e:'💪',s:'Exercise makes muscles strong.'},
+  {w:'teeth',ipa:'/tiːθ/',vi:'răng',e:'🦷',s:'Brush your teeth twice a day.'},
+  {w:'sleep',ipa:'/sliːp/',vi:'ngủ',e:'😴',s:'I sleep nine hours every night.'},
+  {w:'exercise',ipa:'/ˈek.sə.saɪz/',vi:'tập thể dục',e:'🤸',s:'We do exercise every morning.'},
+  {w:'vegetables',ipa:'/ˈvedʒ.tə.bəlz/',vi:'rau củ',e:'🥦',s:'I eat vegetables at dinner.'},
+  {w:'fruit',ipa:'/fruːt/',vi:'trái cây',e:'🍇',s:'Fruit is good for you.'},
+  {w:'doctor',ipa:'/ˈdɒk.tər/',vi:'bác sĩ',e:'👩‍⚕️',s:'The doctor helps sick people.'},
+  {w:'healthy',ipa:'/ˈhel.θi/',vi:'khoẻ mạnh',e:'🌟',s:'I want to be healthy.'}],
+ patterns:['What’s the matter? — I have a headache.','I eat fruit every day.','Shall I help you? — Yes, please.','Exercise makes us healthy.'],
+ dialog:[{w:'👩‍🏫',en:'Mai, what’s the matter?',vi:'Mai ơi, con làm sao thế?'},
+  {w:'👧',en:'I have a headache, teacher.',vi:'Con bị đau đầu ạ.'},
+  {w:'👩‍🏫',en:'Oh dear. Shall I call the doctor?',vi:'Ôi. Cô gọi bác sĩ nhé?'},
+  {w:'👧',en:'Yes, please. Thank you.',vi:'Vâng ạ. Con cảm ơn cô.'},
+  {w:'👩‍🏫',en:'Do you sleep well and eat vegetables?',vi:'Con ngủ đủ và ăn rau chứ?'},
+  {w:'👧',en:'I sleep well, but I don’t like vegetables.',vi:'Con ngủ đủ, nhưng con không thích rau ạ.'}],
+ real:'💓 <b>Thí nghiệm nhịp tim.</b> Ngồi yên, đặt tay lên ngực và đếm nhịp tim trong 10 giây. Rồi chạy tại chỗ 30 giây và đếm lại. Nói to kết quả bằng tiếng Anh: <b>"Now my heart is fast! Exercise is good."</b>',
+ phonics:'<b>Âm /θ/ trong healthy, teeth</b> — heal<b>th</b>y, tee<b>th</b>, <b>th</b>ink. Lưỡi chạm nhẹ răng rồi thổi hơi.<br>Lỗi hay gặp: đọc <i>teeth</i> thành "tít". Hãy để lưỡi ló ra: <b>tiːθ</b>.',
+ tpr:'💓 heart: tay đặt lên ngực đập thình thịch · 💪 muscle: gồng tay · 🦷 teeth: đánh răng · 😴 sleep: chắp tay úp má · 🤸 exercise: nhảy tại chỗ 5 cái · 🥦 vegetables: giả vờ nhai rau.',
+ hw:'Làm bảng "Tuần khoẻ mạnh". Mỗi ngày vẽ 1 việc tốt em đã làm và viết: <b>Monday — I ate fruit. Tuesday — I did exercise.</b>',
+ parent:'Mỗi tối hỏi con 1 câu <b>"What did you eat today?"</b> hoặc <b>"Did you do exercise?"</b> Con trả lời ngắn cũng được, quan trọng là ngày nào cũng hỏi.',
+ scenes:[
+  {bg:'gym',cap:'Our body is amazing. Let’s look inside!',vi:'Cơ thể ta thật kỳ diệu. Cùng nhìn vào bên trong nhé!',act:[{e:'💓',x:42,y:52,s:104,a:'a-bob'},{e:'🦴',x:76,y:58,s:70,a:'a-bob'}]},
+  {bg:'gym',cap:'When I run, my heart goes fast.',vi:'Khi tớ chạy, tim đập nhanh.',act:[{e:'🏃',x:36,y:58,s:100,a:'a-drift'},{e:'💓',x:74,y:48,s:74,a:'a-pop'}]},
+  {bg:'gym',cap:'Exercise makes our muscles strong.',vi:'Tập thể dục làm cơ bắp khoẻ hơn.',act:[{e:'🤸',x:38,y:56,s:104,a:'a-bob'},{e:'💪',x:74,y:56,s:82,a:'a-bob'}]},
+  {bg:'kitchen',cap:'Eat fruit and vegetables every day.',vi:'Hãy ăn trái cây và rau mỗi ngày.',act:[{e:'🍇',x:34,y:56,s:88,a:'a-bob'},{e:'🥦',x:68,y:58,s:88,a:'a-bob'}]},
+  {bg:'room',cap:'Brush your teeth twice a day.',vi:'Đánh răng hai lần mỗi ngày.',act:[{e:'🦷',x:40,y:54,s:96,a:'a-bob'},{e:'🪥',x:74,y:58,s:80,a:'a-sway'}]},
+  {bg:'night',cap:'Sleep well. Good night and stay healthy!',vi:'Ngủ ngon nhé. Chúc em luôn khoẻ mạnh!',act:[{e:'😴',x:42,y:56,s:104,a:'a-bob'},{e:'🌟',x:78,y:34,s:56,a:'a-spin'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là bộ phận nào?',media:'💓',opts:['heart','bone','tooth','muscle'],a:0,say:'heart'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'teeth',opts:['🦷','🦴','💪','💓'],a:0},
+  {q:'You brush your ______ twice a day.',vi:'Em đánh ______ hai lần mỗi ngày.',media:'🦷',opts:['teeth','bones','heart','fruit'],a:0},
+  {q:'They keep our body strong and straight.',vi:'Chúng giúp cơ thể chắc khoẻ và thẳng.',media:'🦴',opts:['bones','cups','codes','wheels'],a:0},
+  {q:'When you run, your heart goes ______ .',vi:'Khi chạy, tim em đập ______ .',media:'🏃',opts:['fast','slow','cold','dry'],a:0},
+  {q:'Which food is healthy?',vi:'Món nào tốt cho sức khoẻ?',opts:['🥦 vegetables','🍰 cake','🍬 sweets','🥤 cola'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'fruit',opts:['🥦','🍇','🦴','😴'],a:1},
+  {q:'Children need about nine hours of ______ .',vi:'Trẻ em cần khoảng chín tiếng ______ .',media:'😴',opts:['sleep','sand','code','meat'],a:0},
+  {q:'"What’s the matter?" — Choose a good answer.',vi:'Chọn câu trả lời phù hợp.',opts:['I have a headache.','I am a headache.','Matter is my head.','I have head a ache.'],a:0},
+  {q:'Your friend is tired. You offer help. You say:',vi:'Bạn mệt. Em ngỏ ý giúp. Em nói:',opts:['Shall I help you?','I help you shall?','Help shall I you?','You shall I help.'],a:0},
+  {q:'______ makes our muscles strong.',vi:'______ làm cơ bắp khoẻ hơn.',media:'💪',opts:['Exercise','Sleeping all day','Sweets','Television'],a:0},
+  {q:'A person who helps sick people is a ______ .',vi:'Người chữa bệnh là ______ .',media:'👩‍⚕️',opts:['doctor','teacher','driver','farmer'],a:0},
+  {q:'Which one is NOT a part of your body?',vi:'Thứ nào KHÔNG phải bộ phận cơ thể?',opts:['heart','bone','muscle','spoon'],a:3},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'doctor',opts:['👩‍⚕️','👩‍🏫','🧒','👵'],a:0},
+  {q:'True or False? Sweets are better than fruit for your teeth.',vi:'Đúng hay Sai? Kẹo tốt cho răng hơn trái cây.',media:'🦷',opts:['True','False'],a:1},
+  {q:'A child who eats well and runs every day is ______ .',vi:'Bạn nhỏ ăn tốt và chạy mỗi ngày thì rất ______ .',media:'🌟',opts:['healthy','heavy','dry','tiny'],a:0},
+  {q:'I ______ fruit every day.',vi:'Ngày nào em cũng ăn trái cây.',opts:['eat','eats','eating','am eat'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['I sleep nine hours every night.','Nine hours I every night sleep.','Sleep I every nine night hours.','Every I sleep night nine hours.'],a:0},
+  {q:'How many times a day should you brush your teeth?',vi:'Một ngày nên đánh răng mấy lần?',media:'🪥',opts:['none','once a week','twice a day','once a month'],a:2},
+  {q:'Teacher asks "What’s the matter?" Your leg hurts. You say:',vi:'Em trả lời:',opts:['I have a sore leg.','My leg is a matter.','I am sore leg have.','Leg sore I have a.'],a:0}]},
+
+{id:'size',badge:'🤖',theme:'t-lime',title:'Big and Little',titleVi:'To và nhỏ',
+ tags:['Pre A1 → A1','35–40 phút','Cambridge Unit 9'],
+ vocab:[
+  {w:'robot',ipa:'/ˈrəʊ.bɒt/',vi:'người máy',e:'🤖',s:'This robot can walk and talk.'},
+  {w:'giant',ipa:'/ˈdʒaɪ.ənt/',vi:'người khổng lồ',e:'🗿',s:'The giant is very tall.'},
+  {w:'tiny',ipa:'/ˈtaɪ.ni/',vi:'tí xíu',e:'🐜',s:'An ant is tiny.'},
+  {w:'light',ipa:'/laɪt/',vi:'nhẹ',e:'🪶',s:'A feather is very light.'},
+  {w:'metre',ipa:'/ˈmiː.tər/',vi:'mét',e:'📏',s:'The robot is two metres tall.'},
+  {w:'machine',ipa:'/məˈʃiːn/',vi:'cỗ máy',e:'⚙️',s:'A robot is a clever machine.'},
+  {w:'button',ipa:'/ˈbʌt.ən/',vi:'cái nút',e:'🔘',s:'Press the red button.'},
+  {w:'clever',ipa:'/ˈklev.ər/',vi:'thông minh',e:'🎓',s:'My robot is very clever.'},
+  {w:'strong',ipa:'/strɒŋ/',vi:'khoẻ, mạnh',e:'🦾',s:'The robot is strong.'},
+  {w:'slow',ipa:'/sləʊ/',vi:'chậm',e:'🐢',s:'A turtle is slow.'}],
+ patterns:['The robot is two metres tall.','A giant is bigger than a robot.','An ant is tiny. A feather is light.','This one has more buttons than that one.'],
+ dialog:[{w:'🧒',en:'Look at my robot! It is one metre tall.',vi:'Nhìn con robot của tớ này! Nó cao một mét.'},
+  {w:'👧',en:'Wow! Is it heavy?',vi:'Ồ! Nó có nặng không?'},
+  {w:'🧒',en:'No, it is light. But it is strong.',vi:'Không, nó nhẹ. Nhưng nó khoẻ.'},
+  {w:'👧',en:'What can it do?',vi:'Nó làm được gì?'},
+  {w:'🧒',en:'Press the red button and it walks.',vi:'Bấm nút đỏ là nó bước đi.'},
+  {w:'👧',en:'That is so clever! I like your robot.',vi:'Thông minh quá! Tớ thích robot của cậu.'}],
+ real:'📏 <b>Đo và so sánh ở nhà.</b> Lấy thước đo chiều cao của em, của bố và của cái bàn. Rồi nói bằng tiếng Anh: <b>"I am one metre tall. My father is taller than me. The table is smaller."</b>',
+ phonics:'<b>Cụm /str/ trong strong</b> — <b>str</b>ong, <b>str</b>eet, <b>str</b>ipes. Ba âm s-t-r đọc liền một hơi.<br>Lỗi hay gặp: đọc "sờ-tong". Đừng thêm âm "ơ": <b>strɒŋ</b>.',
+ tpr:'🤖 robot: bước cứng như máy · 🗿 giant: dang tay thật to, bước thình thịch · 🐜 tiny: chụm người thật nhỏ · 🪶 light: nhón chân nhẹ nhàng · 🐢 slow: bò thật chậm · 🦾 strong: gồng tay.',
+ hw:'Vẽ con robot của riêng em. Viết 3 câu: <b>My robot is ___ metres tall. It is strong. It can ___ .</b>',
+ parent:'Chơi trò đoán: bố mẹ nghĩ một đồ vật trong nhà, con hỏi <b>"Is it big or small?" "Is it heavy or light?"</b> để đoán ra. Vừa vui vừa luyện tính từ.',
+ scenes:[
+  {bg:'room',cap:'Meet my robot. It is a clever machine.',vi:'Đây là robot của tớ. Một cỗ máy thông minh.',act:[{e:'🤖',x:44,y:56,s:126,a:'a-bob'},{e:'⚙️',x:80,y:52,s:56,a:'a-spin'}]},
+  {bg:'paper',cap:'The robot is two metres tall.',vi:'Con robot cao hai mét.',act:[{e:'🤖',x:38,y:56,s:112,a:'a-bob'},{e:'📏',x:74,y:54,s:88,a:'a-sway'}]},
+  {bg:'meadow',cap:'A giant is bigger than a robot.',vi:'Người khổng lồ to hơn robot.',act:[{e:'🗿',x:36,y:54,s:130,a:'a-bob'},{e:'🤖',x:74,y:64,s:74,a:'a-bob'}]},
+  {bg:'meadow',cap:'An ant is tiny. A feather is light.',vi:'Con kiến tí xíu. Chiếc lông thì nhẹ.',act:[{e:'🐜',x:34,y:64,s:62,a:'a-drift'},{e:'🪶',x:70,y:50,s:86,a:'a-sway'}]},
+  {bg:'room',cap:'Press the red button. It is strong!',vi:'Bấm nút đỏ. Nó khoẻ lắm!',act:[{e:'🔘',x:36,y:56,s:80,a:'a-pop'},{e:'🦾',x:72,y:56,s:100,a:'a-bob'}]},
+  {bg:'meadow',cap:'A turtle is slow. A robot is fast. Goodbye!',vi:'Rùa thì chậm. Robot thì nhanh. Tạm biệt!',act:[{e:'🐢',x:34,y:64,s:86,a:'a-drift'},{e:'🤖',x:72,y:56,s:96,a:'a-bob'}]}],
+ quiz:[
+  {q:'What is it?',vi:'Đây là cái gì?',media:'🤖',opts:['robot','giant','machine','button'],a:0,say:'robot'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'giant',opts:['🐜','🗿','🪶','🐢'],a:1},
+  {q:'An ant is very small. It is ______ .',vi:'Con kiến rất nhỏ. Nó ______ .',media:'🐜',opts:['tiny','giant','heavy','strong'],a:0},
+  {q:'A feather is not heavy. It is ______ .',vi:'Chiếc lông không nặng. Nó ______ .',media:'🪶',opts:['light','slow','tiny','clever'],a:0},
+  {q:'We measure height in ______ .',vi:'Ta đo chiều cao bằng đơn vị ______ .',media:'📏',opts:['metres','months','cups','codes'],a:0},
+  {q:'A turtle is not fast. It is ______ .',vi:'Rùa không nhanh. Nó ______ .',media:'🐢',opts:['slow','light','clever','tiny'],a:0},
+  {q:'A robot is a clever ______ .',vi:'Robot là một cỗ ______ thông minh.',media:'⚙️',opts:['machine','month','museum','muscle'],a:0},
+  {q:'Press the red ______ .',vi:'Bấm ______ màu đỏ.',media:'🔘',opts:['button','bone','banana','bicycle'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'strong',opts:['🐢','🦾','🪶','🐜'],a:1},
+  {q:'Which one is BIGGER?',vi:'Cái nào TO HƠN?',media:'🗿🐜',opts:['the giant','the ant'],a:0},
+  {q:'A giant is ______ than a robot.',vi:'Người khổng lồ ______ robot.',opts:['big','bigger','biggest','more big'],a:1},
+  {q:'The elephant is the ______ animal here.',vi:'Con voi là con vật ______ ở đây.',media:'🐘🐜🐢',opts:['big','bigger','biggest','tiny'],a:2},
+  {q:'This robot has 5 buttons. That one has 3. This one has ______ buttons.',vi:'Con này có ______ nút hơn.',opts:['more','less','fewer than','many the'],a:0},
+  {q:'Which one is NOT about size?',vi:'Từ nào KHÔNG nói về kích thước?',opts:['tiny','giant','big','clever'],a:3},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'machine',opts:['⚙️','🔘','📏','🎓'],a:0},
+  {q:'True or False? A feather is heavier than a rock.',vi:'Đúng hay Sai? Lông nặng hơn đá.',media:'🪶🪨',opts:['True','False'],a:1},
+  {q:'My robot can solve puzzles. It is very ______ .',vi:'Robot của em giải được câu đố. Nó rất ______ .',media:'🎓',opts:['clever','slow','tiny','light'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['The robot is two metres tall.','Two the robot metres tall is.','Tall is the robot two metres a.','Metres two tall robot the is.'],a:0},
+  {q:'Which is the SMALLEST?',vi:'Cái nào NHỎ NHẤT?',opts:['🗿 giant','🤖 robot','🐢 turtle','🐜 ant'],a:3},
+  {q:'A friend asks "How tall is your robot?" It is 1 metre. You say:',vi:'Em trả lời:',media:'📏',opts:['It is one metre tall.','It is tall one metre a.','One metre it tall is.','Tall is one metre it.'],a:0}]}
+,
+{id:'subjects',badge:'📚',theme:'t-ink',lv:2,title:'School Subjects & Timetable',titleVi:'Môn học và thời khoá biểu',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Đọc hiểu'],
+ vocab:[
+  {w:'subject',ipa:'/ˈsʌb.dʒekt/',vi:'môn học',e:'📚',s:'We study six subjects at school.'},
+  {w:'Maths',ipa:'/mæθs/',vi:'môn Toán',e:'➗',s:'We have Maths on Monday and Thursday.'},
+  {w:'Science',ipa:'/ˈsaɪ.əns/',vi:'môn Khoa học',e:'🧪',s:'In Science we do easy experiments.'},
+  {w:'English',ipa:'/ˈɪŋ.ɡlɪʃ/',vi:'môn Tiếng Anh',e:'🔤',s:'English is my favourite subject.'},
+  {w:'Art',ipa:'/ɑːt/',vi:'môn Mĩ thuật',e:'🎨',s:'In Art we draw and paint.'},
+  {w:'Music',ipa:'/ˈmjuː.zɪk/',vi:'môn Âm nhạc',e:'🎵',s:'We sing new songs in Music.'},
+  {w:'PE',ipa:'/ˌpiːˈiː/',vi:'môn Thể dục',e:'⛹️',s:'We play games outside in PE.'},
+  {w:'timetable',ipa:'/ˈtaɪm.teɪ.bəl/',vi:'thời khoá biểu',e:'🗓️',s:'Look at the timetable for Tuesday.'},
+  {w:'lesson',ipa:'/ˈles.ən/',vi:'tiết học',e:'⏱️',s:'Our first lesson starts at seven.'},
+  {w:'break',ipa:'/breɪk/',vi:'giờ ra chơi',e:'🔔',s:'We play football at break time.'}],
+ patterns:['We have Maths on Monday and Wednesday.','What is your favourite subject? — Art, because I love drawing.','Our English lesson starts at eight o’clock.','I am always ready for Science, but I am never late for PE.'],
+ dialog:[{w:'👧',en:'Nam, what have we got on Tuesday?',vi:'Nam ơi, thứ Ba mình có môn gì?'},
+  {w:'🧒',en:'We have got Maths, English and Music.',vi:'Có Toán, Tiếng Anh và Âm nhạc.'},
+  {w:'👧',en:'Which subject do you like best?',vi:'Cậu thích môn nào nhất?'},
+  {w:'🧒',en:'Music, because I love singing. And you?',vi:'Âm nhạc, vì tớ thích hát. Còn cậu?'},
+  {w:'👧',en:'I prefer Science. It is harder, but it is fun.',vi:'Tớ thích Khoa học hơn. Khó hơn nhưng vui.'},
+  {w:'🧒',en:'Come on, the lesson starts in two minutes!',vi:'Nhanh lên, hai phút nữa vào tiết rồi!'}],
+ real:'🗓️ <b>Viết lại thời khoá biểu của em bằng tiếng Anh.</b> Kẻ 5 cột (Monday → Friday) và điền tên môn học tiếng Anh vào. Sáng mai, trước khi đi học, nói to: <b>"Today is Tuesday. We have Maths and English."</b>',
+ phonics:'<b>Trọng âm từ dài</b> — <i>TIME-table</i>, <i>SCI-ence</i>, <i>SUB-ject</i>: nhấn mạnh âm tiết ĐẦU.<br>Lỗi hay gặp: đọc đều tất cả các âm tiết. Hãy vỗ tay vào âm được nhấn khi đọc.',
+ tpr:'Cô gọi tên môn, cả lớp làm động tác: <b>Maths</b> đếm ngón tay · <b>Science</b> cầm ống nghiệm lắc · <b>Art</b> vẽ trong không khí · <b>Music</b> hát "la la" · <b>PE</b> chạy tại chỗ · <b>Break</b> reo lên "yay!".',
+ hw:'Viết 4 câu về thời khoá biểu của em: <b>On Monday we have ___ . My favourite subject is ___ because ___ .</b>',
+ parent:'Mỗi tối khi con soạn cặp, hỏi <b>"What have you got tomorrow?"</b> để con trả lời cả câu: <i>"We have got Maths and Art."</i>',
+ scenes:[
+  {bg:'class',cap:'Good morning! Look at our timetable.',vi:'Chào buổi sáng! Cùng xem thời khoá biểu nào.',act:[{e:'🗓️',x:42,y:52,s:110,a:'a-bob'},{e:'👩‍🏫',x:78,y:64,s:60,a:'a-bob'}]},
+  {bg:'class',cap:'On Monday we have Maths and English.',vi:'Thứ Hai chúng ta có Toán và Tiếng Anh.',act:[{e:'➗',x:34,y:54,s:92,a:'a-bob'},{e:'🔤',x:68,y:56,s:92,a:'a-bob'}]},
+  {bg:'class',cap:'In Science we do easy experiments.',vi:'Giờ Khoa học chúng ta làm thí nghiệm đơn giản.',act:[{e:'🧪',x:44,y:54,s:112,a:'a-sway'},{e:'💧',x:78,y:58,s:52,a:'a-bob'}]},
+  {bg:'class',cap:'In Art we draw. In Music we sing.',vi:'Giờ Mĩ thuật ta vẽ. Giờ Âm nhạc ta hát.',act:[{e:'🎨',x:34,y:56,s:96,a:'a-bob'},{e:'🎵',x:70,y:52,s:88,a:'a-drift'}]},
+  {bg:'gym',cap:'PE is on Friday. We play outside.',vi:'Thể dục vào thứ Sáu. Chúng ta chơi ngoài sân.',act:[{e:'⛹️',x:44,y:58,s:114,a:'a-bob'},{e:'⚽',x:78,y:66,s:56,a:'a-spin'}]},
+  {bg:'class',cap:'The bell rings. It is break time!',vi:'Chuông reo rồi. Đến giờ ra chơi!',act:[{e:'🔔',x:44,y:52,s:104,a:'a-sway'},{e:'🎉',x:78,y:38,s:52,a:'a-pop'}]}],
+ quiz:[
+  {q:'What subject is it?',vi:'Đây là môn gì?',media:'🧪',opts:['Art','Science','Music','PE'],a:1,say:'Science'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'timetable',opts:['🗓️','⏱️','🔔','📚'],a:0},
+  {q:'In this subject we draw and paint.',vi:'Môn này ta vẽ và tô màu.',opts:['➗ Maths','🎨 Art','🔤 English','🧪 Science'],a:1},
+  {q:'We ______ Maths on Monday and Wednesday.',vi:'Chúng em ______ Toán vào thứ Hai và thứ Tư.',opts:['have','has','having','to have'],a:0},
+  {q:'My sister ______ Music every Friday.',vi:'Chị em ______ môn Âm nhạc mỗi thứ Sáu.',media:'🎵',opts:['have','has','are','having'],a:1},
+  {q:'Our English lesson starts ______ eight o’clock.',vi:'Tiết Tiếng Anh bắt đầu lúc 8 giờ.',opts:['in','on','at','to'],a:2},
+  {q:'We have PE ______ Friday.',vi:'Chúng em học Thể dục vào thứ Sáu.',opts:['in','on','at','of'],a:1},
+  {q:'Read: "Mai has Art on Tuesday and Science on Thursday. Her favourite subject is Art." When does Mai have Art?',vi:'Đọc và trả lời: Mai học Mĩ thuật vào thứ mấy?',opts:['Monday','Tuesday','Thursday','Friday'],a:1},
+  {q:'Read the text above again. What is Mai’s favourite subject?',vi:'Môn Mai thích nhất là gì?',opts:['Science','Maths','Art','Music'],a:2},
+  {q:'Read: "Nam is never late for PE, but he is sometimes late for Maths." Is Nam late for PE?',vi:'Nam có hay muộn giờ Thể dục không?',opts:['Yes, always.','No, never.','Yes, sometimes.','Every day.'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'break',opts:['🔔','⏱️','⛹️','🗓️'],a:0},
+  {q:'"What is your favourite subject?" — Choose the BEST answer.',vi:'Chọn câu trả lời hay nhất.',opts:['Art, because I love drawing.','Yes, I do it.','It is on Monday only.','I am a subject.'],a:0},
+  {q:'Which word joins two ideas: "I like Art ______ I love drawing."',vi:'Chọn từ nối đúng.',opts:['because','but','or','after'],a:0},
+  {q:'"Science is hard ______ it is interesting."',vi:'Chọn từ nối đúng.',opts:['because','but','so that','if'],a:1},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['We have Music on Wednesday.','Music we have Wednesday on.','On we Wednesday Music have.','Have we on Music Wednesday.'],a:0},
+  {q:'Between two lessons we have a short ______ .',vi:'Giữa hai tiết học có một ______ ngắn.',media:'🔔',opts:['break','subject','lesson','timetable'],a:0},
+  {q:'True or False? A timetable shows what subjects you have each day.',vi:'Đúng hay Sai?',media:'🗓️',opts:['True','False'],a:0},
+  {q:'How many subjects are in this list: Maths, Art, PE, Music?',vi:'Danh sách này có mấy môn?',opts:['three','four','five','six'],a:1},
+  {q:'A friend asks "Which subject do you like best?" You like English. You say:',vi:'Em trả lời:',opts:['I like English best because it is fun.','Best English I like it fun.','English is like I best.','I am English best like.'],a:0},
+  {q:'Your lesson starts in one minute and you are outside. You say:',vi:'Sắp vào tiết mà em còn ở ngoài. Em nói:',opts:['Hurry up! The lesson starts now.','Good night, see you.','I am a timetable.','Break time is over never.'],a:0}]},
+
+{id:'tree',badge:'👨‍👩‍👧‍👦',theme:'t-rose',lv:2,title:'My Family Tree',titleVi:'Cây gia đình của em',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Sở hữu cách'],
+ vocab:[
+  {w:'parents',ipa:'/ˈpeə.rənts/',vi:'bố mẹ',e:'👨‍👩‍👦',s:'My parents work in the city.'},
+  {w:'grandparents',ipa:'/ˈɡræn.peə.rənts/',vi:'ông bà',e:'👵',s:'My grandparents live in the countryside.'},
+  {w:'aunt',ipa:'/ɑːnt/',vi:'cô, dì, bác gái',e:'👩‍🦰',s:'My aunt is my mother’s sister.'},
+  {w:'uncle',ipa:'/ˈʌŋ.kəl/',vi:'chú, cậu, bác trai',e:'👨‍🦰',s:'My uncle drives a big truck.'},
+  {w:'cousin',ipa:'/ˈkʌz.ən/',vi:'anh chị em họ',e:'🧑‍🤝‍🧑',s:'I have got four cousins.'},
+  {w:'baby',ipa:'/ˈbeɪ.bi/',vi:'em bé',e:'👶',s:'The baby is only one year old.'},
+  {w:'older',ipa:'/ˈəʊl.dər/',vi:'lớn tuổi hơn',e:'🧓',s:'My brother is older than me.'},
+  {w:'younger',ipa:'/ˈjʌŋ.ɡər/',vi:'nhỏ tuổi hơn',e:'🧒',s:'My sister is younger than me.'},
+  {w:'married',ipa:'/ˈmær.id/',vi:'đã kết hôn',e:'💍',s:'My aunt got married last year.'},
+  {w:'twins',ipa:'/twɪnz/',vi:'sinh đôi',e:'👯',s:'My cousins are twins.'}],
+ patterns:['My mother’s brother is my uncle.','My sister is older than me, but I am taller than her.','How many cousins have you got? — I have got four cousins.','My grandparents live in the countryside with my aunt.'],
+ dialog:[{w:'👧',en:'Is this your family tree, Nam?',vi:'Đây là cây gia đình của cậu à, Nam?'},
+  {w:'🧒',en:'Yes. These are my parents and my grandparents.',vi:'Ừ. Đây là bố mẹ và ông bà tớ.'},
+  {w:'👧',en:'Who is the woman next to your mother?',vi:'Người phụ nữ cạnh mẹ cậu là ai?'},
+  {w:'🧒',en:'She is my aunt. She is my mother’s sister.',vi:'Cô ấy là dì tớ, em gái của mẹ tớ.'},
+  {w:'👧',en:'And the two little boys?',vi:'Còn hai cậu bé nhỏ?'},
+  {w:'🧒',en:'They are my cousins. They are twins!',vi:'Đó là anh em họ tớ. Hai bạn ấy sinh đôi đấy!'}],
+ real:'🌳 <b>Vẽ cây gia đình thật của em trên giấy A4.</b> Ghi tên tiếng Anh cho từng người (father, mother, aunt, uncle, cousin…). Sau đó chỉ vào từng người và giới thiệu bằng câu dài: <b>"This is my aunt. She is my mother’s sister. She is younger than my mother."</b>',
+ phonics:'<b>Sở hữu cách ’s</b> — mother<b>’s</b>, father<b>’s</b>, Nam<b>’s</b>. Đọc thêm âm /z/ ở cuối.<br>Lỗi hay gặp: bỏ hẳn âm cuối. Hãy đọc rõ: <b>MU-thəz</b> brother.',
+ tpr:'Cả lớp đứng thành "cây gia đình": hàng sau là <b>grandparents</b>, hàng giữa là <b>parents / aunt / uncle</b>, hàng trước là <b>children / cousins</b>. Cô gọi tên vai nào, hàng đó giơ tay và nói to từ đó.',
+ hw:'Viết 5 câu về gia đình em, mỗi câu dùng một từ mới: <b>My uncle is my father’s brother. He is older than my father.</b>',
+ parent:'Mở album ảnh và hỏi con: <b>"Who is your mother’s sister?"</b> hoặc <b>"Who is older, you or your brother?"</b> Câu hỏi so sánh giúp con quen dần với <i>older/younger than</i>.',
+ scenes:[
+  {bg:'home',cap:'This is my family tree.',vi:'Đây là cây gia đình của tớ.',act:[{e:'👨‍👩‍👧‍👦',x:44,y:54,s:130,a:'a-bob'}]},
+  {bg:'home',cap:'These are my parents. They work in the city.',vi:'Đây là bố mẹ tớ. Họ làm việc ở thành phố.',act:[{e:'👨‍👩‍👦',x:46,y:56,s:126,a:'a-bob'}]},
+  {bg:'meadow',cap:'My grandparents live in the countryside.',vi:'Ông bà tớ sống ở quê.',act:[{e:'👵',x:34,y:60,s:92,a:'a-bob'},{e:'👴',x:60,y:60,s:92,a:'a-bob'},{e:'🌾',x:84,y:68,s:52,a:'a-sway'}]},
+  {bg:'home',cap:'My mother’s sister is my aunt.',vi:'Em gái của mẹ tớ là dì tớ.',act:[{e:'👩‍🦰',x:40,y:56,s:110,a:'a-bob'},{e:'💗',x:76,y:44,s:50,a:'a-pop'}]},
+  {bg:'street',cap:'My uncle drives a big truck.',vi:'Chú tớ lái một chiếc xe tải lớn.',act:[{e:'👨‍🦰',x:34,y:58,s:96,a:'a-bob'},{e:'🚚',x:72,y:62,s:100,a:'a-drift'}]},
+  {bg:'home',cap:'My cousins are twins. I love my family!',vi:'Anh em họ tớ sinh đôi. Tớ yêu gia đình mình!',act:[{e:'👯',x:42,y:58,s:118,a:'a-bob'},{e:'❤️',x:78,y:40,s:50,a:'a-pop'}]}],
+ quiz:[
+  {q:'Who are they?',vi:'Họ là ai?',media:'👨‍👩‍👦',opts:['parents','cousins','twins','teachers'],a:0,say:'parents'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'cousin',opts:['👶','🧑‍🤝‍🧑','👵','👯'],a:1},
+  {q:'My mother’s sister is my ______ .',vi:'Em gái của mẹ em là ______ .',media:'👩‍🦰',opts:['aunt','uncle','cousin','niece'],a:0},
+  {q:'My father’s brother is my ______ .',vi:'Em trai của bố em là ______ .',media:'👨‍🦰',opts:['aunt','uncle','grandfather','cousin'],a:1},
+  {q:'My aunt’s son is my ______ .',vi:'Con trai của dì em là ______ .',media:'🧑‍🤝‍🧑',opts:['brother','cousin','uncle','father'],a:1},
+  {q:'My father’s parents are my ______ .',vi:'Bố mẹ của bố em là ______ .',media:'👵',opts:['parents','cousins','grandparents','twins'],a:2},
+  {q:'Two babies born on the same day are ______ .',vi:'Hai em bé sinh cùng ngày gọi là ______ .',media:'👯',opts:['twins','cousins','parents','friends'],a:0},
+  {q:'I am 8. My brother is 11. My brother is ______ than me.',vi:'Anh em lớn tuổi hơn em.',opts:['old','older','oldest','more old'],a:1},
+  {q:'I am 8. My sister is 5. My sister is ______ than me.',vi:'Em gái em nhỏ tuổi hơn em.',opts:['young','younger','youngest','more young'],a:1},
+  {q:'Choose the correct possessive form.',vi:'Chọn dạng sở hữu đúng.',opts:['my mother’s brother','my mother brother','my brother of mother','mother’s my brother'],a:0},
+  {q:'Read: "Lan has two brothers and one sister. Her brothers are older than her. Her sister is a baby." How many brothers has Lan got?',vi:'Lan có mấy anh trai?',opts:['one','two','three','four'],a:1},
+  {q:'Read the text above again. Is Lan older than her sister?',vi:'Lan có lớn hơn em gái không?',opts:['Yes, she is.','No, she isn’t.','They are twins.','We don’t know.'],a:0},
+  {q:'"How many cousins ______ you got?"',vi:'Điền từ đúng.',opts:['have','has','are','do'],a:0},
+  {q:'My grandparents ______ in the countryside.',vi:'Ông bà em sống ở quê.',opts:['live','lives','living','is live'],a:0},
+  {q:'My uncle ______ a big truck.',vi:'Chú em lái xe tải lớn.',media:'🚚',opts:['drive','drives','driving','is drive'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'married',opts:['💍','👶','🧓','👯'],a:0},
+  {q:'A very small child is a ______ .',vi:'Đứa trẻ rất nhỏ gọi là ______ .',media:'👶',opts:['baby','uncle','twin','parent'],a:0},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['My sister is younger than me.','Younger my sister than me is.','Is my than sister younger me.','Me than younger is my sister.'],a:0},
+  {q:'True or False? Your mother’s mother is your aunt.',vi:'Đúng hay Sai?',media:'👵',opts:['True','False'],a:1},
+  {q:'A friend asks "Who is the tallest in your family?" Your father is. You say:',vi:'Em trả lời:',opts:['My father is the tallest.','My father is taller the most.','The tallest my father is a.','Father tallest is in my.'],a:0}]},
+
+{id:'friend',badge:'🫂',theme:'t-jade',lv:2,title:'My Best Friend',titleVi:'Người bạn thân của em',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Miêu tả người'],
+ vocab:[
+  {w:'friend',ipa:'/frend/',vi:'người bạn',e:'🫂',s:'Mai is my best friend.'},
+  {w:'funny',ipa:'/ˈfʌn.i/',vi:'vui tính',e:'😄',s:'My friend is very funny.'},
+  {w:'friendly',ipa:'/ˈfrend.li/',vi:'thân thiện',e:'😊',s:'The new boy is friendly.'},
+  {w:'shy',ipa:'/ʃaɪ/',vi:'nhút nhát',e:'🙈',s:'I was shy on my first day.'},
+  {w:'brave',ipa:'/breɪv/',vi:'dũng cảm',e:'🦸',s:'She is brave and never gives up.'},
+  {w:'helpful',ipa:'/ˈhelp.fəl/',vi:'hay giúp đỡ',e:'🤲',s:'Nam is helpful in class.'},
+  {w:'honest',ipa:'/ˈɒn.ɪst/',vi:'trung thực',e:'🕊️',s:'A good friend is honest.'},
+  {w:'glasses',ipa:'/ˈɡlɑː.sɪz/',vi:'kính mắt',e:'👓',s:'He wears glasses.'},
+  {w:'curly',ipa:'/ˈkɜː.li/',vi:'xoăn',e:'💇',s:'She has got curly hair.'},
+  {w:'share',ipa:'/ʃeər/',vi:'chia sẻ',e:'🍰',s:'We always share our snacks.'}],
+ patterns:['My best friend is Mai. She is friendly and helpful.','She has got curly hair and she wears glasses.','We always share our books, and we never argue.','Nam is funnier than me, but I am braver than him.'],
+ dialog:[{w:'👩‍🏫',en:'Tell me about your best friend, Lan.',vi:'Kể cho cô nghe về bạn thân của con, Lan.'},
+  {w:'👧',en:'My best friend is Mai. She sits next to me.',vi:'Bạn thân con là Mai. Bạn ấy ngồi cạnh con.'},
+  {w:'👩‍🏫',en:'What does she look like?',vi:'Bạn ấy trông thế nào?'},
+  {w:'👧',en:'She has got curly hair and she wears glasses.',vi:'Bạn ấy tóc xoăn và đeo kính ạ.'},
+  {w:'👩‍🏫',en:'And what is she like?',vi:'Tính bạn ấy ra sao?'},
+  {w:'👧',en:'She is funny and very helpful. We share everything.',vi:'Bạn ấy vui tính và hay giúp đỡ. Chúng con chia sẻ mọi thứ.'}],
+ real:'🫂 <b>Phỏng vấn một người bạn trong lớp.</b> Hỏi 3 câu tiếng Anh: <b>"What is your favourite subject?" "What do you do after school?" "What are you good at?"</b> Ghi lại câu trả lời rồi giới thiệu bạn ấy trước lớp bằng 3 câu.',
+ phonics:'<b>Âm /ʃ/</b> — <b>sh</b>y, <b>sh</b>are, <b>sh</b>e. Chu môi tròn và thổi hơi dài như bảo "suỵt".<br>Lỗi hay gặp: đọc <i>share</i> thành "se-a". Hãy chu môi: <b>ʃeə</b>.',
+ tpr:'Cô đọc tính từ, học sinh diễn: <b>funny</b> cười phá lên · <b>shy</b> lấy tay che mặt · <b>brave</b> chống nạnh ưỡn ngực · <b>helpful</b> chìa tay ra giúp · <b>friendly</b> bắt tay bạn bên cạnh.',
+ hw:'Viết 5 câu về bạn thân của em: <b>My best friend is ___ . He/She has got ___ . He/She is ___ and ___ . We always ___ together.</b>',
+ parent:'Hỏi con <b>"What is your friend like?"</b> (tính cách) và <b>"What does your friend look like?"</b> (ngoại hình). Hai câu này rất dễ nhầm, hỏi lặp lại nhiều lần con sẽ phân biệt được.',
+ scenes:[
+  {bg:'class',cap:'This is Mai. She is my best friend.',vi:'Đây là Mai. Bạn thân của tớ.',act:[{e:'🫂',x:44,y:54,s:126,a:'a-bob'}]},
+  {bg:'class',cap:'She has got curly hair and she wears glasses.',vi:'Bạn ấy tóc xoăn và đeo kính.',act:[{e:'💇',x:34,y:56,s:96,a:'a-bob'},{e:'👓',x:70,y:54,s:88,a:'a-bob'}]},
+  {bg:'class',cap:'She is funny. She makes us laugh.',vi:'Bạn ấy vui tính. Bạn ấy làm chúng tớ cười.',act:[{e:'😄',x:44,y:54,s:118,a:'a-bob'},{e:'🎵',x:80,y:38,s:46,a:'a-drift'}]},
+  {bg:'class',cap:'She is helpful. She helps the new boy.',vi:'Bạn ấy hay giúp đỡ. Bạn giúp cậu học sinh mới.',act:[{e:'🤲',x:36,y:56,s:100,a:'a-bob'},{e:'🙈',x:72,y:60,s:82,a:'a-bob'}]},
+  {bg:'meadow',cap:'We always share our snacks at break.',vi:'Giờ ra chơi chúng tớ luôn chia nhau đồ ăn.',act:[{e:'🍰',x:44,y:56,s:104,a:'a-bob'},{e:'👫',x:78,y:60,s:70,a:'a-bob'}]},
+  {bg:'meadow',cap:'A good friend is honest and brave.',vi:'Người bạn tốt thì trung thực và dũng cảm.',act:[{e:'🕊️',x:36,y:48,s:92,a:'a-drift'},{e:'🦸',x:72,y:58,s:104,a:'a-bob'}]}],
+ quiz:[
+  {q:'She makes everyone laugh. She is ______ .',vi:'Bạn ấy làm mọi người cười. Bạn ấy ______ .',media:'😄',opts:['funny','shy','tired','angry'],a:0},
+  {q:'He always helps other people. He is ______ .',vi:'Cậu ấy luôn giúp người khác. Cậu ấy ______ .',media:'🤲',opts:['helpful','lazy','shy','slow'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'glasses',opts:['👓','💇','🍰','🕊️'],a:0},
+  {q:'He does not like talking to new people. He is ______ .',vi:'Cậu ấy ngại nói chuyện với người lạ. Cậu ấy ______ .',media:'🙈',opts:['brave','shy','funny','friendly'],a:1},
+  {q:'She always tells the truth. She is ______ .',vi:'Bạn ấy luôn nói thật. Bạn ấy ______ .',media:'🕊️',opts:['honest','shy','curly','tired'],a:0},
+  {q:'"What does she look like?" — Choose the answer about APPEARANCE.',vi:'Chọn câu nói về NGOẠI HÌNH.',opts:['She has got curly hair.','She is very kind.','She likes Maths.','She lives near me.'],a:0},
+  {q:'"What is she like?" — Choose the answer about CHARACTER.',vi:'Chọn câu nói về TÍNH CÁCH.',opts:['She has got glasses.','She is tall and thin.','She is friendly and honest.','She has got long hair.'],a:2},
+  {q:'She ______ got curly hair.',vi:'Điền từ đúng.',media:'💇',opts:['have','has','is','are'],a:1},
+  {q:'Nam is 130 cm. I am 125 cm. Nam is ______ than me.',vi:'Nam cao hơn em.',opts:['tall','taller','tallest','more tall'],a:1},
+  {q:'Read: "Minh is new in our class. He is shy, but he is very friendly. He always shares his crayons." Is Minh selfish?',vi:'Minh có ích kỉ không?',opts:['Yes, very.','No, he shares his things.','We don’t know.','Yes, sometimes.'],a:1},
+  {q:'Read the text above again. How does Minh feel in the new class?',vi:'Minh cảm thấy thế nào ở lớp mới?',opts:['angry','shy','tired','bored'],a:1},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'brave',opts:['🙈','🦸','😄','🍰'],a:1},
+  {q:'We ______ our snacks every day.',vi:'Ngày nào chúng em cũng chia nhau đồ ăn.',media:'🍰',opts:['share','shares','sharing','is share'],a:0},
+  {q:'Which word is NOT about character?',vi:'Từ nào KHÔNG nói về tính cách?',opts:['honest','helpful','curly','brave'],a:2},
+  {q:'"Mai is funny ______ Nam is quiet."',vi:'Chọn từ nối đúng.',opts:['but','because','so that','if'],a:0},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['My best friend is very helpful.','Very my best friend helpful is.','Helpful is very my best friend.','Is my very best helpful friend.'],a:0},
+  {q:'True or False? A good friend laughs at your mistakes.',vi:'Đúng hay Sai? Bạn tốt cười nhạo lỗi của em.',media:'🫂',opts:['True','False'],a:1},
+  {q:'Your friend is sad. What do you say?',vi:'Bạn em buồn. Em nói gì?',opts:['Are you OK? I am here.','Go away, please.','That is your problem.','I don’t care.'],a:0},
+  {q:'A new boy sits alone. What do you do?',vi:'Có bạn mới ngồi một mình. Em làm gì?',media:'😊',opts:['Say hello and play with him.','Laugh at him.','Say nothing at all.','Take his pencil.'],a:0},
+  {q:'Teacher asks "Tell me about your friend." Choose the BEST answer.',vi:'Chọn câu trả lời hay nhất.',opts:['My friend is Mai. She is funny and helpful.','Friend Mai funny helpful.','Mai is a friend my funny.','My friend she funny is helpful and.'],a:0}]},
+
+{id:'feel',badge:'😊',theme:'t-amber',lv:2,title:'Feelings and Manners',titleVi:'Cảm xúc và phép lịch sự',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Why / Because'],
+ vocab:[
+  {w:'happy',ipa:'/ˈhæp.i/',vi:'vui vẻ',e:'😀',s:'I am happy because it is Friday.'},
+  {w:'sad',ipa:'/sæd/',vi:'buồn',e:'😢',s:'She is sad because she lost her pen.'},
+  {w:'angry',ipa:'/ˈæŋ.ɡri/',vi:'tức giận',e:'😠',s:'Do not be angry with your brother.'},
+  {w:'tired',ipa:'/taɪəd/',vi:'mệt',e:'😪',s:'I am tired after the football match.'},
+  {w:'excited',ipa:'/ɪkˈsaɪ.tɪd/',vi:'háo hức',e:'🤩',s:'We are excited about the school trip.'},
+  {w:'worried',ipa:'/ˈwʌr.id/',vi:'lo lắng',e:'😟',s:'He is worried about the test.'},
+  {w:'sorry',ipa:'/ˈsɒr.i/',vi:'xin lỗi',e:'🙇',s:'I am sorry. It was my mistake.'},
+  {w:'please',ipa:'/pliːz/',vi:'làm ơn',e:'🙏',s:'Could you help me, please?'},
+  {w:'polite',ipa:'/pəˈlaɪt/',vi:'lịch sự',e:'🎩',s:'Polite children say thank you.'},
+  {w:'calm',ipa:'/kɑːm/',vi:'bình tĩnh',e:'🧘',s:'Take a deep breath and stay calm.'}],
+ patterns:['Why are you sad? — Because I lost my pencil case.','I feel excited when we have Art on Friday.','I am sorry. It was my mistake.','Could you help me, please? — Of course.'],
+ dialog:[{w:'👩‍🏫',en:'Nam, why are you sad today?',vi:'Nam ơi, sao hôm nay con buồn thế?'},
+  {w:'🧒',en:'Because I lost my pencil case, teacher.',vi:'Vì con làm mất hộp bút ạ.'},
+  {w:'👩‍🏫',en:'Do not worry. Stay calm and let us look.',vi:'Đừng lo. Bình tĩnh rồi cô con mình tìm nhé.'},
+  {w:'👧',en:'Teacher, here it is! It was under my chair.',vi:'Thưa cô, đây ạ! Nó ở dưới ghế con.'},
+  {w:'🧒',en:'Thank you, Mai. I am so happy now!',vi:'Cảm ơn Mai. Giờ tớ vui quá!'},
+  {w:'👧',en:'You are welcome. Friends help each other.',vi:'Không có gì. Bạn bè giúp nhau mà.'}],
+ real:'😊 <b>Làm "nhật kí cảm xúc" trong 5 ngày.</b> Mỗi tối vẽ 1 khuôn mặt và viết đúng 1 câu tiếng Anh có chữ <i>because</i>: <b>"Today I was happy because my team won."</b> Cuối tuần đọc lại cả 5 câu cho bố mẹ nghe.',
+ phonics:'<b>Âm /ɜː/ trong worried, girl</b> — w<b>o</b>rried, w<b>o</b>rk, g<b>ir</b>l. Miệng hơi tròn, âm kéo dài từ trong họng.<br>Lỗi hay gặp: đọc <i>worried</i> thành "vo-ri". Hãy đọc <b>WU-rid</b> với âm /w/ chu môi.',
+ tpr:'Cô nói cảm xúc, cả lớp làm mặt: <b>happy</b> cười to · <b>sad</b> mếu · <b>angry</b> chống nạnh · <b>tired</b> ngáp · <b>excited</b> nhảy lên · <b>calm</b> hít sâu, thở ra chậm.',
+ hw:'Viết 4 câu, mỗi câu dùng <b>because</b>: <b>I am happy because ___ . I was tired because ___ .</b>',
+ parent:'Mỗi tối hỏi con <b>"How do you feel today? Why?"</b> Đừng sửa lỗi ngữ pháp ngay, hãy để con nói hết rồi nhắc lại câu đúng một lần cho con nghe.',
+ scenes:[
+  {bg:'class',cap:'How do you feel today?',vi:'Hôm nay em cảm thấy thế nào?',act:[{e:'😀',x:30,y:52,s:84,a:'a-bob'},{e:'😢',x:52,y:56,s:84,a:'a-bob'},{e:'😠',x:74,y:52,s:84,a:'a-bob'}]},
+  {bg:'class',cap:'I am sad because I lost my pencil case.',vi:'Tớ buồn vì làm mất hộp bút.',act:[{e:'😢',x:42,y:54,s:116,a:'a-bob'},{e:'✏️',x:78,y:62,s:56,a:'a-sway'}]},
+  {bg:'class',cap:'Do not worry. Stay calm.',vi:'Đừng lo. Hãy bình tĩnh.',act:[{e:'🧘',x:42,y:56,s:112,a:'a-bob'},{e:'🕊️',x:78,y:42,s:56,a:'a-drift'}]},
+  {bg:'class',cap:'Could you help me, please?',vi:'Bạn giúp tớ được không?',act:[{e:'🙏',x:38,y:56,s:104,a:'a-bob'},{e:'🤲',x:72,y:58,s:92,a:'a-bob'}]},
+  {bg:'class',cap:'I am sorry. It was my mistake.',vi:'Tớ xin lỗi. Đó là lỗi của tớ.',act:[{e:'🙇',x:44,y:56,s:112,a:'a-bob'}]},
+  {bg:'gym',cap:'We are excited! Tomorrow is the school trip.',vi:'Chúng tớ háo hức quá! Mai đi dã ngoại.',act:[{e:'🤩',x:42,y:54,s:118,a:'a-bob'},{e:'🎉',x:78,y:36,s:54,a:'a-pop'}]}],
+ quiz:[
+  {q:'How does he feel?',vi:'Bạn ấy cảm thấy thế nào?',media:'😢',opts:['happy','sad','excited','calm'],a:1,say:'sad'},
+  {q:'How does she feel?',vi:'Bạn ấy cảm thấy thế nào?',media:'🤩',opts:['tired','worried','excited','angry'],a:2,say:'excited'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'worried',opts:['😪','😟','😀','🎩'],a:1},
+  {q:'After a long football match I feel ______ .',vi:'Sau trận bóng dài em thấy ______ .',media:'😪',opts:['tired','excited','polite','curly'],a:0},
+  {q:'"Why are you sad?" — Choose the BEST answer.',vi:'Chọn câu trả lời hay nhất.',opts:['Because I lost my pen.','Yes, I am sad you.','Sad because am I.','I sad my pen lost.'],a:0},
+  {q:'Which word gives a REASON?',vi:'Từ nào dùng để nêu LÍ DO?',opts:['because','but','and','or'],a:0},
+  {q:'I am happy ______ today is my birthday.',vi:'Điền từ nối đúng.',media:'😀',opts:['because','but','or','after'],a:0},
+  {q:'You step on your friend’s foot. You say:',vi:'Em giẫm vào chân bạn. Em nói:',media:'🙇',opts:['I am sorry!','Move away!','That is funny!','Say nothing.'],a:0},
+  {q:'You want to borrow a ruler. Say it politely.',vi:'Em muốn mượn thước. Nói lịch sự.',media:'🙏',opts:['Could I borrow your ruler, please?','Give me ruler now.','Ruler! Ruler!','I take your ruler.'],a:0},
+  {q:'Your friend says "Thank you." You reply:',vi:'Bạn nói cảm ơn. Em đáp:',opts:['You are welcome.','No, thank me.','Sorry, I am sad.','Please, ruler.'],a:0},
+  {q:'Read: "Lan was worried about the Maths test. She studied every evening. She got a good mark and felt very happy." Why was Lan worried?',vi:'Vì sao Lan lo lắng?',opts:['Because of the Maths test.','Because she lost a pen.','Because she was tired.','Because it was raining.'],a:0},
+  {q:'Read the text above again. How did Lan feel at the end?',vi:'Cuối cùng Lan cảm thấy thế nào?',opts:['angry','worried','happy','tired'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'calm',opts:['🧘','😠','🤩','🎩'],a:0},
+  {q:'When you are angry, you should ______ .',vi:'Khi tức giận, em nên ______ .',media:'🧘',opts:['take a deep breath','shout loudly','hit the desk','run away'],a:0},
+  {q:'Children who say "please" and "thank you" are ______ .',vi:'Bạn nào biết nói "please" và "thank you" thì rất ______ .',media:'🎩',opts:['polite','angry','shy','tired'],a:0},
+  {q:'I ______ excited when we have Art.',vi:'Em thấy háo hức khi có giờ Mĩ thuật.',opts:['feel','feels','feeling','am feel'],a:0},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['I am happy because it is Friday.','Happy I am Friday because it is.','Because is it Friday happy I am.','Am I happy is because Friday it.'],a:0},
+  {q:'True or False? It is polite to interrupt when someone is talking.',vi:'Đúng hay Sai? Ngắt lời người khác là lịch sự.',media:'🎩',opts:['True','False'],a:1},
+  {q:'Your friend broke your pencil by mistake and says sorry. You say:',vi:'Bạn lỡ làm gãy bút và xin lỗi. Em nói:',opts:['That’s OK. Never mind.','You are very bad.','I will break yours.','I am not your friend.'],a:0},
+  {q:'Teacher asks "How do you feel today?" You feel great. You say:',vi:'Em trả lời:',opts:['I feel happy today, thank you.','Happy feel I today.','Today I am feel happy a.','Feel today happy I am.'],a:0}]},
+
+{id:'town',badge:'🏙️',theme:'t-sea',lv:2,title:'Places in My Town',titleVi:'Những nơi trong thị trấn của em',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Chỉ đường'],
+ vocab:[
+  {w:'hospital',ipa:'/ˈhɒs.pɪ.təl/',vi:'bệnh viện',e:'🏥',s:'The hospital is near the park.'},
+  {w:'library',ipa:'/ˈlaɪ.brər.i/',vi:'thư viện',e:'📖',s:'I borrow books from the library.'},
+  {w:'supermarket',ipa:'/ˈsuː.pəˌmɑː.kɪt/',vi:'siêu thị',e:'🛒',s:'Mum buys milk at the supermarket.'},
+  {w:'post office',ipa:'/ˈpəʊst ˌɒf.ɪs/',vi:'bưu điện',e:'📮',s:'We send letters at the post office.'},
+  {w:'park',ipa:'/pɑːk/',vi:'công viên',e:'🛝',s:'We play in the park on Sunday.'},
+  {w:'bus stop',ipa:'/ˈbʌs stɒp/',vi:'trạm xe buýt',e:'🚏',s:'Wait for me at the bus stop.'},
+  {w:'market',ipa:'/ˈmɑː.kɪt/',vi:'chợ',e:'🧺',s:'My grandma goes to the market early.'},
+  {w:'street',ipa:'/striːt/',vi:'con đường',e:'🛣️',s:'My school is on this street.'},
+  {w:'left',ipa:'/left/',vi:'bên trái',e:'↩️',s:'Turn left at the bank.'},
+  {w:'right',ipa:'/raɪt/',vi:'bên phải',e:'↪️',s:'Turn right and go straight on.'}],
+ patterns:['Excuse me, where is the library? — Go straight on and turn left.','The supermarket is opposite the park.','My mother goes to the market every morning.','There is a bus stop between the school and the hospital.'],
+ dialog:[{w:'🧒',en:'Excuse me, where is the library, please?',vi:'Xin lỗi, cho cháu hỏi thư viện ở đâu ạ?'},
+  {w:'👩',en:'Go straight on and turn left at the market.',vi:'Cháu đi thẳng rồi rẽ trái ở chợ.'},
+  {w:'🧒',en:'Is it far from here?',vi:'Có xa đây không ạ?'},
+  {w:'👩',en:'No, it is near. It is opposite the park.',vi:'Không, gần thôi. Nó đối diện công viên.'},
+  {w:'🧒',en:'Thank you very much!',vi:'Cháu cảm ơn cô nhiều ạ!'},
+  {w:'👩',en:'You are welcome. Have a nice day!',vi:'Không có gì. Chúc cháu một ngày vui!'}],
+ real:'🗺️ <b>Vẽ bản đồ khu phố nhà em.</b> Đánh dấu 5 nơi và ghi tên tiếng Anh. Sau đó viết đường đi từ nhà đến trường bằng 3 câu: <b>"Go straight on. Turn left at the market. My school is opposite the park."</b>',
+ phonics:'<b>Âm /ɪə/ trong near</b> — n<b>ea</b>r, h<b>e</b>re, y<b>ea</b>r. Bắt đầu bằng "i" rồi trượt nhẹ sang "ơ".<br>Lỗi hay gặp: đọc <i>near</i> thành "nia" gắt. Hãy trượt nhẹ: <b>nɪə</b>.',
+ tpr:'Cô hô, cả lớp làm: <b>Turn left!</b> quay sang trái · <b>Turn right!</b> quay sang phải · <b>Go straight on!</b> bước 3 bước tới · <b>Stop!</b> đứng im. Sau đó hai bạn một cặp, một người chỉ đường, một người nhắm mắt đi theo.',
+ hw:'Viết 4 câu chỉ đường từ nhà em đến một nơi em thích, dùng <b>turn left / turn right / go straight on / opposite</b>.',
+ parent:'Khi đi đường cùng con, chỉ vào các toà nhà và hỏi <b>"What is that place?"</b> Con trả lời <i>"It is a hospital."</i> Chỉ mất 2 phút mỗi lần ra ngoài.',
+ scenes:[
+  {bg:'street',cap:'Welcome to my town. Let’s look around!',vi:'Chào mừng đến thị trấn của tớ. Cùng đi một vòng nhé!',act:[{e:'🏙️',x:44,y:52,s:126,a:'a-bob'},{e:'🛣️',x:80,y:66,s:60,a:'a-bob'}]},
+  {bg:'street',cap:'This is the hospital. It is near the park.',vi:'Đây là bệnh viện. Nó ở gần công viên.',act:[{e:'🏥',x:36,y:56,s:112,a:'a-bob'},{e:'🛝',x:74,y:60,s:88,a:'a-bob'}]},
+  {bg:'street',cap:'I borrow books from the library.',vi:'Tớ mượn sách ở thư viện.',act:[{e:'📖',x:42,y:54,s:114,a:'a-bob'},{e:'🧒',x:78,y:62,s:60,a:'a-hop'}]},
+  {bg:'street',cap:'Mum buys milk at the supermarket.',vi:'Mẹ mua sữa ở siêu thị.',act:[{e:'🛒',x:38,y:58,s:110,a:'a-drift'},{e:'🥛',x:74,y:56,s:70,a:'a-bob'}]},
+  {bg:'street',cap:'Turn left at the market. Then go straight on.',vi:'Rẽ trái ở chợ. Rồi đi thẳng.',act:[{e:'🧺',x:34,y:58,s:96,a:'a-bob'},{e:'↩️',x:70,y:52,s:80,a:'a-bob'}]},
+  {bg:'street',cap:'Wait for me at the bus stop. See you!',vi:'Đợi tớ ở trạm xe buýt nhé. Hẹn gặp lại!',act:[{e:'🚏',x:42,y:56,s:110,a:'a-bob'},{e:'🚌',x:78,y:62,s:74,a:'a-drift'}]}],
+ quiz:[
+  {q:'Where do sick people go?',vi:'Người ốm đến đâu?',media:'🏥',opts:['hospital','library','market','park'],a:0,say:'hospital'},
+  {q:'Where can you borrow books?',vi:'Em mượn sách ở đâu?',media:'📖',opts:['post office','library','bus stop','supermarket'],a:1,say:'library'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'supermarket',opts:['🛒','📮','🧺','🚏'],a:0},
+  {q:'Where do you send a letter?',vi:'Em gửi thư ở đâu?',media:'📮',opts:['park','post office','hospital','library'],a:1},
+  {q:'Where do children play on Sunday?',vi:'Chủ nhật trẻ em chơi ở đâu?',media:'🛝',opts:['park','hospital','post office','street'],a:0},
+  {q:'You wait for the bus at the ______ .',vi:'Em đợi xe buýt ở ______ .',media:'🚏',opts:['bus stop','market','library','park'],a:0},
+  {q:'"Turn ______ ." (⬅️)',vi:'Rẽ bên nào?',media:'↩️',opts:['left','right','up','back'],a:0},
+  {q:'"Turn ______ ." (➡️)',vi:'Rẽ bên nào?',media:'↪️',opts:['left','right','down','front'],a:1},
+  {q:'The supermarket is ______ the park. (nó nằm đối diện)',vi:'Siêu thị ĐỐI DIỆN công viên.',opts:['opposite','under','inside','above'],a:0},
+  {q:'There is a bus stop ______ the school and the hospital.',vi:'Có trạm xe buýt GIỮA trường và bệnh viện.',opts:['on','between','under','opposite'],a:1},
+  {q:'Read: "Go straight on. Turn right at the market. The library is opposite the park." Where do you turn right?',vi:'Em rẽ phải ở đâu?',opts:['at the park','at the market','at the library','at the hospital'],a:1},
+  {q:'Read the text above again. What is opposite the park?',vi:'Đối diện công viên là gì?',opts:['the market','the library','the hospital','the bus stop'],a:1},
+  {q:'Ask for directions politely.',vi:'Hỏi đường lịch sự.',opts:['Excuse me, where is the library, please?','Library where!','You tell me library.','Library I want now.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'market',opts:['🧺','🛒','📮','🏥'],a:0},
+  {q:'My grandma buys fresh fish at the ______ every morning.',vi:'Bà em mua cá tươi ở ______ mỗi sáng.',media:'🧺',opts:['market','library','post office','bus stop'],a:0},
+  {q:'My school is ______ this street.',vi:'Trường em nằm TRÊN con đường này.',media:'🛣️',opts:['in','on','at','under'],a:1},
+  {q:'Mum ______ to the supermarket every Saturday.',vi:'Thứ Bảy nào mẹ cũng đi siêu thị.',opts:['go','goes','going','is go'],a:1},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['The library is opposite the park.','Opposite the library park the is.','Is the park opposite library the.','The park the library opposite is.'],a:0},
+  {q:'True or False? You buy stamps at the hospital.',vi:'Đúng hay Sai? Em mua tem ở bệnh viện.',media:'📮',opts:['True','False'],a:1},
+  {q:'A tourist asks you for the park. It is straight on. You say:',vi:'Em trả lời:',opts:['Go straight on. It is on your left.','Straight go on left your it is.','It park straight go on.','Left on you go it straight.'],a:0}]},
+
+{id:'jobs',badge:'👷',theme:'t-berry',lv:2,title:'Jobs and Dreams',titleVi:'Nghề nghiệp và ước mơ',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Present simple'],
+ vocab:[
+  {w:'teacher',ipa:'/ˈtiː.tʃər/',vi:'giáo viên',e:'👩‍🏫',s:'My teacher works at a primary school.'},
+  {w:'farmer',ipa:'/ˈfɑː.mər/',vi:'nông dân',e:'👨‍🌾',s:'A farmer grows rice and vegetables.'},
+  {w:'nurse',ipa:'/nɜːs/',vi:'y tá',e:'👨‍⚕️',s:'My aunt is a nurse at the hospital.'},
+  {w:'engineer',ipa:'/ˌen.dʒɪˈnɪər/',vi:'kĩ sư',e:'👷',s:'An engineer builds bridges and roads.'},
+  {w:'pilot',ipa:'/ˈpaɪ.lət/',vi:'phi công',e:'👨‍✈️',s:'A pilot flies an aeroplane.'},
+  {w:'cook',ipa:'/kʊk/',vi:'đầu bếp',e:'👨‍🍳',s:'The cook makes soup and rice.'},
+  {w:'driver',ipa:'/ˈdraɪ.vər/',vi:'tài xế',e:'🚌',s:'The bus driver starts work at five.'},
+  {w:'singer',ipa:'/ˈsɪŋ.ər/',vi:'ca sĩ',e:'🎤',s:'The singer sings on the stage.'},
+  {w:'work',ipa:'/wɜːk/',vi:'làm việc',e:'🧑‍💼',s:'My parents work in an office.'},
+  {w:'dream',ipa:'/driːm/',vi:'ước mơ',e:'💫',s:'My dream is to be a doctor.'}],
+ patterns:['What does your father do? — He is a farmer. He works on a farm.','My aunt is a nurse. She works at the hospital.','I want to be a pilot when I grow up.','Does your mother work at a school? — Yes, she does.'],
+ dialog:[{w:'👩‍🏫',en:'Nam, what does your father do?',vi:'Nam ơi, bố con làm nghề gì?'},
+  {w:'🧒',en:'He is a farmer. He works on a farm.',vi:'Bố con là nông dân ạ. Bố làm ở nông trại.'},
+  {w:'👩‍🏫',en:'And your mother? Does she work too?',vi:'Còn mẹ con? Mẹ có đi làm không?'},
+  {w:'🧒',en:'Yes, she does. She is a nurse.',vi:'Có ạ. Mẹ con là y tá.'},
+  {w:'👩‍🏫',en:'What do you want to be one day?',vi:'Sau này con muốn làm gì?'},
+  {w:'🧒',en:'I want to be a pilot. I love aeroplanes!',vi:'Con muốn làm phi công. Con thích máy bay lắm!'}],
+ real:'👨‍👩‍👧 <b>Phỏng vấn 3 người trong gia đình.</b> Hỏi bằng tiếng Anh: <b>"What do you do?" "Where do you work?"</b> Ghi lại rồi báo cáo trước lớp: <b>"My uncle is a driver. He works in the city."</b>',
+ phonics:'<b>Đuôi -er /ər/</b> — teach<b>er</b>, farm<b>er</b>, driv<b>er</b>, sing<b>er</b>. Âm cuối rất nhẹ, gần như "ơ".<br>Lỗi hay gặp: đọc nặng thành "-ơ" dài. Hãy nói nhẹ và nhanh: <b>TEA-chə</b>.',
+ tpr:'Cô nói nghề, cả lớp diễn: <b>teacher</b> viết bảng · <b>farmer</b> cuốc đất · <b>nurse</b> băng tay · <b>pilot</b> dang tay bay · <b>cook</b> đảo chảo · <b>driver</b> cầm vô lăng · <b>singer</b> cầm mic hát.',
+ hw:'Viết 4 câu: <b>My father is a ___ . He works ___ . I want to be a ___ because ___ .</b>',
+ parent:'Khi ra đường, chỉ vào người đang làm việc và hỏi con <b>"What does he do?"</b> để con trả lời <i>"He is a driver."</i> Nhớ nhắc con thêm chữ <b>-s</b> ở động từ khi nói về người khác.',
+ scenes:[
+  {bg:'class',cap:'What do you want to be one day?',vi:'Sau này em muốn làm nghề gì?',act:[{e:'💫',x:44,y:50,s:110,a:'a-spin'},{e:'🧒',x:78,y:64,s:60,a:'a-hop'}]},
+  {bg:'meadow',cap:'A farmer grows rice and vegetables.',vi:'Nông dân trồng lúa và rau.',act:[{e:'👨‍🌾',x:38,y:58,s:110,a:'a-bob'},{e:'🌾',x:74,y:64,s:70,a:'a-sway'}]},
+  {bg:'room',cap:'A nurse helps sick people at the hospital.',vi:'Y tá giúp người bệnh ở bệnh viện.',act:[{e:'👨‍⚕️',x:38,y:56,s:110,a:'a-bob'},{e:'🏥',x:76,y:56,s:80,a:'a-bob'}]},
+  {bg:'street',cap:'An engineer builds bridges and roads.',vi:'Kĩ sư xây cầu và đường.',act:[{e:'👷',x:38,y:56,s:110,a:'a-bob'},{e:'🌉',x:76,y:58,s:82,a:'a-bob'}]},
+  {bg:'meadow',cap:'A pilot flies an aeroplane.',vi:'Phi công lái máy bay.',act:[{e:'👨‍✈️',x:34,y:60,s:96,a:'a-bob'},{e:'✈️',x:72,y:38,s:100,a:'a-drift'}]},
+  {bg:'kitchen',cap:'The cook makes soup. My dream is to be a cook!',vi:'Đầu bếp nấu canh. Ước mơ của tớ là làm đầu bếp!',act:[{e:'👨‍🍳',x:38,y:56,s:110,a:'a-bob'},{e:'🥣',x:74,y:60,s:76,a:'a-bob'}]}],
+ quiz:[
+  {q:'Who grows rice and vegetables?',vi:'Ai trồng lúa và rau?',media:'👨‍🌾',opts:['farmer','pilot','singer','nurse'],a:0,say:'farmer'},
+  {q:'Who flies an aeroplane?',vi:'Ai lái máy bay?',media:'👨‍✈️',opts:['driver','pilot','cook','engineer'],a:1,say:'pilot'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'nurse',opts:['👨‍⚕️','👩‍🏫','👷','🎤'],a:0},
+  {q:'Who helps sick people at the hospital?',vi:'Ai giúp người bệnh ở bệnh viện?',media:'🏥',opts:['a farmer','a nurse','a cook','a singer'],a:1},
+  {q:'Who builds bridges and roads?',vi:'Ai xây cầu và đường?',media:'👷',opts:['engineer','teacher','driver','cook'],a:0},
+  {q:'Who makes food in a restaurant?',vi:'Ai nấu ăn trong nhà hàng?',media:'👨‍🍳',opts:['cook','pilot','nurse','farmer'],a:0},
+  {q:'"What ______ your father do?"',vi:'Điền từ đúng.',opts:['do','does','is','are'],a:1},
+  {q:'He ______ on a farm.',vi:'Bố ấy làm việc ở nông trại.',media:'👨‍🌾',opts:['work','works','working','is work'],a:1},
+  {q:'My parents ______ in an office.',vi:'Bố mẹ em làm việc ở văn phòng.',media:'🧑‍💼',opts:['work','works','working','is work'],a:0},
+  {q:'"Does your mother work at a school?" — Say YES.',vi:'Trả lời CÓ.',opts:['Yes, she does.','Yes, she do.','Yes, she is.','Yes, she work.'],a:0},
+  {q:'Read: "Mai’s mother is a teacher. She works at a primary school. Mai wants to be a doctor." What is Mai’s mother’s job?',vi:'Mẹ Mai làm nghề gì?',opts:['doctor','teacher','nurse','cook'],a:1},
+  {q:'Read the text above again. What does Mai want to be?',vi:'Mai muốn làm nghề gì?',opts:['a teacher','a nurse','a doctor','a pilot'],a:2},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'singer',opts:['🎤','🚌','👷','👨‍🍳'],a:0},
+  {q:'I ______ to be a pilot when I grow up.',vi:'Lớn lên em muốn làm phi công.',media:'💫',opts:['want','wants','wanting','am want'],a:0},
+  {q:'A person who drives a bus is a bus ______ .',vi:'Người lái xe buýt là ______ .',media:'🚌',opts:['driver','singer','farmer','nurse'],a:0},
+  {q:'Which one is NOT a job?',vi:'Từ nào KHÔNG phải nghề nghiệp?',opts:['engineer','pilot','dream','cook'],a:2},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['My aunt works at the hospital.','Works my aunt hospital the at.','At the hospital my works aunt.','Aunt my the hospital works at.'],a:0},
+  {q:'True or False? A cook works on an aeroplane every day.',vi:'Đúng hay Sai?',media:'👨‍🍳',opts:['True','False'],a:1},
+  {q:'"Where does a teacher work?"',vi:'Giáo viên làm việc ở đâu?',media:'👩‍🏫',opts:['at a school','in a field','on a plane','at a market'],a:0},
+  {q:'Teacher asks "What do you want to be?" You want to be an engineer. You say:',vi:'Em trả lời:',opts:['I want to be an engineer.','I want be engineer a.','Engineer I want to be a am.','To be I want engineer.'],a:0}]},
+
+{id:'hobby',badge:'🎯',theme:'t-moss',lv:2,title:'Hobbies and Free Time',titleVi:'Sở thích và thời gian rảnh',
+ tags:['Nâng cao','A1 → A2','40–45 phút','Trạng từ tần suất'],
+ vocab:[
+  {w:'hobby',ipa:'/ˈhɒb.i/',vi:'sở thích',e:'🎯',s:'My hobby is collecting stamps.'},
+  {w:'always',ipa:'/ˈɔːl.weɪz/',vi:'luôn luôn',e:'💯',s:'I always read before bed.'},
+  {w:'usually',ipa:'/ˈjuː.ʒu.ə.li/',vi:'thường thường',e:'🔁',s:'We usually play chess on Sunday.'},
+  {w:'sometimes',ipa:'/ˈsʌm.taɪmz/',vi:'thỉnh thoảng',e:'🎲',s:'I sometimes paint with my sister.'},
+  {w:'never',ipa:'/ˈnev.ər/',vi:'không bao giờ',e:'🚫',s:'He never watches TV late.'},
+  {w:'collect',ipa:'/kəˈlekt/',vi:'sưu tầm',e:'🗃️',s:'I collect stamps and coins.'},
+  {w:'painting',ipa:'/ˈpeɪn.tɪŋ/',vi:'vẽ tranh',e:'🖼️',s:'Painting is her favourite hobby.'},
+  {w:'chess',ipa:'/tʃes/',vi:'cờ vua',e:'♟️',s:'I play chess with my grandfather.'},
+  {w:'reading',ipa:'/ˈriː.dɪŋ/',vi:'đọc sách',e:'📗',s:'Reading is good for your brain.'},
+  {w:'weekend',ipa:'/ˌwiːkˈend/',vi:'cuối tuần',e:'⛱️',s:'At the weekend we visit my grandma.'}],
+ patterns:['What do you do in your free time? — I usually play chess with my brother.','How often do you go swimming? — Twice a week.','I always read before I go to bed, but I never watch TV late.','My hobby is collecting stamps.'],
+ dialog:[{w:'👧',en:'Nam, what do you do in your free time?',vi:'Nam ơi, lúc rảnh cậu làm gì?'},
+  {w:'🧒',en:'I usually play chess with my grandfather.',vi:'Tớ thường chơi cờ vua với ông.'},
+  {w:'👧',en:'How often do you play?',vi:'Cậu chơi thường xuyên không?'},
+  {w:'🧒',en:'Twice a week. And you? What is your hobby?',vi:'Tuần hai lần. Còn cậu? Sở thích của cậu là gì?'},
+  {w:'👧',en:'Painting. I sometimes paint with my sister.',vi:'Vẽ tranh. Thỉnh thoảng tớ vẽ với chị.'},
+  {w:'🧒',en:'That sounds fun. Can you teach me?',vi:'Nghe vui đấy. Cậu dạy tớ được không?'}],
+ real:'📊 <b>Khảo sát cả lớp trong giờ ra chơi.</b> Hỏi 5 bạn: <b>"What is your hobby?"</b> và <b>"How often do you do it?"</b> Vẽ một biểu đồ cột nhỏ ghi kết quả, rồi báo cáo: <b>"Three friends like reading. Two friends like football."</b>',
+ phonics:'<b>Âm /ʒ/ trong usually</b> — u<b>su</b>ally, televi<b>si</b>on, mea<b>su</b>re. Giống âm "gi" nhẹ trong tiếng Việt.<br>Lỗi hay gặp: đọc <i>usually</i> thành "u-su-a-li". Hãy đọc <b>YOO-zhu-ə-li</b>.',
+ tpr:'Cô đọc câu, học sinh giơ ngón tay: <b>always</b> 5 ngón · <b>usually</b> 4 ngón · <b>sometimes</b> 2 ngón · <b>never</b> nắm tay lại. Ví dụ: "I always brush my teeth." → cả lớp giơ 5 ngón.',
+ hw:'Viết 4 câu về thời gian rảnh, mỗi câu dùng một trạng từ khác nhau: <b>I always ___ . I usually ___ . I sometimes ___ . I never ___ .</b>',
+ parent:'Cuối tuần hỏi con <b>"What do you want to do today?"</b> rồi tối hỏi lại <b>"What did you do?"</b> Cùng một hoạt động nhưng luyện được hai thì.',
+ scenes:[
+  {bg:'room',cap:'What do you do in your free time?',vi:'Lúc rảnh em làm gì?',act:[{e:'🎯',x:44,y:52,s:112,a:'a-spin'},{e:'⛱️',x:80,y:60,s:60,a:'a-bob'}]},
+  {bg:'room',cap:'I always read before I go to bed.',vi:'Tớ luôn đọc sách trước khi đi ngủ.',act:[{e:'📗',x:40,y:54,s:110,a:'a-bob'},{e:'💯',x:76,y:50,s:58,a:'a-pop'}]},
+  {bg:'room',cap:'We usually play chess on Sunday.',vi:'Chủ nhật chúng tớ thường chơi cờ vua.',act:[{e:'♟️',x:38,y:56,s:104,a:'a-bob'},{e:'👴',x:74,y:58,s:80,a:'a-bob'}]},
+  {bg:'class',cap:'I sometimes paint with my sister.',vi:'Thỉnh thoảng tớ vẽ tranh với chị.',act:[{e:'🖼️',x:38,y:54,s:106,a:'a-bob'},{e:'🎨',x:74,y:58,s:80,a:'a-sway'}]},
+  {bg:'room',cap:'My hobby is collecting stamps.',vi:'Sở thích của tớ là sưu tầm tem.',act:[{e:'🗃️',x:40,y:56,s:108,a:'a-bob'},{e:'📮',x:76,y:56,s:72,a:'a-bob'}]},
+  {bg:'meadow',cap:'At the weekend we visit my grandma. Great!',vi:'Cuối tuần chúng tớ về thăm bà. Tuyệt!',act:[{e:'⛱️',x:38,y:56,s:100,a:'a-sway'},{e:'👵',x:74,y:60,s:80,a:'a-bob'}]}],
+ quiz:[
+  {q:'What is her hobby?',vi:'Sở thích của bạn ấy là gì?',media:'🖼️',opts:['painting','chess','reading','collecting'],a:0,say:'painting'},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'chess',opts:['♟️','📗','🗃️','🎯'],a:0},
+  {q:'100% of the time = ______',vi:'Luôn luôn, 100% = ______',media:'💯',opts:['always','usually','sometimes','never'],a:0},
+  {q:'0% of the time = ______',vi:'Không bao giờ, 0% = ______',media:'🚫',opts:['always','usually','sometimes','never'],a:3},
+  {q:'About 80% of the time = ______',vi:'Khoảng 80% = ______',media:'🔁',opts:['never','usually','sometimes','always'],a:1},
+  {q:'Where does the adverb go? "I ______ read before bed."',vi:'Trạng từ đứng ở đâu?',opts:['always','always always','read always I','before always'],a:0},
+  {q:'Choose the correct sentence.',vi:'Chọn câu đúng.',opts:['I usually play chess on Sunday.','I play usually chess on Sunday.','Usually I play chess Sunday on.','Play I usually on chess Sunday.'],a:0},
+  {q:'Choose the correct sentence with "never".',vi:'Chọn câu đúng với "never".',opts:['He never watches TV late.','He watches never TV late.','Never he watches late TV.','He is never watch TV late.'],a:0},
+  {q:'"How often do you play chess?" — Choose the BEST answer.',vi:'Chọn câu trả lời hay nhất.',opts:['Twice a week.','Yes, I do it.','At the park.','With my brother.'],a:0},
+  {q:'Listen and choose.',vi:'Nghe và chọn.',say:'collect',opts:['🗃️','⛱️','🎲','📗'],a:0},
+  {q:'Read: "Lan always reads at the weekend. She sometimes paints, but she never plays chess." Does Lan play chess?',vi:'Lan có chơi cờ vua không?',opts:['Yes, always.','No, never.','Yes, sometimes.','Twice a week.'],a:1},
+  {q:'Read the text above again. What does Lan do every weekend?',vi:'Cuối tuần nào Lan cũng làm gì?',opts:['paints','plays chess','reads','swims'],a:2},
+  {q:'Saturday and Sunday are the ______ .',vi:'Thứ Bảy và Chủ nhật là ______ .',media:'⛱️',opts:['weekend','weekday','holiday','timetable'],a:0},
+  {q:'My hobby ______ collecting stamps.',vi:'Điền từ đúng.',media:'🗃️',opts:['is','are','be','am'],a:0},
+  {q:'My brother ______ chess every Sunday.',vi:'Chủ nhật nào anh em cũng chơi cờ.',media:'♟️',opts:['play','plays','playing','is play'],a:1},
+  {q:'Which activity is good for your brain?',vi:'Hoạt động nào tốt cho trí não?',opts:['📗 reading','😴 sleeping all day','📺 watching TV all night','🍬 eating sweets'],a:0},
+  {q:'"I like reading ______ I do not like chess."',vi:'Chọn từ nối đúng.',opts:['but','because','so','and then'],a:0},
+  {q:'True or False? "Never" means you do it every day.',vi:'Đúng hay Sai?',media:'🚫',opts:['True','False'],a:1},
+  {q:'A friend asks "What is your hobby?" You love painting. You say:',vi:'Em trả lời:',media:'🖼️',opts:['My hobby is painting.','Hobby my painting is a.','I am hobby painting.','Painting my is hobby the.'],a:0},
+  {q:'Put the words in order.',vi:'Sắp xếp câu đúng.',opts:['I sometimes paint with my sister.','Sometimes paint I sister with my.','With my sister sometimes paint I.','Paint I with sometimes my sister.'],a:0}]}
+];
+
+/* ═══════ TRẠNG THÁI ═══════ */
+let L=null,sceneIdx=0,sceneTimer=null,playing=true,dlgTimer=null;
+let QUIZ=[],qi=0,score=0,answered=false,wrongs=[],quizMode='lesson',quizTitle='';
+let CARDS=[],ci=0,cardOk=0,cardHard=[],flipped=false;
+const BEST={};
+
+/* ═══════ ÂM THANH ═══════ */
+function speak(t,rate){
+  if(!('speechSynthesis' in window))return;
+  try{speechSynthesis.cancel();
+    const u=new SpeechSynthesisUtterance(t);
+    u.lang='en-US';u.rate=rate||0.85;u.pitch=1.1;speechSynthesis.speak(u);
+  }catch(e){}
+}
+function speakSeq(lines,i){
+  i=i||0; if(i>=lines.length)return;
+  speak(lines[i],0.82);
+  dlgTimer=setTimeout(()=>speakSeq(lines,i+1),Math.max(1900,lines[i].length*95));
+}
+function stopAudio(){clearTimeout(dlgTimer);try{speechSynthesis.cancel()}catch(e){}}
+
+/* ═══════ ĐIỀU HƯỚNG ═══════ */
+function go(name){
+  stopScenes();stopAudio();
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
+  document.getElementById('s-'+name).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  if(name==='video')playScene(0);
+  if(name==='home')renderHome();
+}
+
+/* ═══════ TRANG CHỦ ═══════ */
+function lessonCard(l,i){
+  return `<button class="lesson ${l.theme}" onclick="openLesson(${i})">
+      ${BEST[l.id]!=null?`<span class="best">⭐ ${BEST[l.id]}/20</span>`:''}
+      <div class="top"><span>${l.badge}</span></div>
+      <div class="body"><h3>${l.title}</h3><div class="vi">${l.titleVi}</div>
+      <div class="tags">${l.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div></div>
+    </button>`;
+}
+function renderHome(){
+  const g1=LESSONS.map((l,i)=>[l,i]).filter(x=>(x[0].lv||1)===1);
+  const g2=LESSONS.map((l,i)=>[l,i]).filter(x=>(x[0].lv||1)===2);
+  const head=(t,s)=>`<div class="lvhead"><b>${t}</b><span>${s}</span><i></i></div>`;
+  document.getElementById('lesson-list').innerHTML=
+    head('Mức 1 · Cơ bản','Pre A1 → A1 · câu ngắn, nhiều hình')+
+    g1.map(x=>lessonCard(x[0],x[1])).join('')+
+    head('Mức 2 · Nâng cao','A1 → A2 · câu dài hơn, có bài đọc hiểu')+
+    g2.map(x=>lessonCard(x[0],x[1])).join('');
+}
+const PRACTICE=[
+ {ic:'🎲',t:'Ôn tập tổng hợp',d:'20 câu trộn ngẫu nhiên từ cả 8 bài. Đây là bài ôn chính mỗi ngày.',fn:'mixAll'},
+ {ic:'🎧',t:'Luyện nghe từ vựng',d:'Nghe một từ, chọn đúng hình. 20 câu lấy từ toàn bộ từ vựng đã học.',fn:'listenDrill'},
+ {ic:'📚',t:'Chọn bài để ôn',d:'Tự chọn những bài em muốn ôn, rồi làm 20 câu trộn từ đúng các bài đó.',fn:'pickQuiz'},
+ {ic:'🗣️',t:'Thẻ ghi nhớ — luyện nói',d:'Nhìn hình và nghĩa tiếng Việt, tự nói từ tiếng Anh rồi lật thẻ kiểm tra.',fn:'pickCards'}
+];
+document.getElementById('practice-list').innerHTML=PRACTICE.map(p=>
+ `<button class="practice" onclick="${p.fn}()"><span class="ic">${p.ic}</span>
+   <h3>${p.t}</h3><p>${p.d}</p></button>`).join('');
+renderHome();
+
+function openLesson(i){
+  L=LESSONS[i];
+  document.getElementById('v-title').textContent='🎬 '+L.title;
+  document.getElementById('w-title').textContent='📖 '+L.title;
+  buildVocab();go('video');
+}
+
+/* ═══════ PHIM ═══════ */
+function stopScenes(){clearTimeout(sceneTimer)}
+function playScene(i){
+  stopScenes();if(!L)return;
+  if(i<0)i=0;
+  if(i>=L.scenes.length){i=L.scenes.length-1;playing=false;setPlayBtn()}
+  sceneIdx=i;
+  const s=L.scenes[i];
+  document.getElementById('stage').innerHTML=
+   `<svg class="bg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">${BG[s.bg]}</svg>
+    <div class="scene-layer">${s.act.map(a=>`<div class="actor ${a.a}" style="left:${a.x}%;top:${a.y}%;font-size:${a.s}px">${a.e}</div>`).join('')}</div>
+    <div class="caption"><div class="en">${s.cap}</div><div class="vi">${s.vi}</div></div>`;
+  document.getElementById('v-bar').style.width=((i+1)/L.scenes.length*100)+'%';
+  speak(s.cap,0.8);
+  if(playing&&i<L.scenes.length-1)sceneTimer=setTimeout(()=>playScene(i+1),6200);
+}
+const playBtn=document.getElementById('v-play');
+function setPlayBtn(){playBtn.textContent=playing?'⏸ Tạm dừng':'▶ Tiếp tục'}
+playBtn.onclick=()=>{playing=!playing;setPlayBtn();playing?playScene(sceneIdx+1):stopScenes()};
+
+/* ═══════ TỪ VỰNG + HỘI THOẠI ═══════ */
+function buildVocab(){
+  document.getElementById('words').innerHTML=L.vocab.map(v=>
+   `<button class="word" data-say="${v.w}"><span class="e">${v.e}</span><b>${v.w}</b>
+     <span class="ipa">${v.ipa}</span><span class="vi">${v.vi}</span><span class="ex">${v.s}</span></button>`).join('');
+  document.querySelectorAll('.word').forEach(b=>b.onclick=()=>speak(b.dataset.say,0.7));
+  document.getElementById('dialog').innerHTML=L.dialog.map((d,i)=>
+   `<div class="line" data-i="${i}"><span class="who">${d.w}</span>
+     <span><span class="en">${d.en}</span><br><span class="vi">${d.vi}</span></span></div>`).join('');
+  document.querySelectorAll('.line').forEach(el=>el.onclick=()=>{stopAudio();speak(L.dialog[+el.dataset.i].en,0.8)});
+  document.getElementById('patterns').innerHTML=L.patterns.map(p=>`<div class="pat">${p}</div>`).join('');
+  document.getElementById('real').innerHTML=L.real;
+  document.getElementById('phonics').innerHTML=L.phonics;
+  document.getElementById('tpr').innerHTML=L.tpr;
+}
+function playDialog(){stopAudio();speakSeq(L.dialog.map(d=>d.en))}
+
+/* ═══════ QUIZ ENGINE ═══════ */
+const shuffle=a=>a.map(v=>[Math.random(),v]).sort((x,y)=>x[0]-y[0]).map(v=>v[1]);
+
+function startLessonQuiz(){quizMode='lesson';quizTitle=L.title;QUIZ=L.quiz.slice();runQuiz()}
+function runQuiz(){qi=0;score=0;wrongs=[];document.getElementById('q-title').textContent='📝 '+quizTitle;go('quiz');renderQ()}
+
+function mixAll(){
+  quizMode='mix';quizTitle='Ôn tập tổng hợp — 8 bài';
+  QUIZ=shuffle(LESSONS.flatMap(l=>l.quiz.map(q=>Object.assign({from:l.title},q)))).slice(0,20);
+  runQuiz();
+}
+function listenDrill(){
+  quizMode='listen';quizTitle='Luyện nghe từ vựng';
+  const pool=[];const seen=new Set();
+  LESSONS.forEach(l=>l.vocab.forEach(v=>{if(!seen.has(v.e)){seen.add(v.e);pool.push(v)}}));
+  QUIZ=shuffle(pool).slice(0,20).map(v=>{
+    const others=shuffle(pool.filter(x=>x.e!==v.e)).slice(0,3);
+    const opts=shuffle([v].concat(others));
+    return{q:'Listen and choose the picture.',vi:'Nghe và chọn hình đúng.',say:v.w,
+      opts:opts.map(o=>o.e),a:opts.indexOf(v),tip:v.w+' — '+v.vi};
+  });
+  runQuiz();
+}
+
+let pickTarget='quiz';
+function pickQuiz(){pickTarget='quiz';openPicks('📚 Chọn bài để ôn','Tick vào những bài em muốn ôn. Máy sẽ trộn 20 câu từ đúng các bài đó.','Bắt đầu 20 câu →')}
+function pickCards(){pickTarget='cards';openPicks('🗣️ Chọn bài để luyện nói','Tick vào những bài em muốn luyện. Mỗi thẻ hiện hình + nghĩa tiếng Việt, em tự nói từ tiếng Anh rồi lật thẻ.','Bắt đầu luyện nói →')}
+function openPicks(head,desc,btn){
+  document.getElementById('p-title').textContent=head;
+  document.getElementById('p-head').textContent=head;
+  document.getElementById('p-desc').textContent=desc;
+  document.getElementById('picks').innerHTML=LESSONS.map((l,i)=>
+   `<label class="pick"><input type="checkbox" checked data-i="${i}"> ${l.badge} ${l.title}</label>`).join('');
+  const b=document.getElementById('p-start');b.textContent=btn;
+  b.onclick=()=>{
+    const sel=[...document.querySelectorAll('#picks input:checked')].map(x=>LESSONS[+x.dataset.i]);
+    if(!sel.length){alert('Hãy chọn ít nhất 1 bài nhé!');return}
+    if(pickTarget==='quiz'){
+      quizMode='mix';quizTitle='Ôn '+sel.length+' bài đã học';
+      QUIZ=shuffle(sel.flatMap(l=>l.quiz)).slice(0,20);runQuiz();
+    }else startCards(sel);
+  };
+  go('pick');
+}
+function togglePicks(v){document.querySelectorAll('#picks input').forEach(x=>x.checked=v)}
+
+function renderQ(){
+  answered=false;
+  const q=QUIZ[qi],n=QUIZ.length;
+  document.getElementById('q-num').textContent=`Câu ${qi+1} / ${n}`+(q.from?' · '+q.from:'');
+  document.getElementById('q-score').textContent=score;
+  document.getElementById('q-text').textContent=q.q;
+  document.getElementById('q-vi').textContent=q.vi;
+  document.getElementById('q-media').innerHTML=q.media?`<div class="qmedia">${q.media}</div>`:'';
+  document.getElementById('lanterns').innerHTML=QUIZ.map((_,i)=>{
+    const w=wrongs.find(x=>x.i===i);
+    return `<i class="${i<qi?(w?'no':'ok'):(i===qi?'now':'')}"></i>`}).join('');
+  const box=document.getElementById('q-opts');box.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const b=document.createElement('button');b.className='opt';
+    const emo=/^[\p{Extended_Pictographic}\u{1F3FB}-\u{1F3FF}\uFE0F\u200D]+$/u.test(o);
+    b.innerHTML=emo?`<span class="oe">${o}</span>`:o;
+    b.onclick=()=>answer(i,b);box.appendChild(b);
+  });
+  const fb=document.getElementById('q-fb');fb.className='fb';fb.innerHTML='';
+  document.getElementById('q-next').hidden=true;
+  const hear=document.getElementById('q-hear');
+  if(q.say){hear.hidden=false;hear.onclick=()=>speak(q.say,0.65);speak(q.say,0.65)}
+  else{hear.hidden=true;speak(q.q,0.85)}
+}
+const PRAISE=['Excellent!','Amazing!','Great job!','Wonderful!','Fantastic!','Well done!','Super!'];
+const NUDGE=['Good try!','Almost!','Very close!','Nice try!'];
+function answer(i,btn){
+  if(answered)return;answered=true;
+  const q=QUIZ[qi];
+  document.querySelectorAll('.opt').forEach((b,k)=>{b.disabled=true;
+    if(k===q.a)b.classList.add('right');else if(k===i)b.classList.add('wrong')});
+  const fb=document.getElementById('q-fb');
+  if(i===q.a){
+    score++;fb.className='fb on good';
+    fb.innerHTML=`⭐ ${PRAISE[Math.floor(Math.random()*PRAISE.length)]} <small>Đúng rồi: ${q.opts[q.a]}${q.tip?' ('+q.tip+')':''}</small>`;
+    speak(PRAISE[0],1);
+  }else{
+    wrongs.push({i:qi,q:q.q,vi:q.vi,right:q.opts[q.a]+(q.tip?' ('+q.tip+')':''),yours:q.opts[i]});
+    fb.className='fb on try';
+    fb.innerHTML=`💛 ${NUDGE[Math.floor(Math.random()*NUDGE.length)]} Let’s say it together. <small>Đáp án đúng: <b>${q.opts[q.a]}</b>${q.tip?' — '+q.tip:''}</small>`;
+  }
+  document.getElementById('q-score').textContent=score;
+  const nx=document.getElementById('q-next');nx.hidden=false;
+  nx.textContent=qi===QUIZ.length-1?'Xem kết quả 🏆':'Câu tiếp →';
+  nx.onclick=()=>{if(qi===QUIZ.length-1)showResult();else{qi++;renderQ()}};
+}
+
+/* ═══════ THẺ GHI NHỚ ═══════ */
+function startCards(sel){
+  CARDS=shuffle(sel.flatMap(l=>l.vocab));ci=0;cardOk=0;cardHard=[];go('flash');renderCard();
+}
+function renderCard(){
+  flipped=false;const c=CARDS[ci];
+  document.getElementById('f-num').textContent=`Thẻ ${ci+1} / ${CARDS.length}`;
+  document.getElementById('f-ok').textContent=cardOk;
+  document.getElementById('flash').innerHTML=
+   `<div class="fe">${c.e}</div><div class="fvi">${c.vi}</div>
+    <div id="back" class="hidden"><div class="fen">${c.w}</div><div class="fipa">${c.ipa}</div>
+    <div class="fs">${c.s}</div></div>`;
+  document.getElementById('f-controls').innerHTML=
+   `<button class="btn gold" onclick="flip()">👀 Lật thẻ</button>
+    <span style="color:#6C7495;font-weight:700;font-size:14px">Nói to từ tiếng Anh trước khi lật nhé!</span>`;
+}
+function flip(){
+  flipped=true;const c=CARDS[ci];
+  document.getElementById('back').classList.remove('hidden');
+  speak(c.w,0.7);
+  document.getElementById('f-controls').innerHTML=
+   `<button class="btn ghost sm" onclick="speak(CARDS[ci].w,0.6)">🔊 Nghe lại</button>
+    <button class="btn leaf" onclick="markCard(true)">✅ Em nói được</button>
+    <button class="btn ghost" onclick="markCard(false)">🔁 Cần ôn thêm</button>`;
+}
+function markCard(ok){
+  if(ok)cardOk++;else cardHard.push(CARDS[ci]);
+  if(ci===CARDS.length-1)cardResult();else{ci++;renderCard()}
+}
+function cardResult(){
+  go('result');
+  const n=CARDS.length,pct=cardOk/n;
+  document.getElementById('r-total').textContent=n;
+  document.getElementById('r-score').textContent=cardOk;
+  const st=pct>=0.9?3:pct>=0.7?2:pct>=0.5?1:0;
+  document.getElementById('r-stars').innerHTML=Array.from({length:3},(_,i)=>
+   `<span style="animation-delay:${i*.15}s">${i<st?'⭐':'☆'}</span>`).join('');
+  document.getElementById('r-msg').textContent=st>=2?'Great speaking!':'Good try! Keep practising.';
+  document.getElementById('r-msg-vi').textContent=st>=2?'Em nói rất tốt! Giữ đà nhé.':'Cố lên! Ôn lại những thẻ khó rồi làm lại.';
+  document.getElementById('r-review').innerHTML=cardHard.length
+   ?`<h4>${cardHard.length} từ cần ôn thêm</h4>`+cardHard.map(c=>
+     `<div class="rev">${c.e} <b>${c.w}</b> <span style="color:#6C7495">${c.ipa}</span> — ${c.vi}</div>`).join('')
+   :`<h4>🎉 Em nói được tất cả các từ. Xuất sắc!</h4>`;
+  document.getElementById('r-extra').innerHTML='';
+  document.getElementById('r-actions').innerHTML=
+   `<button class="btn gold" onclick="startCards(LESSONS)">🔁 Luyện lại tất cả</button>
+    ${cardHard.length?`<button class="btn leaf" onclick="retryHard()">🎯 Chỉ ôn ${cardHard.length} từ khó</button>`:''}
+    <button class="btn ghost" onclick="go('home')">Trang chủ →</button>`;
+}
+function retryHard(){const h=cardHard.slice();CARDS=shuffle(h);ci=0;cardOk=0;cardHard=[];go('flash');renderCard()}
+
+/* ═══════ KẾT QUẢ QUIZ ═══════ */
+function showResult(){
+  go('result');
+  const n=QUIZ.length,pct=score/n;
+  if(quizMode==='lesson'&&(BEST[L.id]==null||score>BEST[L.id]))BEST[L.id]=score;
+  document.getElementById('r-total').textContent=n;
+  document.getElementById('r-score').textContent=score;
+  const st=pct>=0.9?3:pct>=0.7?2:pct>=0.5?1:0;
+  document.getElementById('r-stars').innerHTML=Array.from({length:3},(_,i)=>
+   `<span style="animation-delay:${i*.15}s">${i<st?'⭐':'☆'}</span>`).join('');
+  let en,vi;
+  if(st===3){en='Fantastic! You are an English star!';vi='Tuyệt vời! Em nhớ bài rất tốt.'}
+  else if(st===2){en='Great job! Keep going!';vi='Rất tốt! Xem lại vài từ còn nhầm rồi làm lại nhé.'}
+  else if(st===1){en='Good try! You can do it!';vi='Cố lên! Xem lại phim và từ vựng rồi làm lại.'}
+  else{en='Nice try! Let’s learn together again.';vi='Không sao cả! Cùng học lại một lần nữa nhé.'}
+  document.getElementById('r-msg').textContent=en;
+  document.getElementById('r-msg-vi').textContent=vi;
+  speak(en,0.9);
+  document.getElementById('r-review').innerHTML=wrongs.length
+   ?`<h4>Ôn lại ${wrongs.length} câu chưa đúng</h4>`+wrongs.map(w=>
+     `<div class="rev"><div>${w.q}</div><div style="font-size:13px;color:#6C7495;font-weight:700">${w.vi}</div>
+      <div style="margin-top:5px">Đúng: <b>${w.right}</b> · <span class="yours">Em chọn: ${w.yours}</span></div></div>`).join('')
+   :`<h4>🎉 Không sai câu nào. Xuất sắc!</h4>`;
+
+  const ex=document.getElementById('r-extra');
+  ex.innerHTML=(quizMode==='lesson')
+   ?`<h2 class="sec">🌏 Nhiệm vụ đời thực</h2><div class="note real">${L.real}</div>
+     <h2 class="sec">Bài tập về nhà</h2><div class="note">${L.hw}</div>
+     <h2 class="sec">Góc phụ huynh · 10–15 phút/ngày</h2><div class="note">${L.parent}</div>`
+   :`<h2 class="sec">Ôn tiếp thế nào?</h2><div class="note">
+      Làm lại bài ôn này sau <b>1 ngày</b>, rồi <b>3 ngày</b>, <b>7 ngày</b>. Câu nào sai ở trên, hãy quay lại đúng bài đó xem phim và nghe từ vựng một lần nữa.</div>`;
+
+  document.getElementById('r-actions').innerHTML=(quizMode==='lesson')
+   ?`<button class="btn gold" onclick="startLessonQuiz()">🔁 Làm lại 20 câu</button>
+     <button class="btn ghost" onclick="go('video')">▶ Học lại cả bài</button>
+     <button class="btn leaf" onclick="go('home')">Bài học khác →</button>`
+   :`<button class="btn gold" onclick="${quizMode==='listen'?'listenDrill':'mixAll'}()">🔁 Bộ 20 câu mới</button>
+     <button class="btn ghost" onclick="pickQuiz()">📚 Chọn bài khác</button>
+     <button class="btn leaf" onclick="go('home')">Trang chủ →</button>`;
+}
+</script>
